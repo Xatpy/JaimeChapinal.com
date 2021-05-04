@@ -22,6 +22,37 @@ const setTitleFavicon = () => {
     setFavicon(title[indexTitle]);
 }
 
+tippy('#myButton', {
+    //content: '<img src=""></img>',
+    content: "loading",
+    animation:'scale',
+    inertia: true,
+    arrow: true,
+    onShow(instance) {
+        if (typeof(instance.props.content) !== "object") {
+            fetch('https://media2.giphy.com/media/134DVXcD94sOWI/giphy.gif?cid=ecf05e478poqrhjdn7d2e697wj4eqgc0thpbd36d05nkgdlq&rid=giphy.gif')
+                .then((response) => response.blob())
+                .then((blob) => {
+                    // Convert the blob into a URL
+                    const url = URL.createObjectURL(blob);
+                    // Create an image
+                    const image = new Image();
+                    image.width = 200;
+                    image.height = 200;
+                    image.style.display = 'block';
+                    image.src = url;
+                    // Update the tippy content with the image
+                    instance.setContent(image);
+                })
+                .catch((error) => {
+                    // Fallback if the network request failed
+                    instance.setContent(`Request failed. ${error}`);
+                });
+            }
+        }
+  });
+
+
 window.onload = (event) => {
     const myInterval = setInterval(setTitleFavicon, 1000);
 
