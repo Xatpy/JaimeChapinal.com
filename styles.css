@@ -1,0 +1,148 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    scroll-behavior: smooth;
+    font-family: 'Raleway', sans-serif;
+}
+
+.wrapper {
+    justify-content: center; 
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.section {
+  text-align: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+    color: #fff;
+    font-size: 5em;
+    text-shadow:
+      0px 2px 0px #b2a98f,
+      0px 4px 3px rgba(0,0,0,0.15),
+      0px 8px 1px rgba(0,0,0,0.1);
+  }
+  
+  .bg-home {
+    background: #202124;
+  }
+  
+  .bg-second-screen {
+    background: #41434a;
+  }
+  
+  .bg-third-screen {
+    background: #686c78;
+  }
+
+  .bg-fourth-screen {
+    background: #8d93a6;
+  }
+
+  .bg-fifth-screen {
+    background: #b4bcd4;
+  }
+
+  .typing-demo {
+    width: 12ch;
+    animation: typing 2s steps(10), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+  }
+
+  .tooltip {
+    text-decoration:none;
+    position:relative;
+  }
+   
+  .tooltip span {
+    display:none;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    color:black;
+    background:white; 
+  }
+   
+  .tooltip span img {
+    float:left;
+    margin:0px 8px 8px 0;
+  }
+   
+  .tooltip:hover span {
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1000;
+    width:auto;
+    max-width:320px;
+    min-height:128px;
+    border:1px solid black;
+    margin-top:12px;
+    margin-left:32px;
+    overflow:hidden;
+    padding:8px;
+  }
+
+
+  .home-image {
+    clip-path: circle(188px at center);
+
+    animation-iteration-count: 1;
+    animation-name: home-image-animation;
+    animation-duration: 1s;
+    transform-origin: 70% 70%;
+    display: inline-block;
+  }
+
+  @keyframes home-image-animation {
+    0% { clip-path: circle(18px at center) }
+  100% { clip-path: circle(188px at center) }
+}
+
+  .wave {
+    cursor: grab;
+    animation-iteration-count: 1;
+    animation-name: wave-animation;
+    animation-duration: 2.75s;
+    transform-origin: 70% 70%;
+    display: inline-block;
+  }
+  
+  @keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+     10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+     20% { transform: rotate(-8.0deg) }
+     30% { transform: rotate(14.0deg) }
+     40% { transform: rotate(-4.0deg) }
+     50% { transform: rotate(10.0deg) }
+     60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+    100% { transform: rotate( 0.0deg) }
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
