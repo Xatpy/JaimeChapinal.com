@@ -64,6 +64,19 @@ body {
     font-size: 2em;
   }
 
+  .interests-gif {
+    text-decoration: dotted underline;
+    cursor: grab;
+  }
+
+  .main-second-screen {
+    font-size: 5vw;
+    margin: 50px;
+  }
+
+  .text-second-screen {
+    margin-bottom: 100px;
+  }
 
   .home-image {
     clip-path: circle(188px at center);
