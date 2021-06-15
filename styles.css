@@ -107,6 +107,7 @@ body {
   .products {
     display: flex;
     height: 100%;
+    width: 100%;
     flex-direction: column;
   }
 
@@ -119,13 +120,12 @@ body {
   }
 
   .products-grid {
-    /*height: 100%;
-    width: 100%;
-    height: 100vh;
-    width: 100vw;
-    margin: 0;*/
-    display:grid;
-    height: 85%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    /* width: 100%; */
+    justify-content: space-around;
   }
 
   .row {
@@ -136,6 +136,8 @@ body {
       -webkit-flex-wrap: wrap;
       -webkit-flex-direction: row;
       justify-content: flex-start;
+      height: 50%;
+      align-content: center;
   }
 
   .col-md-4 {
@@ -147,12 +149,30 @@ body {
   }
 
   .cell {
+    height: 100%;
     width: 50%;
   }
 
   .img-product {
     width: 100%;
     height: 100%;
+    background: url(https://placeimg.com/220/220) center / cover;
+  }
+
+  .img-product-kindle {
+    background: url(./images/kindle.png) center / cover;
+  }
+
+  .img-product-candy {
+    background: url(./images/candycrush.jpeg) center / cover;
+  }
+
+  .img-product-ea {
+    background: url(./images/electronicArts.jpg) center / cover;
+  }
+
+  .img-product-simfor {
+    background: url(./images/simforSim.jpg) center / cover;
   }
 
   @keyframes home-image-animation {
