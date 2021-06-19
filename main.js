@@ -106,6 +106,22 @@ const initTooltips = () => {
     });
 }
 
+const sendPing = () => {
+    document.getElementById("bell").classList.remove("bell-animation");
+    void document.getElementById("bell").offsetWidth;
+    document.getElementById("bell").classList.add("bell-animation");
+    db.collection("pings").add({
+        userAgent: navigator.userAgent,
+        time: new Date()
+    })
+    .then(() => {
+        console.log("Ping sent");
+    })
+    .catch((error) => {
+        console.error("Error writing document: ", error);
+    });
+}
+
 window.onload = (event) => {
     initFaviconTitle();
     initSaluteWave();
