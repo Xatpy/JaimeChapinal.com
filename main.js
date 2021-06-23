@@ -107,6 +107,8 @@ const initTooltips = () => {
 }
 
 const sendPing = () => {
+    document.getElementById("bell").classList.remove("pulse-button");
+    void document.getElementById("bell").offsetWidth;
     document.getElementById("bell").classList.remove("bell-animation");
     void document.getElementById("bell").offsetWidth;
     document.getElementById("bell").classList.add("bell-animation");

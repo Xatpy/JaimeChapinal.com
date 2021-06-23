@@ -5,15 +5,15 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Jaime Chapinal</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='/styles/main.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='/styles/timeline.css'>
 
     <link rel="manifest" href="manifest.json">
+    <link rel='stylesheet' type='text/css' media='screen' href='/styles/main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/styles/timeline.css'>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>">
 
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
@@ -88,7 +88,7 @@
         <div id="sectionD" class="section bg-fourth-screen sectionTimeline" tabindex="0">
             <div class="mainTimeline">
                 <div class="main-text-section timelineTitle">
-                    <p>This is the timeline of my career</p>
+                    <p>Timeline of my career</p>
                 </div>
                 <div class="divTimeline">
                     <ul class="timelines-years">
@@ -143,18 +143,37 @@
                     </ul>
                 </div>
                 <div class="main-text-section timelineTitle">
-                    <p>And my full resume here:</p>
-                    <img src="images/resume.png" alt="resume" class="imgResume"></img>
+                    <p>and my full resume:</p>
+                    <a href="#">
+                        <img src="images/resume.png" alt="resume" class="imgResume"></img>
+                    </a>
                 </div>
             </div>
         </div>
 
         <div id="sectionE" class="section bg-fifth-screen" tabindex="0">
             <div class="main-pings">
-                <p>
-                    Thanks for getting here! Send a ping if you want :)
-                </p>
-                <button onclick="sendPing()" class="bell" id="bell">🔔</button>
+                <div class="end-component end-component-title">
+                    <p>
+                        Thanks for getting here!
+                    </p>
+                </div>
+                <div class="end-component end-component-center">
+                    <p>You can contact me through social networks:</p>
+                    <div class="wrapper-social-networker">
+                        <ul>
+                          <li class="github"><a title="GitHub" href="https://github.com/xatpy" target="_blank" rel="noopener"><i class="fa fa-github fa" aria-hidden="true"></i></a></li>
+                          <li class="twitter"><a title="Twitter" href="https://twitter.com/chapi13" target="_blank" rel="noopener"><i class="fa fa-twitter fa" aria-hidden="true"></i></a></li>
+                          <li class="linkedin"><a title="LinkedIn" href="https://linkedin.com/in/jaime-chapinal-cervantes" target="_blank" rel="noopener"><i class="fa fa-linkedin fa" aria-hidden="true"></i></a></li>
+                          <li class="envelope"><a title="Mail" href="mailto:jaime.chapinal@gmail.com?subject=Mail from Site"><i class="fa fa-envelope fa" aria-hidden="true"></i></a></li>
+                          <li class="rss"><a title="Blog" href="https://jaimechapinal.com/blog/" target="_blank" rel="noopener"><i class="fa fa-rss fa" aria-hidden="true"></i></a></li>
+                        </ul>
+                      </div>
+                </div>
+                <div class="end-component end-component-title">
+                    Oh! And send a ping if you want :)
+                    <button onclick="sendPing()" class="bell pulse-button" id="bell">🔔</button>
+                </div>
             </div>
         </div>
     </div>
