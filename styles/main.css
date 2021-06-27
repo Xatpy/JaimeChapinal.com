@@ -10,11 +10,15 @@
       -ms-user-select: none; /* Internet Explorer/Edge */
           user-select: none; /* Non-prefixed version, currently
                                 supported by Chrome, Edge, Opera and Firefox */
+
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
     scroll-behavior: smooth;
     font-family: 'Raleway', sans-serif;
+    background-color: red;
 }
 
 .wrapper {
@@ -151,19 +155,19 @@ body {
   }
 
   .img-product-kindle {
-    background: url(/images/kindle.png) center / cover;
+    background: url(./images/kindle.png) center / cover;
   }
 
   .img-product-candy {
-    background: url(/images/candycrush.jpeg) center / cover;
+    background: url(./images/candycrush.jpeg) center / cover;
   }
 
   .img-product-ea {
-    background: url(/images/electronicArts.jpg) center / cover;
+    background: url(./images/electronicArts.jpg) center / cover;
   }
 
   .img-product-simfor {
-    background: url(/images/simforSim.jpg) center / cover;
+    background: url(./images/simforSim.jpg) center / cover;
   }
 
   .main-pings {
