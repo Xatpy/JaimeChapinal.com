@@ -154,20 +154,35 @@ body {
     background-size: cover;
   }
 
+  .hover-rotate {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .hover-rotate img {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  
+  .hover-rotate:hover img {
+    transform: scale(1.3) rotate(5deg);
+  }
+
   .img-product-kindle {
-    background: url(./images/kindle.png) center / cover;
+    background: url(../images/kindle.png) center / cover;
   }
 
   .img-product-candy {
-    background: url(./images/candycrush.jpeg) center / cover;
+    background: url(../images/candycrush.jpeg) center / cover;
   }
 
   .img-product-ea {
-    background: url(./images/electronicArts.jpg) center / cover;
+    background: url(../images/electronicArts.jpg) center / cover;
   }
 
   .img-product-simfor {
-    background: url(./images/simforSim.jpg) center / cover;
+    background: url(../images/simforSim.jpg) center / cover;
   }
 
   .main-pings {
