@@ -124,8 +124,26 @@ const sendPing = () => {
     });
 }
 
+const initFirebase = () => {
+    const firebaseConfig = {
+        apiKey: "AIzaSyDTpMSPHNLH1dXaYbqiBSrQoIIebGt0y08",
+        authDomain: "jaimechapinal-com.firebaseapp.com",
+        projectId: "jaimechapinal-com",
+        storageBucket: "jaimechapinal-com.appspot.com",
+        messagingSenderId: "751701889580",
+        appId: "1:751701889580:web:706a07b62751039d417789",
+        measurementId: "G-90MG26RGN0"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    //firebase.analytics();
+
+    db = firebase.firestore();
+}
+
 window.onload = (event) => {
     initFaviconTitle();
     initSaluteWave();
     initTooltips();
+    initFirebase();
 };
