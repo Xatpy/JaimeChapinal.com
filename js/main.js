@@ -1,6 +1,6 @@
 const USE_SW = true;
 if (USE_SW && 'serviceWorker' in navigator) {
-    navigator.serviceWorker.register("/sw.js").then((reg) => {
+    navigator.serviceWorker.register("./sw.js").then((reg) => {
         console.log("Service worker registed", reg)
     }).catch((err) => {
         console.log("Errors registering service worker", err);
