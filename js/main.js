@@ -8,7 +8,6 @@ if (USE_SW && 'serviceWorker' in navigator) {
         });
 }
 
-
 const initSaluteWave = () => {
     document.getElementById("emojiHi").onmouseenter = () => {
         const emojiHi = document.getElementById("emojiHi");
@@ -139,6 +138,8 @@ const closeBanner = () => {
     localStorage.setItem('cookies','closed');
     document.getElementById("cookie-banner").classList.remove("fade-in");
     document.getElementById("cookie-banner").classList.add("hidden");
+    const audio = new Audio('./images/cookie.ogg');
+    audio.play();
 }
 
 const initFirebase = () => {
