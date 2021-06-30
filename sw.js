@@ -1,5 +1,4 @@
 const cacheName = 'cache-sw';
-
 const resourcesToPrecache = ['', 'index.html', 'styles.css'];
 
 self.addEventListener('install', (event) => {
@@ -21,11 +20,12 @@ self.addEventListener('fetch', (event) => {
             caches.open(cacheName).then((cache) => {
                 return cache.match(event.request).then((response) => {
                     console.log("Response: ", response);
-                    return (response || fetch(event.request).then((response => {
+                    return (response || fetch(event.request).then(response => {
                         cache.put(event.request, response.clone());
                         return response;
-                    })));
+                    }));
                 });
-            }));
+            })
+        );
     }
 })
