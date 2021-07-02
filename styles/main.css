@@ -292,6 +292,40 @@ body {
     background: url(../images/simforSim.jpg) center / cover;
   }
 
+  .image-caption {
+    cursor: crosshair;
+    top: -105%;
+    width: 100%;
+    height: 110%;
+    background: rgba(0, 0, 0, 0.7);
+    position: relative;
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+  }
+  
+  .image-caption h5 {
+    padding: 45px 0px 5px 0px;
+    text-align: center;
+    margin-left: -15px;
+    text-transform: uppercase;
+    font-size: 25px;
+    color: #00bfb6;
+  }
+  
+  .image-caption p {
+    text-align: center;
+    font-family: 'Overpass Mono', monospace;
+    color: #fff;
+  }
+  
+  .image-caption:hover {
+    opacity: 1;
+  }
+
   .main-pings {
     display: flex;
     flex-direction: column;
