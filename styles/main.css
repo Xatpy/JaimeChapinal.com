@@ -179,7 +179,8 @@ body {
   }
 
   .interests-gif {
-    text-decoration: dotted underline;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
     cursor: grab;
   }
 
