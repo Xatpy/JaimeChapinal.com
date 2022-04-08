@@ -247,6 +247,14 @@ body {
       font-size: 40px;
   }
 
+  .col-md-3 {
+    flex: 0 0 33.33%;
+    -webkit-flex: 0 0 33.33%;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 40px;
+}
+
   .cell {
     height: 100%;
     width: 50%;
@@ -283,6 +291,10 @@ body {
 
   .img-product-candy {
     background: url(../images/candycrush.jpeg) center / cover;
+  }
+
+  .img-product-spotify {
+    background: url(../images/spotify_2.jpeg) center / cover;
   }
 
   .img-product-ea {
@@ -394,7 +406,7 @@ body {
   }
 
   .wrapper-social-networker ul li .fa {
-    font-size: 30px;
+    /*font-size: 40px;*/
     color: #D8E2DC;
     transition: all 0.5s ease;
   }
