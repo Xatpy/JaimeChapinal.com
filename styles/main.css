@@ -382,6 +382,8 @@ body {
     position: relative;
     justify-content: center;
     margin: 20px;
+    width: 100%;
+    align-items: center;
   }
 
   /* Style the Un-order list by setting its list-style to none */
@@ -472,9 +474,7 @@ body {
   }
 
   @media screen and (max-width: 640px){
-    .wrapper-social-networker {
-        width: 350px;
-    }
+    
     .wrapper-social-networker ul li{
         margin-top: 10px;
     }
@@ -485,7 +485,7 @@ body {
 
   @media screen and (max-width: 340px){
     .wrapper-social-networker {
-        width: 150px;
+        margin: 0px;
     }
     .wrapper-social-networker ul li{
         margin:15px;

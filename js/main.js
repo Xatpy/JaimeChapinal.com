@@ -81,23 +81,23 @@ const initTooltips = () => {
     const arraryGifInterests = [
         {
             id: "gif-football",
-            gifUrl: "https://i.gifer.com/AV3b.gif"
+            gifUrl: "./images/gifs/football.gif"
         },
         {
             id: "gif-videogames",
-            gifUrl: "https://media0.giphy.com/media/H4nUqdNomOWzJfoIa6/giphy.gif"
+            gifUrl: "./images/gifs/videogames.gif"
         },
         {
             id: "gif-programming",
-            gifUrl: "https://media.giphy.com/media/13HgwGsXF0aiGY/giphy.gif"
+            gifUrl: "./images/gifs/programming.gif"
         },
         {
             id: "gif-office",
-            gifUrl: "https://media2.giphy.com/media/134DVXcD94sOWI/giphy.gif?cid=ecf05e478poqrhjdn7d2e697wj4eqgc0thpbd36d05nkgdlq&rid=giphy.gif"
+            gifUrl: "./images/gifs/the-office.gif"
         },
         {
             id: "gif-gifs",
-            gifUrl: "https://media.giphy.com/media/3o6gbbuLW76jkt8vIc/giphy.gif"
+            gifUrl: "./images/gifs/gifs.gif"
         },
     ];
 
