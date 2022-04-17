@@ -1,3 +1,20 @@
+.cookie-banner {
+    font-size: 20px;
+    position: fixed;
+    bottom: 40px;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    padding: 5px 14px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #eee;
+    border-radius: 5px;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
 .fade-in {
     animation: fadeIn ease 4s;
     -webkit-animation: fadeIn ease 4s;
