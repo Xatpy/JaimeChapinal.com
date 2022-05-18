@@ -107,10 +107,6 @@
         height: 50px;
         line-height: 45px;
     }
-
-    .wrapper-social-networker ul li.envelope {
-        /* margin-left: 60px; */
-    }
 }
 
 @media screen and (max-width: 340px) {
@@ -119,9 +115,6 @@
     }
     .wrapper-social-networker ul li {
         margin: 15px;
-    }
-    .wrapper-social-networker ul li.envelope {
-        /* margin-left: 15px; */
     }
 }
 
