@@ -143,6 +143,32 @@ const closeBanner = () => {
     audio.play();
 };
 
+const initTimeline = () => {
+    console.log('Init timeline');
+
+    const desktopTimeline = document.getElementById('desktopTimeline');
+    const mobileTimeline = document.getElementById('mobileTimeline');
+
+    const vw = Math.max(
+        document.documentElement.clientWidth || 0,
+        window.innerWidth || 0
+    );
+    // const vh = Math.max(
+    //     document.documentElement.clientHeight || 0,
+    //     window.innerHeight || 0
+    // );
+
+    desktopTimeline;
+    const showDesktopTimeline = vw > 420;
+    if (showDesktopTimeline) {
+        desktopTimeline.classList.remove('hide');
+        mobileTimeline.classList.add('hide');
+    } else {
+        desktopTimeline.classList.add('hide');
+        mobileTimeline.classList.remove('hide');
+    }
+};
+
 const initFirebase = () => {
     const firebaseConfig = {
         apiKey: 'AIzaSyDTpMSPHNLH1dXaYbqiBSrQoIIebGt0y08',
@@ -160,10 +186,19 @@ const initFirebase = () => {
     db = firebase.firestore();
 };
 
-window.onload = (event) => {
+const resize = (e) => {
+    initTimeline(e);
+};
+
+window.onload = () => {
     initFaviconTitle();
     initSaluteWave();
     initTooltips();
     initCookiesBanner();
+    initTimeline();
     initFirebase();
+};
+
+window.onresize = (e) => {
+    resize(e);
 };
