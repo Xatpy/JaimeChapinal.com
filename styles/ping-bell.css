@@ -1,7 +1,7 @@
 .bell {
     cursor: pointer;
     all: unset;
-    width: 15%;
+    /* width: 15%; */
     margin: 0 auto;
     display: block;
 }

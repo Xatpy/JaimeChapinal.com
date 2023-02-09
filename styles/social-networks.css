@@ -1,3 +1,20 @@
+.linkSocialNetwork {
+    /* width: 100px;
+    line-height: 100px; */
+    width: 10%;
+    line-height: 10%;
+    /* display: block; */
+    text-align: center;
+    cursor: pointer;
+}
+
+.ul-wrapper {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 /* Let's style the wrapper in such away that, 
   it should always be at the center of the browser */
 .wrapper-social-networker {
@@ -18,9 +35,9 @@
     and float them to left and set its border and border-radius.
   */
 .wrapper-social-networker ul li {
-    width: 75px;
-    height: 195x;
-    line-height: 65px;
+    /* width: 75px; */
+    /* height: 195x; */
+    /* line-height: 65px; */
     margin: 0 10px;
     text-align: center;
     cursor: pointer;
@@ -28,10 +45,11 @@
     border: 5px solid #d8e2dc;
     float: left;
     transition: all 0.5s ease;
+    padding: 25px;
 }
 
 .wrapper-social-networker ul li .fa {
-    font-size: 40px;
+    /* font-size: 40px; */
     color: #d8e2dc;
     transition: all 0.5s ease;
 }
@@ -102,10 +120,10 @@
     }
 
     .wrapper-social-networker ul li {
-        margin-top: 10px;
+        /* margin-top: 10px;
         width: 50px;
         height: 50px;
-        line-height: 45px;
+        line-height: 45px; */
     }
 
     .wrapper-social-networker ul li .fa {

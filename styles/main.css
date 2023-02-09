@@ -130,11 +130,19 @@ body {
     justify-content: center;
 }
 
+.desktopProductsContent {
+    height: 85%;
+}
+
+.mobileProductsContent {
+    height: 85%;
+}
+
 .products-grid {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 85%;
+    height: 100%;
     justify-content: space-around;
 }
 
@@ -147,6 +155,13 @@ body {
     -webkit-flex-direction: row;
     justify-content: flex-start;
     height: 50%;
+    align-content: center;
+}
+
+.rowProductsMobile {
+    justify-content: center;
+    height: 20%;
+    width: 100%;
     align-content: center;
 }
 
@@ -385,6 +400,24 @@ body {
 
     .col-md-4 {
         font-size: 20px;
+    }
+}
+
+@media all and (min-width: 769px) {
+    .desktopProductsContent {
+        display: block;
+    }
+    .mobileProductsContent {
+        display: none;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .desktopProductsContent {
+        display: none;
+    }
+    .mobileProductsContent {
+        display: block;
     }
 }
 
