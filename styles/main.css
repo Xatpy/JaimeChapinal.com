@@ -109,6 +109,7 @@ body {
 .main-text-section {
     font-size: 5vw;
     margin: 50px;
+    /* line-height: 1.75em; */
 }
 
 .text-second-screen {
@@ -123,19 +124,19 @@ body {
 }
 
 .products-title {
-    height: 15%;
-    font-size: 5vw;
+    height: 10%;
+    font-size: 5.5vw;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .desktopProductsContent {
-    height: 85%;
+    height: 90%;
 }
 
 .mobileProductsContent {
-    height: 85%;
+    height: 90%;
 }
 
 .products-grid {
@@ -270,7 +271,7 @@ body {
     flex-direction: column;
     height: 100%;
     width: 100%;
-    font-size: 5vw;
+    font-size: 4vw;
 }
 
 .link-products {
@@ -392,6 +393,12 @@ body {
 @media screen and (max-width: 632px) {
     .section {
         font-size: 3em;
+        line-height: 1.75em;
+    }
+
+    .main-text-section {
+        font-size: 7vw;
+        line-height: 1.75em;
     }
 
     .col-md-3 {
@@ -400,6 +407,10 @@ body {
 
     .col-md-4 {
         font-size: 20px;
+    }
+
+    .main-pings {
+        font-size: 7w;
     }
 }
 

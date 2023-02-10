@@ -46,6 +46,8 @@ const initFaviconTitle = () => {
     const myInterval = setInterval(setTitleFavicon, 1000);
 };
 
+// TODO: Fix error of Tippy if trying to set the tooltip but the image has
+// not been loaded yet
 const initTooltips = () => {
     const createTooltip = (id, url) => {
         tippy(`#${id}`, {
@@ -182,7 +184,6 @@ const initFirebase = () => {
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     //firebase.analytics();
-
     db = firebase.firestore();
 };
 
@@ -193,10 +194,10 @@ const resize = (e) => {
 window.onload = () => {
     initFaviconTitle();
     initSaluteWave();
-    initTooltips();
     initCookiesBanner();
     initTimeline();
     initFirebase();
+    initTooltips();
 };
 
 window.onresize = (e) => {

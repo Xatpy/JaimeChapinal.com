@@ -2,7 +2,7 @@
     /* width: 100px;
     line-height: 100px; */
     width: 10%;
-    line-height: 10%;
+    /* line-height: 10%; */
     /* display: block; */
     text-align: center;
     cursor: pointer;
@@ -24,6 +24,7 @@
     margin: 20px;
     width: 100%;
     align-items: center;
+    margin-top: 5%;
 }
 
 /* Style the Un-order list by setting its list-style to none */
@@ -37,7 +38,7 @@
 .wrapper-social-networker ul li {
     /* width: 75px; */
     /* height: 195x; */
-    /* line-height: 65px; */
+    line-height: 0;
     margin: 0 10px;
     text-align: center;
     cursor: pointer;
