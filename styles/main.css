@@ -373,13 +373,50 @@ body {
     text-shadow: none;
 }
 
-.desktopTimeline {
+.timelineMainDiv {
     display: flex;
     flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+.desktopTimeline {
+    /* display: flex;
+    flex-direction: column; */
+    /* width: 50%; */
+    height: 100%;
+    opacity: 0.5s;
+}
+
+.desktopTimelineChange {
+    opacity: 1;
+    transition: all 1s;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .timelineTitle {
+    height: 10%;
+    font-size: 5.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+}
+
+.timelineContainer {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 100%;
+}
+
+.timelineStage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .timelineDownload {

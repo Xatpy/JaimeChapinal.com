@@ -145,32 +145,6 @@ const closeBanner = () => {
     audio.play();
 };
 
-const initTimeline = () => {
-    console.log('Init timeline');
-
-    const desktopTimeline = document.getElementById('desktopTimeline');
-    const mobileTimeline = document.getElementById('mobileTimeline');
-
-    const vw = Math.max(
-        document.documentElement.clientWidth || 0,
-        window.innerWidth || 0
-    );
-    // const vh = Math.max(
-    //     document.documentElement.clientHeight || 0,
-    //     window.innerHeight || 0
-    // );
-
-    desktopTimeline;
-    const showDesktopTimeline = vw > 420;
-    if (showDesktopTimeline) {
-        desktopTimeline.classList.remove('hide');
-        mobileTimeline.classList.add('hide');
-    } else {
-        desktopTimeline.classList.add('hide');
-        mobileTimeline.classList.remove('hide');
-    }
-};
-
 const initFirebase = () => {
     const firebaseConfig = {
         apiKey: 'AIzaSyDTpMSPHNLH1dXaYbqiBSrQoIIebGt0y08',
@@ -187,19 +161,37 @@ const initFirebase = () => {
     db = firebase.firestore();
 };
 
-const resize = (e) => {
-    initTimeline(e);
-};
+/**
+ * section observers
+ const observer = new IntersectionObserver((entries) => {
+        entries.forEach((elem) => {
+            console.log('hola', elem.target.id);
+            if (elem.isIntersecting) {
+                const text = elem.target.id;
+                // const text = elem.target.querySelector('h2').innerText;
+                // console.log('Ping! Visible: ', text);
+                if (text === 'sectionE') {
+                    document
+                        .getElementById('idTimeline')
+                        .classList.add('desktopTimelineChange');
+                    console.log('Setup here');
+                    setUpTimelines();
+                }
+            }
+        });
+    });
+
+    const a = document.getElementsByClassName('section');
+    for (let elem of a) {
+        // console.log(item.id);
+        observer.observe(elem);
+    }
+ */
 
 window.onload = () => {
     initFaviconTitle();
     initSaluteWave();
     initCookiesBanner();
-    initTimeline();
     initFirebase();
     initTooltips();
-};
-
-window.onresize = (e) => {
-    resize(e);
 };

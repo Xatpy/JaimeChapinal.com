@@ -11,7 +11,6 @@
 
         <link rel="manifest" href="manifest.json" />
         <link rel="stylesheet" type="text/css" media="screen" href="./styles/main.css" />
-        <link rel="stylesheet" type="text/css" media="screen" href="./styles/timeline.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="./styles/banner.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="./styles/social-networks.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="./styles/ping-bell.css" />
@@ -198,78 +197,109 @@
                 </div>
 
                 <div id="sectionD" class="section bg-fourth-screen sectionTimeline" tabindex="0">
-                    <div>
-                        <div class="main-text-section timelineTitle">
+                    <div class="timelineMainDiv">
+                        <div class="timelineTitle">
                             <span>Career timeline</span>
                         </div>
-                        <div id="mainTimeline">
-                            <div id="desktopTimeline" class="desktopTimeline">
-                                <ul class="timelines-years">
-                                    <li>2008</li>
-                                    <li>2009</li>
-                                    <li>2010</li>
-                                    <li>2011</li>
-                                    <li>2012</li>
-                                    <li>2013</li>
-                                    <li>2014</li>
-                                    <li>2015</li>
-                                    <li>2016</li>
-                                    <li>2017</li>
-                                    <li>2018</li>
-                                    <li>2019</li>
-                                    <li>2020</li>
-                                    <li>2021</li>
-                                    <li>2022</li>
-                                </ul>
 
-                                <ul class="timeline-events">
-                                    <li class="timeline-event-years-uc3m">
-                                        <span> Technical Engineering in <br />Computer Managements</span>
-                                    </li>
-                                    <li class="timeline-event-years-mediapost">
-                                        <span>Mediapost</span>
-                                    </li>
-                                    <li class="timeline-event-years-ugr">
-                                        <span
-                                            >Universidad <br />
-                                            Granada</span
-                                        >
-                                    </li>
-                                    <li class="timeline-event-years-simfor">
-                                        <span>Simfor</span>
-                                    </li>
-                                    <li class="timeline-event-years-carto">
-                                        <span>Carto</span>
-                                    </li>
-                                    <li class="timeline-event-years-ea" onmouseover="hover(this)">
-                                        <span>Electronic Arts</span>
-                                    </li>
-                                    <li class="timeline-event-years-gameloft" onmousemove="hover(this)">
-                                        <span>Gameloft</span>
-                                    </li>
-                                    <li class="timeline-event-years-future-lighthouse">
-                                        <span>FL</span>
-                                    </li>
-                                    <li class="timeline-event-years-king">
-                                        <span>King</span>
-                                    </li>
-                                    <li class="timeline-event-years-amazon">
-                                        <span>Amazon</span>
-                                    </li>
-                                    <li class="timeline-event-years-spotify">
-                                        <span>Spotify</span>
-                                    </li>
-                                </ul>
+                        <div class="timelineContainer">
+                            <div id="idTimeline" class="desktopTimeline desktopTimelineChange">
+                                <div class="timeline timeline--loaded timeline--mobile" style="opacity: 1">
+                                    <div class="timeline__wrap">
+                                        <div class="timeline__items">
+                                            <div class="timeline__item timeline__item">
+                                                <div class="timeline__item__inner">
+                                                    <div class="timeline__content__wrap">
+                                                        <div class="timeline__content"><span>Spotify</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="timeline__item timeline__item">
+                                                <div class="timeline__item__inner">
+                                                    <div class="timeline__content__wrap">
+                                                        <div class="timeline__content"><span>Amazon</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="timeline__item timeline__item">
+                                                <div class="timeline__item__inner">
+                                                    <div class="timeline__content__wrap">
+                                                        <div class="timeline__content"><span>King</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="timeline__item timeline__item">
+                                                <div class="timeline__item__inner">
+                                                    <div class="timeline__content__wrap">
+                                                        <div class="timeline__content"><span>Future Lighthouse</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="timeline__item timeline__item">
+                                                <div class="timeline__item__inner">
+                                                    <div class="timeline__content__wrap">
+                                                        <div class="timeline__content"><span>Gameloft</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="timeline__item timeline__item">
+                                                <div class="timeline__item__inner">
+                                                    <div class="timeline__content__wrap">
+                                                        <div class="timeline__content"><span>Electronic Arts</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="timeline__item timeline__item">
+                                                <div class="timeline__item__inner">
+                                                    <div class="timeline__content__wrap">
+                                                        <div class="timeline__content"><span>Carto</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="timeline__item timeline__item">
+                                                <div class="timeline__item__inner">
+                                                    <div class="timeline__content__wrap">
+                                                        <div class="timeline__content"><span>Simfor</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="timeline__item timeline__item--left">
+                                                <div class="timeline__item__inner">
+                                                    <div class="timeline__content__wrap">
+                                                        <div class="timeline__content">
+                                                            <span
+                                                                >Universidad <br />
+                                                                Granada</span
+                                                            >
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="timeline__item timeline__item--left">
+                                                <div class="timeline__item__inner">
+                                                    <div class="timeline__content__wrap">
+                                                        <div class="timeline__content"><span>Mediapost</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="timeline__item timeline__item--left">
+                                                <div class="timeline__item__inner">
+                                                    <div class="timeline__content__wrap">
+                                                        <div class="timeline__content">
+                                                            <span> Technical Engineering in <br />Computer Managements</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div id="mobileTimeline">Mobile TIMELINE</div>
+                            <div class="timelineStage">
+                                <div id="timelineStageSelected">TIMELINE</div>
+                            </div>
                         </div>
-                        <!-- <div class="main-text-section timelineTitle divResume">
-                    <p>and my full resume:</p>
-                    <a href="#">
-                        <img src="images/resume.png" alt="resume" class="imgResume" />
-                    </a>
-                </div> -->
                     </div>
                 </div>
 
@@ -328,6 +358,8 @@
                 </div>
             </main>
         </div>
+        <!-- <script src="./js/timeline.js"></script> -->
+        <link href="./styles/timeline.min.css" rel="stylesheet" />
 
         <script src="./js/main.js"></script>
 
