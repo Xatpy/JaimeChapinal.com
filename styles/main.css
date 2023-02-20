@@ -395,9 +395,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    width: 50%;
 }
 
 .timelineTitle {
+    width: 100%;
     height: 10%;
     font-size: 5.5vw;
     display: flex;
@@ -409,14 +411,15 @@ body {
 .timelineContainer {
     display: flex;
     flex-direction: row;
-    width: 50%;
+    width: 100%;
     height: 100%;
 }
 
 .timelineStage {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    width: 50%;
 }
 
 .timelineDownload {
@@ -425,6 +428,12 @@ body {
 
 .divTimeline {
     height: 10vh;
+}
+
+.divSelectedStage {
+    background-color: #ffd50099;
+    border-radius: 25px;
+    padding: 50px;
 }
 
 .divResume {

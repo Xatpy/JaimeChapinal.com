@@ -84,6 +84,10 @@
     display: block;
     padding: 10px;
     position: relative;
+    border: 2px solid transparent;
+}
+.timeline__content:active {
+    border: solid 2px gold;
 }
 .timeline__content::before,
 .timeline__content::after {
@@ -117,6 +121,9 @@
     font-size: 15px;
     line-height: 1.5;
     margin-bottom: 10px;
+}
+.timeline__content span {
+    color: white;
 }
 .timeline--mobile {
     padding: 0;
@@ -166,4 +173,48 @@
     100% {
         top: -15px;
     }
+}
+
+.colorSpotify {
+    background-color: #1ed760;
+}
+
+.colorAmazon {
+    background-color: #ff9a00;
+}
+
+.colorKing {
+    background-color: #ff5c01;
+}
+
+.colorFutureLighthouse {
+    background-color: #193a53;
+}
+
+.colorGameloft {
+    background-color: #8e9294;
+}
+
+.colorEA {
+    background-color: #fc4444;
+}
+
+.colorCarto {
+    background-color: #142c44;
+}
+
+.colorSimfor {
+    background-color: #3783e5;
+}
+
+.colorGranada {
+    background-color: #bb2c2c;
+}
+
+.colorMediapost {
+    background-color: #dc2c34;
+}
+
+.colorUC3M {
+    background-color: #000e77;
 }

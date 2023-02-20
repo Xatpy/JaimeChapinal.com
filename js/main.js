@@ -108,6 +108,19 @@ const initTooltips = () => {
     });
 };
 
+function clickOnTimeline(id) {
+    console.log('Click on timeline: ', id);
+
+    const timelineStageSelected = document.getElementById(
+        'timelineStageSelected'
+    );
+    timelineStageSelected.innerHTML = id;
+}
+
+const initTimeline = () => {
+    clickOnTimeline('spotify');
+};
+
 const sendPing = () => {
     document.getElementById('bell').classList.remove('pulse-button');
     void document.getElementById('bell').offsetWidth;
@@ -145,22 +158,6 @@ const closeBanner = () => {
     audio.play();
 };
 
-const initFirebase = () => {
-    const firebaseConfig = {
-        apiKey: 'AIzaSyDTpMSPHNLH1dXaYbqiBSrQoIIebGt0y08',
-        authDomain: 'jaimechapinal-com.firebaseapp.com',
-        projectId: 'jaimechapinal-com',
-        storageBucket: 'jaimechapinal-com.appspot.com',
-        messagingSenderId: '751701889580',
-        appId: '1:751701889580:web:706a07b62751039d417789',
-        measurementId: 'G-90MG26RGN0',
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    //firebase.analytics();
-    db = firebase.firestore();
-};
-
 /**
  * section observers
  const observer = new IntersectionObserver((entries) => {
@@ -192,6 +189,6 @@ window.onload = () => {
     initFaviconTitle();
     initSaluteWave();
     initCookiesBanner();
-    initFirebase();
     initTooltips();
+    initTimeline();
 };
