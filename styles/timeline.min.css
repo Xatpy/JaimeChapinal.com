@@ -310,6 +310,21 @@
     background-color: #000e77;
 }
 
+@media all and (max-width: 1400px) {
+    .timeline__content {
+        font-size: 0.75em;
+    }
+    .timeline__item {
+        background-color: yellow;
+        font-size: 1rem;
+        padding: 2px 10px 2px 0;
+        position: relative;
+        width: 50%;
+        z-index: 2;
+        cursor: pointer;
+    }
+}
+
 @media all and (max-width: 667px) {
     .timeline--mobile .timeline__item {
         left: 0;
@@ -319,7 +334,7 @@
 
     .timeline__item {
         font-size: 1rem;
-        padding: 2px 10px 5px 0;
+        padding: 2px 5px 2px 0;
     }
 
     .timeline__content {
@@ -341,5 +356,26 @@
 @media all and (max-width: 1200px) {
     .divSelectedStage {
         width: 85%;
+    }
+}
+
+@media only screen and (max-device-width: 1024px) and (orientation: landscape) {
+    .timeline--mobile .timeline__item {
+        background-color: red;
+    }
+
+    .timeline__item {
+        font-size: 0.6rem;
+        padding: 0px 1px 0px 0;
+    }
+
+    .timeline__content {
+        font-size: 1em;
+        /* background-color: blue; */
+        padding: 2px;
+    }
+
+    .timelineStage {
+        justify-content: center;
     }
 }
