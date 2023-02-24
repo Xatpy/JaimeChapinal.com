@@ -315,13 +315,44 @@
         font-size: 0.75em;
     }
     .timeline__item {
-        background-color: yellow;
         font-size: 1rem;
         padding: 2px 10px 2px 0;
         position: relative;
         width: 50%;
         z-index: 2;
         cursor: pointer;
+    }
+}
+
+@media all and (min-height: 800px) and (max-height: 1400px) {
+    .timeline__content {
+        font-size: 0.75em;
+    }
+    .timeline__item {
+        font-size: 1.7rem;
+        padding: 3px 10px 3px 0;
+    }
+}
+
+@media all and (min-height: 575px) and (max-height: 800px) {
+    .timeline__content {
+        font-size: 0.75em;
+        padding: 5px;
+    }
+    .timeline__item {
+        font-size: 0.6rem;
+        padding: 3px 10px 3px 0;
+    }
+}
+
+@media all and (max-height: 575px) {
+    .timeline__content {
+        font-size: 0.75em;
+        padding: 3px;
+    }
+    .timeline__item {
+        font-size: 0.5rem;
+        padding: 1px 10px 1px 0;
     }
 }
 
