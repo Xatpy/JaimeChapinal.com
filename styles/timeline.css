@@ -7,6 +7,20 @@
     color: #ffffff88;
 }
 
+.selectedStageTitle {
+    font-size: 0.75em;
+    text-align: center;
+}
+
+.selectedStageLogo {
+    max-width: 250px;
+}
+.selectedStageSubText {
+    font-size: 0.5em;
+    text-align: center;
+    margin: 10px;
+}
+
 .sectionTimeline {
     display: block;
     text-align: start;
@@ -71,14 +85,15 @@
 }
 
 .divSelectedStage {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: #ffd50099;
-    width: 50%;
+    width: 75%;
     height: 75%;
     border-radius: 25px;
     padding: 50px;
     display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .timeline {
@@ -311,6 +326,23 @@
 }
 
 @media all and (max-width: 1400px) {
+    /* .timeline--mobile .timeline__item {
+        background-color: black;
+    } */
+    .selectedStageTitle {
+        font-size: 0.5em;
+    }
+    .selectedStageSubText {
+        font-size: 0.44em;
+        line-height: 1;
+        margin: 5px;
+    }
+    .divSelectedStage {
+        height: 42%;
+        padding: 25px;
+        display: flex;
+        margin: 2px;
+    }
     .timeline__content {
         font-size: 0.75em;
     }
@@ -324,37 +356,18 @@
     }
 }
 
-@media all and (min-height: 800px) and (max-height: 1400px) {
-    .timeline__content {
-        font-size: 0.75em;
+/* @media all and (max-width: 667px) {
+    .timeline--mobile .timeline__item {
+        background-color: black;
     }
-    .timeline__item {
-        font-size: 1.7rem;
-        padding: 3px 10px 3px 0;
+    .selectedStageTitle {
+        font-size: 0.4em;
     }
-}
-
-@media all and (min-height: 575px) and (max-height: 800px) {
-    .timeline__content {
-        font-size: 0.75em;
-        padding: 5px;
+    .selectedStageSubText {
+        font-size: 0.3em;
+        line-height: 1;
     }
-    .timeline__item {
-        font-size: 0.6rem;
-        padding: 3px 10px 3px 0;
-    }
-}
-
-@media all and (max-height: 575px) {
-    .timeline__content {
-        font-size: 0.75em;
-        padding: 3px;
-    }
-    .timeline__item {
-        font-size: 0.5rem;
-        padding: 1px 10px 1px 0;
-    }
-}
+} */
 
 @media all and (max-width: 667px) {
     .timeline--mobile .timeline__item {
@@ -408,5 +421,50 @@
 
     .timelineStage {
         justify-content: center;
+    }
+}
+
+@media all and (min-height: 800px) and (max-height: 1400px) {
+    .date {
+        font-size: 0.66em;
+        color: #ffffff88;
+    }
+    .selectedStageTitle {
+        font-size: 0.75em;
+    }
+    .selectedStageSubText {
+        font-size: 0.5em;
+    }
+    .timeline--mobile .timeline__item {
+        background-color: grey;
+    }
+    .timeline__content {
+        font-size: 0.75em;
+    }
+    .timeline__item {
+        font-size: 1.7rem;
+        padding: 3px 10px 3px 0;
+    }
+}
+
+@media all and (min-height: 575px) and (max-height: 800px) {
+    .timeline__content {
+        font-size: 0.75em;
+        padding: 5px;
+    }
+    .timeline__item {
+        font-size: 0.6rem;
+        padding: 3px 10px 3px 0;
+    }
+}
+
+@media all and (max-height: 575px) {
+    .timeline__content {
+        font-size: 0.75em;
+        padding: 3px;
+    }
+    .timeline__item {
+        font-size: 0.5rem;
+        padding: 1px 10px 1px 0;
     }
 }
