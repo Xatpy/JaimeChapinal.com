@@ -85,15 +85,16 @@
 }
 
 .divSelectedStage {
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #ffd50099;
+    background-color: #ffd50069;
+    border: solid black 3px;
     width: 75%;
     height: 75%;
     border-radius: 25px;
     padding: 50px;
-    display: flex;
 }
 
 .timeline {
@@ -435,9 +436,9 @@
     .selectedStageSubText {
         font-size: 0.5em;
     }
-    .timeline--mobile .timeline__item {
-        background-color: grey;
-    }
+    /* .timeline--mobile .timeline__item {
+        background-color: pink;
+    } */
     .timeline__content {
         font-size: 0.75em;
     }
