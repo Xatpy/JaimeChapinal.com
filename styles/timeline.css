@@ -92,6 +92,7 @@
     background-color: #ffd50069;
     border: solid black 3px;
     width: 75%;
+    /* height: 1145px; */
     height: 75%;
     border-radius: 25px;
     padding: 50px;
@@ -366,6 +367,7 @@
         padding: 25px;
         display: flex;
         margin: 2px;
+        /* height: 756px; */
     }
     .timeline__content {
         font-size: 0.75em;
@@ -379,19 +381,6 @@
         cursor: pointer;
     }
 }
-
-/* @media all and (max-width: 667px) {
-    .timeline--mobile .timeline__item {
-        background-color: black;
-    }
-    .selectedStageTitle {
-        font-size: 0.4em;
-    }
-    .selectedStageSubText {
-        font-size: 0.3em;
-        line-height: 1;
-    }
-} */
 
 @media all and (max-width: 667px) {
     .timeline--mobile .timeline__item {
@@ -454,10 +443,10 @@
         color: #ffffff88;
     }
     .selectedStageTitle {
-        font-size: 0.75em;
+        font-size: 0.65em;
     }
     .selectedStageSubText {
-        font-size: 0.5em;
+        font-size: 0.4em;
     }
     /* .timeline--mobile .timeline__item {
         background-color: pink;
