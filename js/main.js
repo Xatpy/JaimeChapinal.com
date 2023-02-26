@@ -176,7 +176,7 @@ function clickOnTimeline(id) {
             projects: '',
         },
         granada: {
-            imageUrl: '../images/logos/granada.webp',
+            imageUrl: '../images/logos/granada.png',
             title: 'University of Granada',
             role: 'Student',
             tasks: 'Master in Software Development (Human – Computer Interaction)',
@@ -218,6 +218,13 @@ function clickOnTimeline(id) {
     timelineStageSelectedRole.innerHTML = foundCareer.role ?? '';
     timelineStageSelectedTasks.innerHTML = foundCareer.tasks ?? '';
     timelineStageSelectedProjects.innerHTML = foundCareer.projects ?? '';
+
+    const divSelectedStageTextContainer = document.getElementById(
+        'divSelectedStageTextContainer'
+    );
+    divSelectedStageTextContainer.classList.remove('runAnimation');
+    void divSelectedStageTextContainer.offsetWidth;
+    divSelectedStageTextContainer.classList.add('runAnimation');
 }
 
 const initTimeline = () => {
