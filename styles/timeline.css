@@ -103,7 +103,7 @@
 }
 
 .runAnimation {
-    animation: fadeInAnimation ease 0.5s;
+    animation: fadeInAnimation ease 0.45s;
     animation-iteration-count: 1;
 }
 
