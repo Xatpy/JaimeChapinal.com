@@ -199,7 +199,6 @@ body {
 .img-product {
     width: 100%;
     height: 100%;
-
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -254,6 +253,11 @@ body {
     -moz-transition: all 300ms ease-in-out;
     -o-transition: all 300ms ease-in-out;
     -ms-transition: all 300ms ease-in-out;
+
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
 }
 
 .image-caption h5 {
@@ -376,7 +380,41 @@ body {
     margin: 30px;
 }
 
-@media screen and (max-width: 632px) {
+@media all and (min-width: 769px) {
+    .desktopProductsContent {
+        display: block;
+    }
+    .mobileProductsContent {
+        display: none;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .desktopProductsContent {
+        display: none;
+    }
+    .mobileProductsContent {
+        display: block;
+    }
+
+    .image-caption {
+        top: -110%;
+        height: 108%;
+    }
+
+    .image-caption h5 {
+        padding: 25px 0px 2px 0px;
+        margin-left: 0;
+        text-transform: uppercase;
+        font-size: 2rem;
+    }
+
+    .image-caption p {
+        font-size: 1.5rem;
+    }
+}
+
+@media all and (max-width: 632px) {
     .section {
         font-size: 3em;
         line-height: 1.75em;
@@ -395,26 +433,29 @@ body {
         font-size: 20px;
     }
 
+    .end-component {
+        gap: 40px;
+    }
+
     .main-pings {
-        font-size: 7w;
+        font-size: 6vw;
+        line-height: 2rem;
     }
-}
 
-@media all and (min-width: 769px) {
-    .desktopProductsContent {
-        display: block;
+    .image-caption {
+        top: -130%;
+        height: 108%;
     }
-    .mobileProductsContent {
-        display: none;
-    }
-}
 
-@media all and (max-width: 768px) {
-    .desktopProductsContent {
-        display: none;
+    .image-caption h5 {
+        padding: 0;
+        margin-left: 0;
+        text-transform: uppercase;
+        font-size: 1.5rem;
     }
-    .mobileProductsContent {
-        display: block;
+
+    .image-caption p {
+        font-size: 1rem;
     }
 }
 
