@@ -284,7 +284,7 @@ body {
     flex-direction: column;
     height: 100%;
     width: 100%;
-    font-size: 4vw;
+    font-size: 5vw;
 }
 
 .link-products {
@@ -378,6 +378,24 @@ body {
 .imgResume {
     max-width: 150px;
     margin: 30px;
+}
+
+.transparent {
+    opacity: 0;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation: fadeInAnimation 1.75s;
+    animation-fill-mode: forwards;
 }
 
 @media all and (min-width: 769px) {

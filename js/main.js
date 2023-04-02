@@ -268,37 +268,26 @@ const closeBanner = () => {
     audio.play();
 };
 
-/**
- * section observers
- const observer = new IntersectionObserver((entries) => {
+const initObserversFadeInAnimations = () => {
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach((elem) => {
-            console.log('hola', elem.target.id);
             if (elem.isIntersecting) {
-                const text = elem.target.id;
-                // const text = elem.target.querySelector('h2').innerText;
-                // console.log('Ping! Visible: ', text);
-                if (text === 'sectionE') {
-                    document
-                        .getElementById('idTimeline')
-                        .classList.add('desktopTimelineChange');
-                    console.log('Setup here');
-                    setUpTimelines();
-                }
+                elem.target.classList.add('fadeIn');
             }
         });
     });
 
-    const a = document.getElementsByClassName('section');
-    for (let elem of a) {
-        // console.log(item.id);
+    const transparentNodes = document.getElementsByClassName('transparent');
+    for (let elem of transparentNodes) {
         observer.observe(elem);
     }
- */
+};
 
 window.onload = () => {
     initFaviconTitle();
     initSaluteWave();
     initCookiesBanner();
+    initObserversFadeInAnimations();
     initTooltips();
     initTimeline();
 };
