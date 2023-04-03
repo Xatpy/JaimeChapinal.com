@@ -204,9 +204,6 @@ function clickOnTimeline(id) {
     const foundCareer = mapCareer[id];
 
     const timelineLogo = document.getElementById('timelineLogo');
-    // const timelineStageSelectedTitle = document.getElementById(
-    //     'timelineStageSelectedTitle'
-    // );
     const timelineStageSelectedRole = document.getElementById(
         'timelineStageSelectedRole'
     );
@@ -217,7 +214,7 @@ function clickOnTimeline(id) {
         'timelineStageSelectedProjects'
     );
     timelineLogo.src = foundCareer.imageUrl;
-    // timelineStageSelectedTitle.innerHTML = foundCareer.title ?? '';
+    timelineLogo.alt = 'Alt text image url';
     timelineStageSelectedRole.innerHTML = foundCareer.role ?? '';
     timelineStageSelectedTasks.innerHTML = foundCareer.tasks ?? '';
     timelineStageSelectedProjects.innerHTML = foundCareer.projects ?? '';

@@ -382,8 +382,7 @@
                             <div class="timelineStage">
                                 <div id="timelineStageSelected" class="divSelectedStage">
                                     <div id="divSelectedStageTextContainer" class="divSelectedStageTextContainer runAnimation">
-                                        <img id="timelineLogo" class="selectedStageLogo" />
-                                        <!-- <h4 id="timelineStageSelectedTitle" class="selectedStageTitle">Title</h4> -->
+                                        <img id="timelineLogo" class="selectedStageLogo" alt="Selected stage logo" />
                                         <h6 id="timelineStageSelectedRole" class="selectedStageSubText">Role</h6>
                                         <h6 id="timelineStageSelectedTasks" class="selectedStageSubText">Task</h6>
                                         <h6 id="timelineStageSelectedProjects" class="selectedStageSubText">Projects</h6>
@@ -449,7 +448,7 @@
                 </div>
             </main>
         </div>
-        <!-- <script src="./js/timeline.js"></script> -->
+
         <link href="./styles/timeline.css" rel="stylesheet" />
 
         <script src="./js/main.js"></script>
@@ -457,16 +456,14 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
         <script src="./js/hoverButton.js"></script>
 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-S4WPTM8ZQ5"></script>
         <script>
-            function hover(element) {
-                element.style.backgroundColor = 'yellow';
-                console.log(element);
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
             }
-
-            function hoverOff(element) {
-                element.style.backgroundColor = '#000079';
-                console.log('a');
-            }
+            gtag('js', new Date());
+            gtag('config', 'G-S4WPTM8ZQ5');
         </script>
     </body>
 </html>
