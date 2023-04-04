@@ -221,7 +221,7 @@ body {
 }
 
 .img-product-kindle {
-    background: url(../images/kindle.png) center / cover;
+    background: url(../images/kindleCover.png) center / cover;
 }
 
 .img-product-candy {
@@ -229,7 +229,7 @@ body {
 }
 
 .img-product-spotify {
-    background: url(../images/spotify_2.jpeg) center / cover;
+    background: url(../images/spotifyCover.jpeg) center / cover;
 }
 
 .img-product-ea {
