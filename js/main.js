@@ -55,6 +55,7 @@ const initTooltips = () => {
             animation: 'scale',
             inertia: true,
             arrow: true,
+            hideOnClick: false,
             onShow(instance) {
                 if (typeof instance.props.content !== 'object') {
                     fetch(url)
@@ -237,17 +238,6 @@ const sendPing = () => {
     document.getElementById('bell').classList.remove('bell-animation');
     void document.getElementById('bell').offsetWidth;
     document.getElementById('bell').classList.add('bell-animation');
-    db.collection('pings')
-        .add({
-            userAgent: navigator.userAgent,
-            time: new Date(),
-        })
-        .then(() => {
-            console.log('Ping sent');
-        })
-        .catch((error) => {
-            console.error('Error writing document: ', error);
-        });
 };
 
 const initCookiesBanner = () => {

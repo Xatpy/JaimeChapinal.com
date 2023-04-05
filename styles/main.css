@@ -315,6 +315,10 @@ body {
     height: 50%;
 }
 
+.remove-decorations {
+    text-decoration: none;
+}
+
 .home-image {
     clip-path: circle(100px at center);
     animation-iteration-count: 1;
