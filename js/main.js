@@ -232,7 +232,13 @@ const initTimeline = () => {
     clickOnTimeline('spotify');
 };
 
+const playSound = (soundUrl) => {
+    const audio = new Audio(soundUrl);
+    audio.play();
+};
+
 const sendPing = () => {
+    playSound('./sounds/a.mp3');
     document.getElementById('bell').classList.remove('pulse-button');
     void document.getElementById('bell').offsetWidth;
     document.getElementById('bell').classList.remove('bell-animation');
@@ -240,18 +246,17 @@ const sendPing = () => {
     document.getElementById('bell').classList.add('bell-animation');
 };
 
+const closeBanner = () => {
+    localStorage.setItem('cookies', 'closed');
+    document.getElementById('cookie-banner').classList.add('hidden');
+    playSound('./sounds/cookie.ogg');
+};
+
 const initCookiesBanner = () => {
     if (localStorage.getItem('cookies') != 'closed') {
         document.getElementById('cookie-close').onclick = closeBanner;
         document.getElementById('cookie-banner').classList.remove('hidden');
     }
-};
-
-const closeBanner = () => {
-    localStorage.setItem('cookies', 'closed');
-    document.getElementById('cookie-banner').classList.add('hidden');
-    const audio = new Audio('./images/cookie.ogg');
-    audio.play();
 };
 
 const initObserversFadeInAnimations = () => {
