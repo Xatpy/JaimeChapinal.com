@@ -36,9 +36,6 @@
 }
 
 .desktopTimeline {
-    /* display: flex;
-    flex-direction: column; */
-    /* width: 50%; */
     height: 100%;
     opacity: 0.5s;
 }
@@ -93,7 +90,6 @@
     background-color: #ffd50069;
     border: solid black 3px;
     width: 75%;
-    /* height: 1145px; */
     height: 75%;
     border-radius: 25px;
     padding: 50px;
@@ -251,9 +247,7 @@
     line-height: 1.5;
     margin-bottom: 10px;
 }
-/* .timeline__content span {
-    color: white;
-} */
+
 .timeline--mobile {
     padding: 0;
 }
@@ -352,9 +346,6 @@
 }
 
 @media all and (max-width: 1400px) {
-    /* .timeline--mobile .timeline__item {
-        background-color: black;
-    } */
     .selectedStageTitle {
         font-size: 0.5em;
     }
@@ -368,7 +359,6 @@
         padding: 25px;
         display: flex;
         margin: 2px;
-        /* height: 756px; */
     }
     .timeline__content {
         font-size: 0.75em;
@@ -400,7 +390,6 @@
 
     .timeline__content {
         font-size: 1em;
-        /* background-color: blue; */
         padding: 3px;
     }
 
@@ -445,7 +434,6 @@
 
     .timeline__content {
         font-size: 1em;
-        /* background-color: blue; */
         padding: 2px;
     }
 
@@ -462,12 +450,6 @@
     .selectedStageTitle {
         font-size: 0.65em;
     }
-    .selectedStageSubText {
-        /* font-size: 0.4em; */
-    }
-    /* .timeline--mobile .timeline__item {
-        background-color: pink;
-    } */
     .timeline__content {
         font-size: 0.65em;
     }
