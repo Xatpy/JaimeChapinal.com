@@ -118,7 +118,6 @@ body {
 .main-text-section {
     font-size: 5vw;
     margin: 50px;
-    /* line-height: 1.75em; */
 }
 
 .text-second-screen {
@@ -302,7 +301,7 @@ body {
 }
 
 .end-component-title {
-    height: 20%;
+    height: 30%;
 }
 
 .end-component-bell {
@@ -312,14 +311,14 @@ body {
 }
 
 .end-component-center {
-    height: 50%;
+    height: 40%;
 }
 
 .remove-decorations {
     text-decoration: none;
 }
 
-.home-image {
+.home-image-img {
     clip-path: circle(100px at center);
     animation-iteration-count: 1;
     animation-name: home-image-animation;
@@ -328,6 +327,8 @@ body {
     display: inline-block;
     cursor: grab;
     margin-top: 50px;
+    width: 200px;
+    height: 200px;
 }
 
 @keyframes home-image-animation {
@@ -478,6 +479,21 @@ body {
 
     .image-caption p {
         font-size: 1rem;
+    }
+}
+
+@media all and (max-height: 500px) {
+    .section {
+        font-size: 5vh;
+    }
+    .main-text-section {
+        font-size: 5vh;
+    }
+    .products-title {
+        font-size: 5vh;
+    }
+    .main-pings {
+        font-size: 5vh;
     }
 }
 

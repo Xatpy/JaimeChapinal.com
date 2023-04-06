@@ -498,3 +498,9 @@
         padding: 1px 10px 1px 0;
     }
 }
+
+@media all and (max-height: 575px) {
+    .timelineTitle {
+        font-size: 5vh;
+    }
+}

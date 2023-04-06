@@ -29,10 +29,6 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" />
 
-        <script src="./js/popper.min.js"></script>
-        <script src="./js/tippy-bundle.umd.min.js"></script>
-
-        <!-- Google Tag Manager -->
         <script>
             (function (w, d, s, l, i) {
                 w[l] = w[l] || [];
@@ -45,8 +41,8 @@
                 f.parentNode.insertBefore(j, f);
             })(window, document, 'script', 'dataLayer', 'GTM-T8J34XQ');
         </script>
-        <!-- End Google Tag Manager -->
     </head>
+
     <body>
         <a class="skip-link" href="#maincontent">Skip to main</a>
         <div class="wrapper">
@@ -55,7 +51,7 @@
                     <div>Hi there! <span id="emojiHi" class="wave">👋</span></div>
                     <div>My name is <mark>Jaime Chapinal</mark></div>
                     <div>
-                        <img id="home-image" class="home-image" src="./images/cartoon.jpeg" alt="Cartoon profile picture" />
+                        <img id="home-image-id" class="home-image-img" src="./images/webp/cartoon.webp" alt="Cartoon profile picture" />
                     </div>
                     <div id="cookie-banner" class="cookie-banner hidden">
                         <span></span>
@@ -470,8 +466,11 @@
 
         <script src="./js/main.js"></script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script> -->
+        <script src="./js/3rdParty/gsap.min.js"></script>
         <script src="./js/hoverButton.js"></script>
+        <script src="./js/3rdParty/popper.min.js"></script>
+        <script src="./js/3rdParty/tippy-bundle.umd.min.js"></script>
 
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-S4WPTM8ZQ5"></script>
         <script>
@@ -483,7 +482,6 @@
             gtag('config', 'G-S4WPTM8ZQ5');
         </script>
 
-        <!-- Google Tag Manager (noscript) -->
         <noscript
             ><iframe
                 src="https://www.googletagmanager.com/ns.html?id=GTM-T8J34XQ"
@@ -492,6 +490,5 @@
                 style="display: none; visibility: hidden"
             ></iframe
         ></noscript>
-        <!-- End Google Tag Manager (noscript) -->
     </body>
 </html>

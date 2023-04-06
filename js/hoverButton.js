@@ -67,5 +67,5 @@ class HoverButton {
     }
 }
 
-const btn1 = document.getElementById('home-image');
+const btn1 = document.getElementById('home-image-id');
 new HoverButton(btn1);
