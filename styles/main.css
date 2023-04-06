@@ -331,16 +331,16 @@ body {
 }
 
 .home-image-img {
-    clip-path: circle(100px at center);
+    clip-path: circle(200px at center);
     animation-iteration-count: 1;
     animation-name: home-image-animation;
     animation-duration: 1s;
     transform-origin: 70% 70%;
     display: inline-block;
     cursor: grab;
-    margin-top: 50px;
-    width: 200px;
-    height: 200px;
+    margin-top: 75px;
+    width: 400px;
+    height: 400px;
 }
 
 @keyframes home-image-animation {
@@ -348,7 +348,7 @@ body {
         clip-path: circle(18px at center);
     }
     100% {
-        clip-path: circle(100px at center);
+        clip-path: circle(200px at center);
     }
 }
 
@@ -446,6 +446,21 @@ body {
 
     .image-caption p {
         font-size: 1.5rem;
+    }
+
+    .home-image-img {
+        clip-path: circle(100px at center);
+        width: 200px;
+        height: 200px;
+    }
+
+    @keyframes home-image-animation {
+        0% {
+            clip-path: circle(18px at center);
+        }
+        100% {
+            clip-path: circle(100px at center);
+        }
     }
 }
 

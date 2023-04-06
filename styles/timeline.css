@@ -7,18 +7,20 @@
     color: #ffffff88;
 }
 
+.selectedStageLogo {
+    max-width: 250px;
+    margin-bottom: 25px;
+}
 .selectedStageTitle {
     font-size: 0.75em;
     text-align: center;
-}
-
-.selectedStageLogo {
-    max-width: 250px;
+    font-weight: bolder;
 }
 .selectedStageSubText {
     font-size: 0.5em;
     text-align: center;
     margin: 10px;
+    font-weight: normal;
 }
 
 .sectionTimeline {
@@ -94,10 +96,12 @@
     border-radius: 25px;
     padding: 50px;
 }
+
 .divSelectedStageTextContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 5vh;
 }
 
 .runAnimation {
