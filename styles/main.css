@@ -237,26 +237,36 @@ body {
 }
 
 .img-product-kindle {
-    background: url(../images/kindleCover.png) center / cover;
+    /* background: url(../images/kindleCover.png) center / cover; */
+    background: url(../images/webp/kindleCover.webp) center / cover;
 }
 
 .img-product-candy {
-    background: url(../images/candycrush.jpeg) center / cover;
+    /* background: url(../images/candycrush.jpeg) center / cover; */
+    background: url(../images/webp/candycrush.webp) center / cover;
 }
 
 .img-product-spotify {
-    background: url(../images/spotifyCover.jpeg) center / cover;
+    /* background: url(../images/spotifyCover.jpeg) center / cover; */
+    background: url(../images/webp/spotifyCover.webp) center / cover;
 }
 
 .img-product-ea {
-    background: url(../images/electronicArts.jpg) center / cover;
+    /* background: url(../images/electronicArts.jpg) center / cover; */
+    background: url(../images/webp/electronicArts.webp) center / cover;
 }
 
 .img-product-simfor {
-    background: url(../images/simforSim.jpg) center / cover;
+    /* background: url(../images/simforSim.jpg) center / cover; */
+    background: url(../images/webp/simforSim.webp) center / cover;
 }
 
 .image-caption {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
     cursor: crosshair;
     top: -105%;
     width: 100%;
@@ -276,7 +286,7 @@ body {
     text-align: center;
     margin-left: -15px;
     text-transform: uppercase;
-    font-size: 25px;
+    font-size: 50px;
     color: #00bfb6;
 }
 
@@ -442,6 +452,7 @@ body {
         margin-left: 0;
         text-transform: uppercase;
         font-size: 2rem;
+        font-size: 25px;
     }
 
     .image-caption p {
@@ -502,6 +513,7 @@ body {
         margin-left: 0;
         text-transform: uppercase;
         font-size: 1.5rem;
+        font-size: 25px;
     }
 
     .image-caption p {
