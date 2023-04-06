@@ -329,7 +329,8 @@ body {
 .end-component-bell {
     display: flex;
     height: 30%;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 30px;
 }
 
 .end-component-center {

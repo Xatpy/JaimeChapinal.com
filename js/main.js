@@ -109,7 +109,13 @@ const initTooltips = () => {
     });
 };
 
+let = g_currentId = '';
 function clickOnTimeline(id) {
+    if (id === g_currentId) {
+        return;
+    }
+
+    g_currentId = id;
     // const baseUrl = '../images/webp'; // Local
     const baseUrl =
         'https://raw.githubusercontent.com/Xatpy/JaimeChapinal.com_v2/main/images/webp';
