@@ -110,19 +110,19 @@ const initTooltips = () => {
 };
 
 function clickOnTimeline(id) {
-    // const baseUrl = ".." // Local
+    // const baseUrl = '../images/webp'; // Local
     const baseUrl =
-        'https://raw.githubusercontent.com/Xatpy/JaimeChapinal.com_v2/main';
+        'https://raw.githubusercontent.com/Xatpy/JaimeChapinal.com_v2/main/images/webp';
     const mapCareer = {
         spotify: {
-            imageUrl: baseUrl + '/images/logos/spotify.png',
+            imageUrl: baseUrl + '/logos/spotify.webp',
             title: 'Spotfiy',
             role: 'Software Engineer II',
             tasks: 'Release squad',
             projects: 'Spotify Desktop app. Internal developer tools.',
         },
         amazon: {
-            imageUrl: baseUrl + '/images/logos/amazon.png',
+            imageUrl: baseUrl + '/logos/amazon.webp',
             title: 'Amazon',
             role: 'Software Development Engineer II',
             tasks: 'European Customer Experience Engineer: API, backend, mobile, OPS (retail). Kindle Reader: Maintaining PC/Mac reader apps and developing new web reader',
@@ -130,28 +130,28 @@ function clickOnTimeline(id) {
                 'Price drops in cart, Amazon Kids, Kindle Reader for PC/Mac/Web]',
         },
         king: {
-            imageUrl: baseUrl + '/images/logos/king.png',
+            imageUrl: baseUrl + '/logos/king.webp',
             title: 'King',
             role: 'C++ Game Programmer',
             tasks: 'Gameplay and tools programmer. New content team: New in-game features (blockers, map functionalities) and art/design production toolsets.',
             projects: 'Candy Crush Saga',
         },
         fl: {
-            imageUrl: baseUrl + '/images/logos/futureLighthouse.png',
+            imageUrl: baseUrl + '/logos/futureLighthouse.webp',
             title: 'Future Lighthouse',
             role: 'VR Engineer',
             tasks: 'VR programming, QA certification bug fixing and publishing.',
             projects: 'Melita (Gear VR), In the Cloud: VR Afterlife (PS4)',
         },
         gameloft: {
-            imageUrl: baseUrl + '/images/logos/gameloft.png',
+            imageUrl: baseUrl + '/logos/gameloft.webp',
             title: 'Gameloft',
             role: 'UI Engineer',
             tasks: 'Bug fixing (upd.6) and new Unity prototyping for an unannounced title.',
             projects: 'Asphalt Extreme, Unannounced title',
         },
         ea: {
-            imageUrl: baseUrl + '/images/logos/ea.png',
+            imageUrl: baseUrl + '/logos/ea.webp',
             title: 'Electronic Arts',
             role: 'Software Engineer',
             tasks: 'Frostbite, Unity3D, Ignite and internal tools. PC,PS4,X1,PS3,X360. Internationalization, localization and bug fixing',
@@ -159,42 +159,42 @@ function clickOnTimeline(id) {
                 'FIFA 17, Battlefield 1, Star Wars Battlefront, FIFA 16,Plants vs Zombies: Heroes, Mirror’s Edge: Catalyst , Need for Speed',
         },
         carto: {
-            imageUrl: baseUrl + '/images/logos/carto.png',
+            imageUrl: baseUrl + '/logos/carto.webp',
             title: 'Carto',
             role: 'Developer',
             tasks: 'Front-End Engineer. QA. Technical Support',
             projects: '',
         },
         simfor: {
-            imageUrl: baseUrl + '/images/logos/simfor.png',
+            imageUrl: baseUrl + '/logos/simfor.webp',
             title: 'Simfor',
             role: 'Programmer',
             tasks: 'Virtual simulators: cranes, cars, buses, trucks and military vehicles. C++,(OSG), DirectX and Qt. Gameplay, tools and shaders',
             projects: '',
         },
         complutense: {
-            imageUrl: baseUrl + '/images/logos/complutense.png',
+            imageUrl: baseUrl + '/logos/complutense.webp',
             title: 'University Complutense of Madrid',
             role: 'Student',
             tasks: 'Master in Video Games Development (Programming)',
             projects: '',
         },
         granada: {
-            imageUrl: baseUrl + '/images/logos/granada.png',
+            imageUrl: baseUrl + '/logos/granada.webp',
             title: 'University of Granada',
             role: 'Student',
             tasks: 'Master in Software Development (Human – Computer Interaction)',
             projects: '',
         },
         mediapost: {
-            imageUrl: baseUrl + '/images/logos/mediapost.png',
+            imageUrl: baseUrl + '/logos/mediapost.webp',
             title: 'Mediapost',
             role: 'Junior programmer',
             tasks: 'Marketing and logistic web apps. Technologies: ASP.NET, C#, Javascript, web services and thermal printers',
             projects: '',
         },
         uc3m: {
-            imageUrl: baseUrl + '/images/logos/uc3m.png',
+            imageUrl: baseUrl + '/logos/uc3m.webp',
             title: 'University Carlos III of Madrid',
             role: 'Student',
             tasks: '2007-2010: Technical Engineering in Computer Managements, 2010-2011: Computer Engineering Degree',
