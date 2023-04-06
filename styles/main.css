@@ -306,7 +306,14 @@ body {
     flex-direction: column;
     height: 100%;
     width: 100%;
-    font-size: 5vw;
+    font-size: 4vw;
+}
+
+.div-pet-projects {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .link-products {
@@ -321,25 +328,37 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .end-component-title {
-    height: 30%;
+    height: 25%;
 }
 
 .end-component-bell {
     display: flex;
-    height: 30%;
+    height: 25%;
     justify-content: center;
     gap: 30px;
 }
 
 .end-component-center {
-    height: 40%;
+    height: 50%;
+    gap: 2%;
+}
+
+.main-pings-bolder-text {
+    font-weight: bolder;
+    display: inline-block;
+}
+
+.pet-project-link {
+    color: #e4e4e4;
 }
 
 .remove-decorations {
     text-decoration: none;
+    width: 50%;
 }
 
 .home-image-img {
@@ -481,6 +500,7 @@ body {
     .section {
         font-size: 3em;
         line-height: 1.75em;
+        text-shadow: none;
     }
 
     .main-text-section {
@@ -501,7 +521,7 @@ body {
     }
 
     .main-pings {
-        font-size: 6vw;
+        /* font-size: 4vw; */
         line-height: 2rem;
     }
 
