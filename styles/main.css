@@ -3,13 +3,12 @@
     margin: 0;
     padding: 0;
 
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Old versions of Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently
-                                supported by Chrome, Edge, Opera and Firefox */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 
     max-width: 100%;
     overflow-x: clip;
@@ -219,6 +218,24 @@ body {
     transform: scale(1.3) rotate(5deg);
 }
 
+.cookie-banner {
+    font-size: 20px;
+    position: fixed;
+    bottom: 40px;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    padding: 5px 14px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #eee;
+    border-radius: 5px;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    color: grey;
+}
+
 .img-product-kindle {
     background: url(../images/kindleCover.png) center / cover;
 }
@@ -252,11 +269,6 @@ body {
     -moz-transition: all 300ms ease-in-out;
     -o-transition: all 300ms ease-in-out;
     -ms-transition: all 300ms ease-in-out;
-
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; */
 }
 
 .image-caption h5 {
@@ -496,23 +508,3 @@ body {
         font-size: 5vh;
     }
 }
-
-/* @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
-    .section {
-        font-size: 3em;
-    }
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    .section {
-        font-size: 3em;
-    }
-}
-
-/* iPads (portrait and landscape) ----------- */
-/*@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-    .section {
-        font-size: 3em;
-    }
-}
-*/

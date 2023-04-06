@@ -244,15 +244,11 @@ const initCookiesBanner = () => {
     if (localStorage.getItem('cookies') != 'closed') {
         document.getElementById('cookie-close').onclick = closeBanner;
         document.getElementById('cookie-banner').classList.remove('hidden');
-        document.getElementById('cookie-banner').classList.add('fade-in');
-    } else {
-        document.getElementById('cookie-banner').classList.remove('fade-in');
     }
 };
 
 const closeBanner = () => {
     localStorage.setItem('cookies', 'closed');
-    document.getElementById('cookie-banner').classList.remove('fade-in');
     document.getElementById('cookie-banner').classList.add('hidden');
     const audio = new Audio('./images/cookie.ogg');
     audio.play();
