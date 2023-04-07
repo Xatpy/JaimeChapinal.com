@@ -9,7 +9,7 @@
     "theme_color": "#317EFB",
     "icons": [
         {
-            "src": "images/cartoon.webp",
+            "src": "images/webp/cartoon.webp",
             "sizes": "400x400",
             "type": "image/png"
         }

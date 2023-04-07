@@ -57,7 +57,9 @@ const initTooltips = () => {
             arrow: true,
             hideOnClick: false,
             onShow(instance) {
+                console.log('On show', instance);
                 if (typeof instance.props.content !== 'object') {
+                    console.log('Fetching ', url);
                     fetch(url)
                         .then((response) => response.blob())
                         .then((blob) => {
@@ -71,6 +73,7 @@ const initTooltips = () => {
                             image.src = url;
                             // Update the tippy content with the image
                             instance.setContent(image);
+                            console.log('Update instance');
                         })
                         .catch((error) => {
                             // Fallback if the network request failed
