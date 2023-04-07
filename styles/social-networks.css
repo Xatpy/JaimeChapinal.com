@@ -47,6 +47,10 @@
     transition: all 0.5s ease;
 }
 
+.wrapper-social-networker ul li .fa-linkedin {
+    color: #3b5998aa;
+}
+
 .wrapper-social-networker ul li:hover .fa-linkedin {
     color: #3b5998;
     text-shadow: 0 0 15px #2867b2;
@@ -57,6 +61,10 @@
     border: 5px solid #00aced;
     box-shadow: 0 0 15px #00aced;
     transition: all 0.5s ease;
+}
+
+.wrapper-social-networker ul li .fa-twitter {
+    color: #00acedaa;
 }
 
 .wrapper-social-networker ul li:hover .fa-twitter {
@@ -71,6 +79,10 @@
     transition: all 0.5s ease;
 }
 
+.wrapper-social-networker ul li .fa-github {
+    color: #333333aa;
+}
+
 .wrapper-social-networker ul li:hover .fa-github {
     color: #333;
     text-shadow: 0 0 15px #333;
@@ -83,6 +95,10 @@
     transition: all 0.5s ease;
 }
 
+.wrapper-social-networker ul li .fa-envelope {
+    color: #4dc247aa;
+}
+
 .wrapper-social-networker ul li:hover .fa-envelope {
     color: #4dc247;
     text-shadow: 0 0 15px #4dc247;
@@ -93,6 +109,10 @@
     border: 5px solid #f26522;
     box-shadow: 0 0 15px #f26522;
     transition: all 0.5s ease;
+}
+
+.wrapper-social-networker ul li .fa-rss {
+    color: #f26522aa;
 }
 
 .wrapper-social-networker ul li:hover .fa-rss {
