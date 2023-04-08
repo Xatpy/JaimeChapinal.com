@@ -127,7 +127,7 @@ function clickOnTimeline(id) {
         'https://raw.githubusercontent.com/Xatpy/JaimeChapinal.com_v2/main/images/webp';
     const mapCareer = {
         spotify: {
-            imageUrl: baseUrl + '/logos/spotify.webp',
+            imageUrl: baseUrl + '/logos/spotifyLogo.webp',
             title: 'Spotfiy',
             role: 'Software Engineer II',
             tasks: 'Release squad',
@@ -217,6 +217,13 @@ function clickOnTimeline(id) {
     const foundCareer = mapCareer[id];
 
     const timelineLogo = document.getElementById('timelineLogo');
+    timelineLogo.src = foundCareer.imageUrl;
+    timelineLogo.alt = 'Alt text image url';
+    if (id === 'spotify') {
+        timelineLogo.classList.add('logoBorderRadius');
+    } else {
+        timelineLogo.classList.remove('logoBorderRadius');
+    }
     const timelineStageSelectedRole = document.getElementById(
         'timelineStageSelectedRole'
     );
@@ -226,8 +233,6 @@ function clickOnTimeline(id) {
     const timelineStageSelectedProjects = document.getElementById(
         'timelineStageSelectedProjects'
     );
-    timelineLogo.src = foundCareer.imageUrl;
-    timelineLogo.alt = 'Alt text image url';
     timelineStageSelectedRole.innerHTML = foundCareer.role ?? '';
     timelineStageSelectedTasks.innerHTML = foundCareer.tasks ?? '';
     timelineStageSelectedProjects.innerHTML = foundCareer.projects ?? '';
