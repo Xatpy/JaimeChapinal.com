@@ -57,26 +57,19 @@ const initTooltips = () => {
             arrow: true,
             hideOnClick: false,
             onShow(instance) {
-                console.log('On show', instance);
                 if (typeof instance.props.content !== 'object') {
-                    console.log('Fetching ', url);
                     fetch(url)
                         .then((response) => response.blob())
                         .then((blob) => {
-                            // Convert the blob into a URL
                             const url = URL.createObjectURL(blob);
-                            // Create an image
                             const image = new Image();
                             image.width = 200;
                             image.height = 200;
                             image.style.display = 'block';
                             image.src = url;
-                            // Update the tippy content with the image
                             instance.setContent(image);
-                            console.log('Update instance');
                         })
                         .catch((error) => {
-                            // Fallback if the network request failed
                             instance.setContent(`Request failed. ${error}`);
                         });
                 }
@@ -111,6 +104,16 @@ const initTooltips = () => {
         createTooltip(n.id, n.gifUrl);
     });
 };
+
+function updateSelectedItemAfter(selectedId) {
+    g_htmlTimelineElements.forEach((htmlElement) => {
+        if (htmlElement.id === `item-${selectedId}`) {
+            htmlElement.classList.add('timeline__selected');
+        } else {
+            htmlElement.classList.remove('timeline__selected');
+        }
+    });
+}
 
 let = g_currentId = '';
 function clickOnTimeline(id) {
@@ -235,10 +238,31 @@ function clickOnTimeline(id) {
     divSelectedStageTextContainer.classList.remove('runAnimation');
     void divSelectedStageTextContainer.offsetWidth;
     divSelectedStageTextContainer.classList.add('runAnimation');
+
+    updateSelectedItemAfter(id);
 }
 
+let g_htmlTimelineElements = [];
 const initTimeline = () => {
     clickOnTimeline('spotify');
+
+    const listIds = [
+        'item-spotify',
+        'item-amazon',
+        'item-king',
+        'item-fl',
+        'item-gameloft',
+        'item-ea',
+        'item-carto',
+        'item-simfor',
+        'item-complutense',
+        'item-granada',
+        'item-mediapost',
+        'item-uc3m',
+    ];
+    listIds.forEach((id) => {
+        g_htmlTimelineElements.push(document.getElementById(id));
+    });
 };
 
 const playSound = (soundUrl) => {

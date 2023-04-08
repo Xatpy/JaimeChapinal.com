@@ -175,6 +175,11 @@
     width: 20px;
     z-index: 1;
 }
+.timeline__selected::after {
+    background-color: gold;
+    border: 4px solid #a48a00;
+}
+
 .timeline__item.animated {
     animation-duration: 1s;
     animation-fill-mode: both;
