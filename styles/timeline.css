@@ -124,6 +124,7 @@
     box-sizing: border-box;
     position: relative;
     line-height: 1;
+    height: 100%;
 }
 .timeline *,
 .timeline *::before,
@@ -141,10 +142,17 @@
     width: 4px;
     z-index: 1;
 }
+.timeline__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
 .timeline__wrap {
     overflow: hidden;
     position: relative;
     z-index: 2;
+    height: 100%;
 }
 .timeline__item {
     font-size: 1rem;
@@ -420,6 +428,10 @@
         line-height: 1.1;
         margin: 4px;
     }
+
+    .divSelectedStage {
+        border-width: 2px;
+    }
 }
 
 @media all and (max-width: 1200px) {
@@ -429,10 +441,6 @@
 }
 
 @media only screen and (max-device-width: 1024px) and (orientation: landscape) {
-    .timeline--mobile .timeline__item {
-        background-color: red;
-    }
-
     .timeline__item {
         font-size: 0.6rem;
         padding: 0px 1px 0px 0;

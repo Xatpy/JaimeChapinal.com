@@ -496,9 +496,27 @@ body {
     }
 }
 
+@media only screen and (min-device-width: 600px) and (orientation: landscape) {
+    .home-image-img {
+        margin-top: 35px;
+        clip-path: circle(100px at center);
+        width: 200px;
+        height: 200px;
+    }
+
+    @keyframes home-image-animation {
+        0% {
+            clip-path: circle(18px at center);
+        }
+        100% {
+            clip-path: circle(100px at center);
+        }
+    }
+}
+
 @media all and (max-width: 632px) {
     .section {
-        font-size: 3em;
+        font-size: 5vw;
         line-height: 1.75em;
         text-shadow: none;
     }
@@ -521,8 +539,11 @@ body {
     }
 
     .main-pings {
-        /* font-size: 4vw; */
         line-height: 2rem;
+    }
+
+    .end-component {
+        gap: 10px;
     }
 
     .image-caption {
