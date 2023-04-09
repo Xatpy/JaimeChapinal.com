@@ -306,7 +306,7 @@ body {
     flex-direction: column;
     height: 100%;
     width: 100%;
-    font-size: 4vw;
+    font-size: 3.5vw;
 }
 
 .div-pet-projects {
@@ -344,7 +344,7 @@ body {
 
 .end-component-center {
     height: 50%;
-    gap: 2%;
+    gap: 3.5%;
 }
 
 .main-pings-bolder-text {
@@ -496,7 +496,7 @@ body {
     }
 }
 
-@media only screen and (min-device-width: 600px) and (orientation: landscape) {
+@media only screen and (min-device-width: 600px) and (max-device-width: 1250px) and (orientation: landscape) {
     .home-image-img {
         margin-top: 35px;
         clip-path: circle(100px at center);
@@ -547,7 +547,7 @@ body {
     }
 
     .image-caption {
-        top: -130%;
+        /* top: -130%; */
         height: 108%;
     }
 
@@ -555,12 +555,15 @@ body {
         padding: 0;
         margin-left: 0;
         text-transform: uppercase;
-        font-size: 1.5rem;
+        font-size: 4vw;
         font-size: 25px;
     }
 
     .image-caption p {
-        font-size: 1rem;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 3vw;
+        line-height: 1rem;
     }
 }
 
