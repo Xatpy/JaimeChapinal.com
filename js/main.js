@@ -123,8 +123,9 @@ function clickOnTimeline(id) {
 
     g_currentId = id;
     // const baseUrl = '../images/webp'; // Local
-    const baseUrl =
-        'https://raw.githubusercontent.com/Xatpy/JaimeChapinal.com_v2/main/images/webp';
+    // const baseUrl =
+    //     'https://raw.githubusercontent.com/Xatpy/JaimeChapinal.com_v2/main/images/webp';
+    const baseUrl = 'https://jaimechapinal.com/images/webp/';
     const mapCareer = {
         spotify: {
             imageUrl: baseUrl + '/logos/spotifyLogo.webp',
