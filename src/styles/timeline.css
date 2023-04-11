@@ -233,6 +233,9 @@
     display: flex;
     flex-direction: column;
 }
+.timeline__active {
+    border: solid 2px gold;
+}
 .timeline__content:active {
     border: solid 2px gold;
 }
