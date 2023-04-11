@@ -295,6 +295,8 @@ body {
     text-align: center;
     font-family: 'Overpass Mono', monospace;
     color: #fff;
+    width: 90%;
+    gap: 1.33%;
 }
 
 .image-caption:hover {
@@ -452,6 +454,16 @@ body {
     }
     .mobileProductsContent {
         display: none;
+    }
+}
+
+@media all and (min-width: 769px) and (max-width: 1200px) {
+    .image-caption h5 {
+        font-size: 4vw;
+    }
+
+    .image-caption p {
+        font-size: 3vw;
     }
 }
 
