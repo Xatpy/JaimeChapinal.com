@@ -1,15 +1,3 @@
-const USE_SW = false;
-if (USE_SW && 'serviceWorker' in navigator) {
-    navigator.serviceWorker
-        .register('./sw.js')
-        .then((reg) => {
-            console.log('Service worker registed', reg);
-        })
-        .catch((err) => {
-            console.log('Errors registering service worker', err);
-        });
-}
-
 const initSaluteWave = () => {
     document.getElementById('emojiHi').onmouseenter = () => {
         const emojiHi = document.getElementById('emojiHi');
@@ -115,7 +103,7 @@ function updateSelectedItemAfter(selectedId) {
     });
 }
 
-let = g_currentId = '';
+let g_currentId = '';
 function clickOnTimeline(id) {
     if (id === g_currentId) {
         return;
