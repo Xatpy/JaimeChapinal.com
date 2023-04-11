@@ -76,9 +76,13 @@ const initTooltips = ()=>{
     });
 };
 function updateSelectedItemAfter(selectedId) {
-    g_htmlTimelineElements.forEach((htmlElement)=>{
+    g_htmlTimelineIdsBall.forEach((htmlElement)=>{
         if (htmlElement.id === `item-${selectedId}`) htmlElement.classList.add("timeline__selected");
         else htmlElement.classList.remove("timeline__selected");
+    });
+    g_htmlTimelineSpeechBubble.forEach((htmlElement)=>{
+        if (htmlElement.id === `timeline-${selectedId}`) htmlElement.classList.add("timeline__active");
+        else htmlElement.classList.remove("timeline__active");
     });
 }
 let g_currentId = "";
@@ -193,25 +197,27 @@ function clickOnTimeline(id) {
     divSelectedStageTextContainer.classList.add("runAnimation");
     updateSelectedItemAfter(id);
 }
-let g_htmlTimelineElements = [];
+let g_htmlTimelineIdsBall = [];
+let g_htmlTimelineSpeechBubble = [];
 const initTimeline = ()=>{
     clickOnTimeline("spotify");
-    const listIds = [
-        "item-spotify",
-        "item-amazon",
-        "item-king",
-        "item-fl",
-        "item-gameloft",
-        "item-ea",
-        "item-carto",
-        "item-simfor",
-        "item-complutense",
-        "item-granada",
-        "item-mediapost",
-        "item-uc3m"
+    const companiesId = [
+        "spotify",
+        "amazon",
+        "king",
+        "fl",
+        "gameloft",
+        "ea",
+        "carto",
+        "simfor",
+        "complutense",
+        "granada",
+        "mediapost",
+        "uc3m"
     ];
-    listIds.forEach((id)=>{
-        g_htmlTimelineElements.push(document.getElementById(id));
+    companiesId.forEach((id)=>{
+        g_htmlTimelineIdsBall.push(document.getElementById(`item-${id}`));
+        g_htmlTimelineSpeechBubble.push(document.getElementById(`timeline-${id}`));
     });
 };
 const playSound = (soundUrl)=>{
