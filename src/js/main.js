@@ -218,8 +218,12 @@ function clickOnTimeline(id) {
     timelineLogo.alt = 'Alt text image url';
     if (id === 'spotify') {
         timelineLogo.classList.add('logoBorderRadius');
+        timelineLogo.width = 250;
+        timelineLogo.height = 85;
     } else {
         timelineLogo.classList.remove('logoBorderRadius');
+        timelineLogo.width = '250';
+        timelineLogo.height = '250';
     }
     const timelineStageSelectedRole = document.getElementById(
         'timelineStageSelectedRole'
