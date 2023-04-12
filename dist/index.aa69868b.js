@@ -1,3 +1,7 @@
+let g_indexTitle = -1;
+let g_currentTimelineId = "";
+let g_htmlTimelineIdsBall = [];
+let g_htmlTimelineSpeechBubble = [];
 const initSaluteWave = ()=>{
     document.getElementById("emojiHi").onmouseenter = ()=>{
         const emojiHi = document.getElementById("emojiHi");
@@ -6,7 +10,6 @@ const initSaluteWave = ()=>{
         emojiHi.classList.add("wave");
     };
 };
-let gIndexTitle = -1;
 const setTitleFavicon = ()=>{
     const setFavicon = (char)=>{
         const linkForFavicon = document.querySelector(`head > link[rel='icon']`);
@@ -17,15 +20,13 @@ const setTitleFavicon = ()=>{
         linkForFavicon.setAttribute(`href`, `data:image/svg+xml,${svg}`);
     };
     const title = "Jaime Chapinal";
-    gIndexTitle++;
-    if (gIndexTitle >= title.length) gIndexTitle = 0;
-    setFavicon(title[gIndexTitle]);
+    g_indexTitle++;
+    if (g_indexTitle >= title.length) g_indexTitle = 0;
+    setFavicon(title[g_indexTitle]);
 };
 const initFaviconTitle = ()=>{
     const myInterval = setInterval(setTitleFavicon, 1000);
 };
-// TODO: Fix error of Tippy if trying to set the tooltip but the image has
-// not been loaded yet
 const initTooltips = ()=>{
     const createTooltip = (id, url)=>{
         tippy(`#${id}`, {
@@ -85,10 +86,9 @@ function updateSelectedItemAfter(selectedId) {
         else htmlElement.classList.remove("timeline__active");
     });
 }
-let g_currentId = "";
 function clickOnTimeline(id) {
-    if (id === g_currentId) return;
-    g_currentId = id;
+    if (id === g_currentTimelineId) return;
+    g_currentTimelineId = id;
     // const baseUrl = '../images/webp'; // Local
     // const baseUrl =
     //     'https://raw.githubusercontent.com/Xatpy/JaimeChapinal.com_v2/main/images/webp';
@@ -197,8 +197,6 @@ function clickOnTimeline(id) {
     divSelectedStageTextContainer.classList.add("runAnimation");
     updateSelectedItemAfter(id);
 }
-let g_htmlTimelineIdsBall = [];
-let g_htmlTimelineSpeechBubble = [];
 const initTimeline = ()=>{
     clickOnTimeline("spotify");
     const companiesId = [
