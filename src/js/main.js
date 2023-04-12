@@ -1,3 +1,8 @@
+let g_indexTitle = -1;
+let g_currentTimelineId = '';
+let g_htmlTimelineIdsBall = [];
+let g_htmlTimelineSpeechBubble = [];
+
 const initSaluteWave = () => {
     document.getElementById('emojiHi').onmouseenter = () => {
         const emojiHi = document.getElementById('emojiHi');
@@ -7,7 +12,6 @@ const initSaluteWave = () => {
     };
 };
 
-let gIndexTitle = -1;
 const setTitleFavicon = () => {
     const setFavicon = (char) => {
         const linkForFavicon = document.querySelector(
@@ -23,19 +27,17 @@ const setTitleFavicon = () => {
     };
 
     const title = 'Jaime Chapinal';
-    gIndexTitle++;
-    if (gIndexTitle >= title.length) {
-        gIndexTitle = 0;
+    g_indexTitle++;
+    if (g_indexTitle >= title.length) {
+        g_indexTitle = 0;
     }
-    setFavicon(title[gIndexTitle]);
+    setFavicon(title[g_indexTitle]);
 };
 
 const initFaviconTitle = () => {
     const myInterval = setInterval(setTitleFavicon, 1000);
 };
 
-// TODO: Fix error of Tippy if trying to set the tooltip but the image has
-// not been loaded yet
 const initTooltips = () => {
     const createTooltip = (id, url) => {
         tippy(`#${id}`, {
@@ -111,13 +113,12 @@ function updateSelectedItemAfter(selectedId) {
     });
 }
 
-let g_currentId = '';
 function clickOnTimeline(id) {
-    if (id === g_currentId) {
+    if (id === g_currentTimelineId) {
         return;
     }
 
-    g_currentId = id;
+    g_currentTimelineId = id;
     // const baseUrl = '../images/webp'; // Local
     // const baseUrl =
     //     'https://raw.githubusercontent.com/Xatpy/JaimeChapinal.com_v2/main/images/webp';
@@ -218,12 +219,8 @@ function clickOnTimeline(id) {
     timelineLogo.alt = 'Alt text image url';
     if (id === 'spotify') {
         timelineLogo.classList.add('logoBorderRadius');
-        timelineLogo.width = 250;
-        timelineLogo.height = 85;
     } else {
         timelineLogo.classList.remove('logoBorderRadius');
-        timelineLogo.width = '250';
-        timelineLogo.height = '250';
     }
     const timelineStageSelectedRole = document.getElementById(
         'timelineStageSelectedRole'
@@ -248,8 +245,6 @@ function clickOnTimeline(id) {
     updateSelectedItemAfter(id);
 }
 
-let g_htmlTimelineIdsBall = [];
-let g_htmlTimelineSpeechBubble = [];
 const initTimeline = () => {
     clickOnTimeline('spotify');
 
