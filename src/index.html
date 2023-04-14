@@ -223,11 +223,7 @@
                                 <div class="timeline timeline--loaded timeline--mobile" style="opacity: 1">
                                     <div class="timeline__wrap">
                                         <div class="timeline__items">
-                                            <div
-                                                class="timeline__item timeline__item timeline__selected"
-                                                onclick="clickOnTimeline('spotify')"
-                                                id="item-spotify"
-                                            >
+                                            <div class="timeline__item timeline__item timeline__selected" id="item-spotify">
                                                 <div class="timeline__item__inner">
                                                     <div class="timeline__content__wrap">
                                                         <div id="timeline-spotify" class="timeline__content colorSpotify timeline__active">
@@ -237,7 +233,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="timeline__item timeline__item" onclick="clickOnTimeline('amazon')" id="item-amazon">
+                                            <div class="timeline__item timeline__item" id="item-amazon">
                                                 <div class="timeline__item__inner">
                                                     <div class="timeline__content__wrap">
                                                         <div id="timeline-amazon" class="timeline__content colorAmazon">
@@ -247,7 +243,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="timeline__item timeline__item" onclick="clickOnTimeline('king')" id="item-king">
+                                            <div class="timeline__item timeline__item" id="item-king">
                                                 <div class="timeline__item__inner">
                                                     <div class="timeline__content__wrap">
                                                         <div id="timeline-king" class="timeline__content colorKing">
@@ -438,7 +434,7 @@
 
         <link href="./styles/timeline.css" rel="stylesheet" />
 
-        <script src="./js/main.js"></script>
+        <script type="module" src="./js/main.js"></script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
         <script src="./js/hoverButton.js"></script>

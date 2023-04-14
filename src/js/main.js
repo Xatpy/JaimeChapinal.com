@@ -1,3 +1,22 @@
+import gifFootball from '../images/gifs/football.gif';
+import gifVideogames from '../images/gifs/videogames.gif';
+import gifProgramming from '../images/gifs/programming.gif';
+import gifOffice from '../images/gifs/the-office.gif';
+import gifGifs from '../images/gifs/gifs.gif';
+
+import spotifyImage from '../images/webp/logos/spotifyLogo.webp';
+import amazonImg from '../images/webp/logos/amazon.webp';
+import imgKing from '../images/webp/logos/king.webp';
+import imgFL from '../images/webp/logos/futureLighthouse.webp';
+import imgGameloft from '../images/webp/logos/gameloft.webp';
+import imgGranada from '../images/webp/logos/granada.webp';
+import imgEA from '../images/webp/logos/ea.webp';
+import imgCarto from '../images/webp/logos/carto.webp';
+import imgSimfor from '../images/webp/logos/simfor.webp';
+import imgComplutense from '../images/webp/logos/complutense.webp';
+import imgMediapost from '../images/webp/logos/mediapost.webp';
+import imgUC3M from '../images/webp/logos/uc3m.webp';
+
 let g_indexTitle = -1;
 let g_currentTimelineId = '';
 let g_htmlTimelineIdsBall = [];
@@ -70,23 +89,23 @@ const initTooltips = () => {
     const arraryGifInterests = [
         {
             id: 'gif-football',
-            gifUrl: './images/gifs/football.gif',
+            gifUrl: gifFootball,
         },
         {
             id: 'gif-videogames',
-            gifUrl: './images/gifs/videogames.gif',
+            gifUrl: gifVideogames,
         },
         {
             id: 'gif-programming',
-            gifUrl: './images/gifs/programming.gif',
+            gifUrl: gifProgramming,
         },
         {
             id: 'gif-office',
-            gifUrl: './images/gifs/the-office.gif',
+            gifUrl: gifOffice,
         },
         {
             id: 'gif-gifs',
-            gifUrl: './images/gifs/gifs.gif',
+            gifUrl: gifGifs,
         },
     ];
 
@@ -113,26 +132,29 @@ function updateSelectedItemAfter(selectedId) {
     });
 }
 
-function clickOnTimeline(id) {
+function clickOnTimeline(event) {
+    updateTimeline(event.currentTarget.id.replace('item-', ''));
+}
+function updateTimeline(id) {
     if (id === g_currentTimelineId) {
         return;
     }
 
     g_currentTimelineId = id;
-    // const baseUrl = '../images/webp'; // Local
+    const baseUrl = '../images/webp'; // Local
     // const baseUrl =
     //     'https://raw.githubusercontent.com/Xatpy/JaimeChapinal.com_v2/main/images/webp';
-    const baseUrl = 'https://jaimechapinal.com/images/webp/';
+    // const baseUrl = 'https://jaimechapinal.com/images/webp/';
     const mapCareer = {
         spotify: {
-            imageUrl: baseUrl + '/logos/spotifyLogo.webp',
+            image: spotifyImage,
             title: 'Spotfiy',
             role: 'Software Engineer II',
             tasks: 'Release squad',
             projects: 'Spotify Desktop app. Internal developer tools.',
         },
         amazon: {
-            imageUrl: baseUrl + '/logos/amazon.webp',
+            image: amazonImg,
             title: 'Amazon',
             role: 'Software Development Engineer II',
             tasks: 'European Customer Experience Engineer: API, backend, mobile, OPS (retail). Kindle Reader: Maintaining PC/Mac reader apps and developing new web reader',
@@ -140,28 +162,28 @@ function clickOnTimeline(id) {
                 'Price drops in cart, Amazon Kids, Kindle Reader for PC/Mac/Web]',
         },
         king: {
-            imageUrl: baseUrl + '/logos/king.webp',
+            image: imgKing,
             title: 'King',
             role: 'C++ Game Programmer',
             tasks: 'Gameplay and tools programmer. New content team: New in-game features (blockers, map functionalities) and art/design production toolsets.',
             projects: 'Candy Crush Saga',
         },
         fl: {
-            imageUrl: baseUrl + '/logos/futureLighthouse.webp',
+            image: imgFL,
             title: 'Future Lighthouse',
             role: 'VR Engineer',
             tasks: 'VR programming, QA certification bug fixing and publishing.',
             projects: 'Melita (Gear VR), In the Cloud: VR Afterlife (PS4)',
         },
         gameloft: {
-            imageUrl: baseUrl + '/logos/gameloft.webp',
+            image: imgGameloft,
             title: 'Gameloft',
             role: 'UI Engineer',
             tasks: 'Bug fixing (upd.6) and new Unity prototyping for an unannounced title.',
             projects: 'Asphalt Extreme, Unannounced title',
         },
         ea: {
-            imageUrl: baseUrl + '/logos/ea.webp',
+            image: imgEA,
             title: 'Electronic Arts',
             role: 'Software Engineer',
             tasks: 'Frostbite, Unity3D, Ignite and internal tools. PC,PS4,X1,PS3,X360. Internationalization, localization and bug fixing',
@@ -169,42 +191,42 @@ function clickOnTimeline(id) {
                 'FIFA 17, Battlefield 1, Star Wars Battlefront, FIFA 16,Plants vs Zombies: Heroes, Mirror’s Edge: Catalyst , Need for Speed',
         },
         carto: {
-            imageUrl: baseUrl + '/logos/carto.webp',
+            image: imgCarto,
             title: 'Carto',
             role: 'Developer',
             tasks: 'Front-End Engineer. QA. Technical Support',
             projects: '',
         },
         simfor: {
-            imageUrl: baseUrl + '/logos/simfor.webp',
+            image: imgSimfor,
             title: 'Simfor',
             role: 'Programmer',
             tasks: 'Virtual simulators: cranes, cars, buses, trucks and military vehicles. C++,(OSG), DirectX and Qt. Gameplay, tools and shaders',
             projects: '',
         },
         complutense: {
-            imageUrl: baseUrl + '/logos/complutense.webp',
+            image: imgComplutense,
             title: 'University Complutense of Madrid',
             role: 'Student',
             tasks: 'Master in Video Games Development (Programming)',
             projects: '',
         },
         granada: {
-            imageUrl: baseUrl + '/logos/granada.webp',
+            image: imgGranada,
             title: 'University of Granada',
             role: 'Student',
             tasks: 'Master in Software Development (Human – Computer Interaction)',
             projects: '',
         },
         mediapost: {
-            imageUrl: baseUrl + '/logos/mediapost.webp',
+            image: imgMediapost,
             title: 'Mediapost',
             role: 'Junior programmer',
             tasks: 'Marketing and logistic web apps. Technologies: ASP.NET, C#, Javascript, web services and thermal printers',
             projects: '',
         },
         uc3m: {
-            imageUrl: baseUrl + '/logos/uc3m.webp',
+            image: imgUC3M,
             title: 'University Carlos III of Madrid',
             role: 'Student',
             tasks: '2007-2010: Technical Engineering in Computer Managements, 2010-2011: Computer Engineering Degree',
@@ -215,7 +237,7 @@ function clickOnTimeline(id) {
     const foundCareer = mapCareer[id];
 
     const timelineLogo = document.getElementById('timelineLogo');
-    timelineLogo.src = foundCareer.imageUrl;
+    timelineLogo.src = foundCareer.image;
     timelineLogo.alt = 'Alt text image url';
     if (id === 'spotify') {
         timelineLogo.classList.add('logoBorderRadius');
@@ -246,8 +268,6 @@ function clickOnTimeline(id) {
 }
 
 const initTimeline = () => {
-    clickOnTimeline('spotify');
-
     const companiesId = [
         'spotify',
         'amazon',
@@ -263,11 +283,15 @@ const initTimeline = () => {
         'uc3m',
     ];
     companiesId.forEach((id) => {
-        g_htmlTimelineIdsBall.push(document.getElementById(`item-${id}`));
+        const timelineItem = document.getElementById(`item-${id}`);
+        timelineItem.onclick = clickOnTimeline;
+        g_htmlTimelineIdsBall.push(timelineItem);
         g_htmlTimelineSpeechBubble.push(
             document.getElementById(`timeline-${id}`)
         );
     });
+
+    updateTimeline('spotify');
 };
 
 const playSound = (soundUrl) => {
