@@ -147,22 +147,20 @@ function updateSelectedItemAfter(selectedId) {
 function clickOnTimeline(event) {
     updateTimeline(event.currentTarget.id.replace('item-', ''));
 }
+
 function updateTimeline(id) {
     if (id === g_currentTimelineId) {
         return;
     }
 
     g_currentTimelineId = id;
-    const baseUrl = '../images/webp'; // Local
-    // const baseUrl =
-    //     'https://raw.githubusercontent.com/Xatpy/JaimeChapinal.com_v2/main/images/webp';
-    // const baseUrl = 'https://jaimechapinal.com/images/webp/';
+    const baseUrl = '../images/webp';
     const mapCareer = {
         spotify: {
             image: spotifyImage,
             title: 'Spotfiy',
-            role: 'Software Engineer II',
-            tasks: 'Release squad',
+            role: 'Senior Software Engineer',
+            tasks: 'Web/Desktop app features development and Client Quality Platform tooling',
             projects: 'Spotify Desktop app. Internal developer tools.',
             width: 250,
             height: 75,
@@ -210,7 +208,7 @@ function updateTimeline(id) {
             role: 'Software Engineer',
             tasks: 'Frostbite, Unity3D, Ignite and internal tools. PC,PS4,X1,PS3,X360. Internationalization, localization and bug fixing',
             projects:
-                'FIFA 17, Battlefield 1, Star Wars Battlefront, FIFA 16,Plants vs Zombies: Heroes, Mirror’s Edge: Catalyst , Need for Speed',
+                'FIFA 17, Battlefield 1, Star Wars Battlefront, FIFA 16,Plants vs. Zombies: Heroes, Mirror’s Edge: Catalyst , Need for Speed',
             width: 250,
             height: 39,
         },
@@ -263,7 +261,7 @@ function updateTimeline(id) {
             image: imgUC3M,
             title: 'University Carlos III of Madrid',
             role: 'Student',
-            tasks: '2007-2010: Technical Engineering in Computer Managements, 2010-2011: Computer Engineering Degree',
+            tasks: '2007-2010: Technical Engineering in Computer Management, 2010-2011: Computer Engineering Degree',
             projects: '',
             width: 250,
             height: 250,
