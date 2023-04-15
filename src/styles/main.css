@@ -374,6 +374,8 @@ body {
     margin-top: 75px;
     width: 400px;
     height: 400px;
+
+    background: url(../images/webp/cartoonHRwebp.webp) center / cover;
 }
 
 @keyframes home-image-animation {
@@ -449,6 +451,10 @@ body {
 }
 
 @media all and (min-width: 769px) {
+    .home-image-img {
+        background: url(../images/webp/cartoon.webp) center / cover;
+    }
+
     .desktopProductsContent {
         display: block;
     }
