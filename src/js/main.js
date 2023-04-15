@@ -4,18 +4,30 @@ import gifProgramming from '../images/gifs/programming.gif';
 import gifOffice from '../images/gifs/the-office.gif';
 import gifGifs from '../images/gifs/gifs.gif';
 
-import spotifyImage from '../images/webp/logos/spotifyLogo.webp';
-import amazonImg from '../images/webp/logos/amazon.webp';
-import imgKing from '../images/webp/logos/king.webp';
-import imgFL from '../images/webp/logos/futureLighthouse.webp';
-import imgGameloft from '../images/webp/logos/gameloft.webp';
-import imgGranada from '../images/webp/logos/granada.webp';
-import imgEA from '../images/webp/logos/ea.webp';
-import imgCarto from '../images/webp/logos/carto.webp';
-import imgSimfor from '../images/webp/logos/simfor.webp';
-import imgComplutense from '../images/webp/logos/complutense.webp';
-import imgMediapost from '../images/webp/logos/mediapost.webp';
-import imgUC3M from '../images/webp/logos/uc3m.webp';
+// import spotifyImage from '../images/webp/logos/spotifyLogo.webp';
+// import amazonImg from '../images/webp/logos/amazon.webp';
+// import imgKing from '../images/webp/logos/king.webp';
+// import imgFL from '../images/webp/logos/futureLighthouse.webp';
+// import imgGameloft from '../images/webp/logos/gameloft.webp';
+// import imgGranada from '../images/webp/logos/granada.webp';
+// import imgEA from '../images/webp/logos/ea.webp';
+// import imgCarto from '../images/webp/logos/carto.webp';
+// import imgSimfor from '../images/webp/logos/simfor.webp';
+// import imgComplutense from '../images/webp/logos/complutense.webp';
+// import imgMediapost from '../images/webp/logos/mediapost.webp';
+// import imgUC3M from '../images/webp/logos/uc3m.webp';
+import spotifyImage from '../images/logos/spotify.png';
+import amazonImg from '../images/logos/amazon.png';
+import imgKing from '../images/logos/king.png';
+import imgFL from '../images/logos/futureLighthouse.png';
+import imgGameloft from '../images/logos/gameloft.png';
+import imgGranada from '../images/logos/granada.png';
+import imgEA from '../images/logos/ea.png';
+import imgCarto from '../images/logos/carto.png';
+import imgSimfor from '../images/logos/simfor.png';
+import imgComplutense from '../images/logos/complutense.png';
+import imgMediapost from '../images/logos/mediapost.png';
+import imgUC3M from '../images/logos/uc3m.png';
 
 let g_indexTitle = -1;
 let g_currentTimelineId = '';
@@ -152,6 +164,8 @@ function updateTimeline(id) {
             role: 'Software Engineer II',
             tasks: 'Release squad',
             projects: 'Spotify Desktop app. Internal developer tools.',
+            width: 250,
+            height: 75,
         },
         amazon: {
             image: amazonImg,
@@ -160,6 +174,8 @@ function updateTimeline(id) {
             tasks: 'European Customer Experience Engineer: API, backend, mobile, OPS (retail). Kindle Reader: Maintaining PC/Mac reader apps and developing new web reader',
             projects:
                 'Price drops in cart, Amazon Kids, Kindle Reader for PC/Mac/Web]',
+            width: 250,
+            height: 75,
         },
         king: {
             image: imgKing,
@@ -167,6 +183,8 @@ function updateTimeline(id) {
             role: 'C++ Game Programmer',
             tasks: 'Gameplay and tools programmer. New content team: New in-game features (blockers, map functionalities) and art/design production toolsets.',
             projects: 'Candy Crush Saga',
+            width: 200,
+            height: 200,
         },
         fl: {
             image: imgFL,
@@ -174,6 +192,8 @@ function updateTimeline(id) {
             role: 'VR Engineer',
             tasks: 'VR programming, QA certification bug fixing and publishing.',
             projects: 'Melita (Gear VR), In the Cloud: VR Afterlife (PS4)',
+            width: 250,
+            height: 176,
         },
         gameloft: {
             image: imgGameloft,
@@ -181,6 +201,8 @@ function updateTimeline(id) {
             role: 'UI Engineer',
             tasks: 'Bug fixing (upd.6) and new Unity prototyping for an unannounced title.',
             projects: 'Asphalt Extreme, Unannounced title',
+            width: 250,
+            height: 50,
         },
         ea: {
             image: imgEA,
@@ -189,6 +211,8 @@ function updateTimeline(id) {
             tasks: 'Frostbite, Unity3D, Ignite and internal tools. PC,PS4,X1,PS3,X360. Internationalization, localization and bug fixing',
             projects:
                 'FIFA 17, Battlefield 1, Star Wars Battlefront, FIFA 16,Plants vs Zombies: Heroes, Mirror’s Edge: Catalyst , Need for Speed',
+            width: 250,
+            height: 39,
         },
         carto: {
             image: imgCarto,
@@ -196,6 +220,8 @@ function updateTimeline(id) {
             role: 'Developer',
             tasks: 'Front-End Engineer. QA. Technical Support',
             projects: '',
+            width: 200,
+            height: 98,
         },
         simfor: {
             image: imgSimfor,
@@ -203,6 +229,8 @@ function updateTimeline(id) {
             role: 'Programmer',
             tasks: 'Virtual simulators: cranes, cars, buses, trucks and military vehicles. C++,(OSG), DirectX and Qt. Gameplay, tools and shaders',
             projects: '',
+            width: 200,
+            height: 82,
         },
         complutense: {
             image: imgComplutense,
@@ -210,6 +238,8 @@ function updateTimeline(id) {
             role: 'Student',
             tasks: 'Master in Video Games Development (Programming)',
             projects: '',
+            width: 250,
+            height: 283,
         },
         granada: {
             image: imgGranada,
@@ -217,6 +247,8 @@ function updateTimeline(id) {
             role: 'Student',
             tasks: 'Master in Software Development (Human – Computer Interaction)',
             projects: '',
+            width: 250,
+            height: 85,
         },
         mediapost: {
             image: imgMediapost,
@@ -224,6 +256,8 @@ function updateTimeline(id) {
             role: 'Junior programmer',
             tasks: 'Marketing and logistic web apps. Technologies: ASP.NET, C#, Javascript, web services and thermal printers',
             projects: '',
+            width: 250,
+            height: 149,
         },
         uc3m: {
             image: imgUC3M,
@@ -231,6 +265,8 @@ function updateTimeline(id) {
             role: 'Student',
             tasks: '2007-2010: Technical Engineering in Computer Managements, 2010-2011: Computer Engineering Degree',
             projects: '',
+            width: 250,
+            height: 250,
         },
     };
 
@@ -239,6 +275,8 @@ function updateTimeline(id) {
     const timelineLogo = document.getElementById('timelineLogo');
     timelineLogo.src = foundCareer.image;
     timelineLogo.alt = 'Alt text image url';
+    timelineLogo.width = foundCareer.width ?? 100;
+    timelineLogo.height = foundCareer.height ?? 100;
     if (id === 'spotify') {
         timelineLogo.classList.add('logoBorderRadius');
     } else {

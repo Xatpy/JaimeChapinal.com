@@ -8,8 +8,8 @@
 }
 
 .selectedStageLogo {
-    max-height: 250px;
-    max-width: 250px;
+    /* max-height: 250px;
+    max-width: 250px; */
     margin-bottom: 25px;
 }
 .logoBorderRadius {
@@ -438,7 +438,7 @@
     }
 
     .selectedStageLogo {
-        max-width: 75%;
+        /* max-width: 75%; */
     }
 
     .selectedStageSubText {
@@ -460,8 +460,8 @@
 
 @media only screen and (max-device-width: 1024px) and (orientation: landscape) {
     .selectedStageLogo {
-        max-height: 100px;
-        max-width: 100px;
+        /* max-height: 100px;
+        max-width: 100px; */
         margin-bottom: 10px;
     }
     .timeline__item {
