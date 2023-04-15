@@ -4,7 +4,7 @@ import gifProgramming from '../images/gifs/programming.gif';
 import gifOffice from '../images/gifs/the-office.gif';
 import gifGifs from '../images/gifs/gifs.gif';
 
-import spotifyImage from '../images/logos/spotifyLogo.png';
+import spotifyImage from '../images/logos/spotify.png';
 import amazonImg from '../images/logos/amazon.png';
 import imgKing from '../images/logos/king.png';
 import imgFL from '../images/logos/futureLighthouse.png';
@@ -142,7 +142,6 @@ const updateTimeline = (id) => {
     }
 
     g_currentTimelineId = id;
-    const baseUrl = '../images/webp';
     const mapCareer = {
         spotify: {
             image: spotifyImage,
@@ -263,11 +262,7 @@ const updateTimeline = (id) => {
     timelineLogo.alt = 'Alt text image url';
     timelineLogo.width = foundCareer.width ?? 100;
     timelineLogo.height = foundCareer.height ?? 100;
-    if (id === 'spotify') {
-        timelineLogo.classList.add('logoBorderRadius');
-    } else {
-        timelineLogo.classList.remove('logoBorderRadius');
-    }
+
     const timelineStageSelectedRole = document.getElementById(
         'timelineStageSelectedRole'
     );
