@@ -4,19 +4,7 @@ import gifProgramming from '../images/gifs/programming.gif';
 import gifOffice from '../images/gifs/the-office.gif';
 import gifGifs from '../images/gifs/gifs.gif';
 
-// import spotifyImage from '../images/webp/logos/spotifyLogo.webp';
-// import amazonImg from '../images/webp/logos/amazon.webp';
-// import imgKing from '../images/webp/logos/king.webp';
-// import imgFL from '../images/webp/logos/futureLighthouse.webp';
-// import imgGameloft from '../images/webp/logos/gameloft.webp';
-// import imgGranada from '../images/webp/logos/granada.webp';
-// import imgEA from '../images/webp/logos/ea.webp';
-// import imgCarto from '../images/webp/logos/carto.webp';
-// import imgSimfor from '../images/webp/logos/simfor.webp';
-// import imgComplutense from '../images/webp/logos/complutense.webp';
-// import imgMediapost from '../images/webp/logos/mediapost.webp';
-// import imgUC3M from '../images/webp/logos/uc3m.webp';
-import spotifyImage from '../images/logos/spotify.png';
+import spotifyImage from '../images/logos/spotifyLogo.png';
 import amazonImg from '../images/logos/amazon.png';
 import imgKing from '../images/logos/king.png';
 import imgFL from '../images/logos/futureLighthouse.png';
@@ -126,7 +114,7 @@ const initTooltips = () => {
     });
 };
 
-function updateSelectedItemAfter(selectedId) {
+const updateSelectedItemAfter = (selectedId) => {
     g_htmlTimelineIdsBall.forEach((htmlElement) => {
         if (htmlElement.id === `item-${selectedId}`) {
             htmlElement.classList.add('timeline__selected');
@@ -142,13 +130,13 @@ function updateSelectedItemAfter(selectedId) {
             htmlElement.classList.remove('timeline__active');
         }
     });
-}
+};
 
-function clickOnTimeline(event) {
+const clickOnTimeline = (event) => {
     updateTimeline(event.currentTarget.id.replace('item-', ''));
-}
+};
 
-function updateTimeline(id) {
+const updateTimeline = (id) => {
     if (id === g_currentTimelineId) {
         return;
     }
@@ -236,8 +224,8 @@ function updateTimeline(id) {
             role: 'Student',
             tasks: 'Master in Video Games Development (Programming)',
             projects: '',
-            width: 250,
-            height: 283,
+            width: 175,
+            height: 198,
         },
         granada: {
             image: imgGranada,
@@ -263,8 +251,8 @@ function updateTimeline(id) {
             role: 'Student',
             tasks: '2007-2010: Technical Engineering in Computer Management, 2010-2011: Computer Engineering Degree',
             projects: '',
-            width: 250,
-            height: 250,
+            width: 175,
+            height: 175,
         },
     };
 
@@ -301,7 +289,7 @@ function updateTimeline(id) {
     divSelectedStageTextContainer.classList.add('runAnimation');
 
     updateSelectedItemAfter(id);
-}
+};
 
 const initTimeline = () => {
     const companiesId = [
