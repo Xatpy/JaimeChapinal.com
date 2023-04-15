@@ -365,6 +365,7 @@ body {
 
 .home-image-img {
     clip-path: circle(200px at center);
+    -webkit-clip-path: circle(200px at center);
     animation-iteration-count: 1;
     animation-name: home-image-animation;
     animation-duration: 1s;
@@ -381,9 +382,11 @@ body {
 @keyframes home-image-animation {
     0% {
         clip-path: circle(18px at center);
+        -webkit-clip-path: circle(18px at center);
     }
     100% {
         clip-path: circle(200px at center);
+        -webkit-clip-path: circle(200px at center);
     }
 }
 
@@ -500,6 +503,7 @@ body {
 
     .home-image-img {
         clip-path: circle(100px at center);
+        -webkit-clip-path: circle(100px at center);
         width: 200px;
         height: 200px;
     }
@@ -507,9 +511,11 @@ body {
     @keyframes home-image-animation {
         0% {
             clip-path: circle(18px at center);
+            -webkit-clip-path: circle(18px at center);
         }
         100% {
             clip-path: circle(100px at center);
+            -webkit-clip-path: circle(100px at center);
         }
     }
 }
@@ -518,6 +524,7 @@ body {
     .home-image-img {
         margin-top: 35px;
         clip-path: circle(100px at center);
+        -webkit-clip-path: circle(100px at center);
         width: 200px;
         height: 200px;
     }
@@ -525,9 +532,11 @@ body {
     @keyframes home-image-animation {
         0% {
             clip-path: circle(18px at center);
+            -webkit-clip-path: circle(18px at center);
         }
         100% {
             clip-path: circle(100px at center);
+            -webkit-clip-path: circle(100px at center);
         }
     }
 }
