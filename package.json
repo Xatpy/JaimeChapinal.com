@@ -4,8 +4,8 @@
     "browserslist": "> 0.5%, last 2 versions, not dead",
     "scripts": {
         "start": "parcel",
-        "build": "rm -rf .parcel-cache ./dist && parcel build --no-source-maps --public-url ./",
-        "predeploy": "rm -rf dist .parcel-cache && parcel build --no-source-maps --public-url https://xatpy.github.io/JaimeChapinal.com_v2/",
+        "build": "rm -rf .parcel-cache ./dist && parcel build --public-url ./",
+        "predeploy": "rm -rf dist .parcel-cache && parcel build --public-url https://xatpy.github.io/JaimeChapinal.com_v2/",
         "deploy": "gh-pages -d dist"
     },
     "devDependencies": {
