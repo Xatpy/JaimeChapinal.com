@@ -249,7 +249,6 @@
 .pulse-button {
     border-radius: 50%;
     cursor: pointer;
-    /* box-shadow: 0 0 0 0 rgba(198, 212, 90, 0.33); */
     -webkit-animation: pulse 2.5s infinite;
 }
 
@@ -265,13 +264,11 @@
         -ms-transform: scale(1);
         -webkit-transform: scale(1);
         transform: scale(1);
-        /* box-shadow: 0 0 0 50px rgba(90, 153, 212, 0); */
     }
     100% {
         -moz-transform: scale(1);
         -ms-transform: scale(1);
         -webkit-transform: scale(1);
         transform: scale(1);
-        /* box-shadow: 0 0 0 0 rgba(90, 153, 212, 0); */
     }
 }

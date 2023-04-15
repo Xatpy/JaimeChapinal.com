@@ -238,27 +238,22 @@ body {
 }
 
 .img-product-kindle {
-    /* background: url(../images/kindleCover.png) center / cover; */
     background: url(../images/webp/kindleCover.webp) center / cover;
 }
 
 .img-product-candy {
-    /* background: url(../images/candycrush.jpeg) center / cover; */
     background: url(../images/webp/candycrush.webp) center / cover;
 }
 
 .img-product-spotify {
-    /* background: url(../images/spotifyCover.jpeg) center / cover; */
     background: url(../images/webp/spotifyCover.webp) center / cover;
 }
 
 .img-product-ea {
-    /* background: url(../images/electronicArts.jpg) center / cover; */
     background: url(../images/webp/electronicArts.webp) center / cover;
 }
 
 .img-product-simfor {
-    /* background: url(../images/simforSim.jpg) center / cover; */
     background: url(../images/webp/simforSim.webp) center / cover;
 }
 
@@ -484,6 +479,10 @@ body {
         display: block;
     }
 
+    .products-title {
+        height: 5%;
+    }
+
     .image-caption {
         top: -110%;
         height: 108%;
@@ -517,6 +516,14 @@ body {
             clip-path: circle(100px at center);
             -webkit-clip-path: circle(100px at center);
         }
+    }
+
+    .end-component-title {
+        justify-content: end;
+    }
+
+    .end-component-bell {
+        justify-content: start;
     }
 }
 
@@ -574,7 +581,6 @@ body {
     }
 
     .image-caption {
-        /* top: -130%; */
         height: 108%;
     }
 
