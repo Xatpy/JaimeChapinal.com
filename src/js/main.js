@@ -346,6 +346,10 @@ const sendPing = () => {
     document.getElementById('bell').classList.add('bell-animation');
 };
 
+const initBell = () => {
+    document.getElementById('bell').onclick = sendPing;
+};
+
 const closeBanner = () => {
     localStorage.setItem('cookies', 'closed');
     document.getElementById('cookie-banner').classList.add('hidden');
@@ -381,4 +385,5 @@ window.onload = () => {
     initObserversFadeInAnimations();
     initTooltips();
     initTimeline();
+    initBell();
 };
