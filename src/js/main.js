@@ -338,7 +338,7 @@ const playSound = (soundUrl) => {
 };
 
 const sendPing = () => {
-    playSound('./sounds/a.mp3');
+    playSound(require('url:../sounds/a.mp3'));
     document.getElementById('bell').classList.remove('pulse-button');
     void document.getElementById('bell').offsetWidth;
     document.getElementById('bell').classList.remove('bell-animation');
@@ -353,7 +353,7 @@ const initBell = () => {
 const closeBanner = () => {
     localStorage.setItem('cookies', 'closed');
     document.getElementById('cookie-banner').classList.add('hidden');
-    playSound('./sounds/cookie.ogg');
+    playSound(require('url:../sounds/cookie.ogg'));
 };
 
 const initCookiesBanner = () => {
