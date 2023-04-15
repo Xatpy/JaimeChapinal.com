@@ -4,8 +4,9 @@
     "browserslist": "> 0.5%, last 2 versions, not dead",
     "scripts": {
         "start": "parcel",
-        "build": "rm -rf .cache ./dist && parcel build --public-url ./",
-        "deploy-ghpages": "rm -rf .cache ./dist && parcel build --public-url https://xatpy.github.io/JaimeChapinal.com_v2/ && git subtree push --prefix dist origin gh-pages"
+        "build": "rm -rf .parcel-cache ./dist && parcel build --public-url ./",
+        "predeploy": "rm -rf dist .parcel-cache && parcel build --public-url https://xatpy.github.io/JaimeChapinal.com_v2/",
+        "deploy": "gh-pages -d dist"
     },
     "devDependencies": {
         "@parcel/packager-raw-url": "2.8.3",
