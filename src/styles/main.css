@@ -225,7 +225,6 @@ body {
     bottom: 40px;
     left: 10%;
     right: 10%;
-    width: 80%;
     padding: 5px 14px;
     z-index: 100;
     display: flex;
@@ -235,6 +234,7 @@ body {
     border-radius: 5px;
     box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
     color: #404040;
+    text-align: center;
 }
 
 .img-product-kindle {
@@ -479,6 +479,10 @@ body {
         display: block;
     }
 
+    .mobileProductsContent {
+        height: 85%;
+    }
+
     .products-title {
         height: 5%;
     }
@@ -549,6 +553,15 @@ body {
 }
 
 @media all and (max-width: 632px) {
+    .cookie-banner {
+        left: 4%;
+        right: 4%;
+        padding: 5px;
+    }
+    .close-button {
+        width: 30px;
+    }
+
     .section {
         font-size: 5vw;
         line-height: 1.75em;
@@ -582,6 +595,7 @@ body {
 
     .image-caption {
         height: 108%;
+        top: -113%;
     }
 
     .image-caption h5 {
