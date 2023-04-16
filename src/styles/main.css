@@ -342,15 +342,16 @@ body {
 .end-component-center {
     height: 50%;
     gap: 3.5%;
+    vertical-align: middle;
 }
 
 .main-pings-bolder-text {
     font-weight: bolder;
-    display: inline-block;
 }
 
 .pet-project-link {
     color: #e4e4e4;
+    display: inline-block;
 }
 
 .remove-decorations {
@@ -480,7 +481,7 @@ body {
     }
 
     .mobileProductsContent {
-        height: 85%;
+        height: 87%;
     }
 
     .products-title {

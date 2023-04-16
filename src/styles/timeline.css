@@ -110,7 +110,7 @@
 }
 
 .runAnimation {
-    animation: fadeInAnimation ease 0.5s;
+    animation: fadeInAnimation ease 1s;
     animation-iteration-count: 1;
 }
 
@@ -431,7 +431,7 @@
     }
     .timelineContainer {
         gap: 3px;
-        height: 85%;
+        height: 87%;
     }
 
     .selectedStageLogo {

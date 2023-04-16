@@ -9,6 +9,7 @@
     list-style: none;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 3px;
 }
 
 .wrapper-social-networker {
@@ -16,7 +17,7 @@
     position: relative;
     justify-content: center;
     margin: 20px;
-    width: 95%;
+    width: 85%;
     align-items: center;
 }
 
