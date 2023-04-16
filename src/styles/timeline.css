@@ -11,11 +11,6 @@
     margin-bottom: 25px;
 }
 
-.selectedStageTitle {
-    font-size: 0.75em;
-    text-align: center;
-    font-weight: bolder;
-}
 .selectedStageSubText {
     width: 100%;
     font-size: 0.5em;
@@ -73,7 +68,7 @@
     gap: 50px;
 }
 
-.timelineStage {
+.timeline-stage {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -325,58 +320,55 @@
     }
 }
 
-.colorSpotify {
+.color-spotify {
     background-color: #1ed760;
 }
 
-.colorAmazon {
+.color-amazon {
     background-color: #ff9a00;
 }
 
-.colorKing {
+.color-king {
     background-color: #ff5c01;
 }
 
-.colorFutureLighthouse {
+.color-future-lighthouse {
     background-color: #193a53;
 }
 
-.colorGameloft {
+.color-gameloft {
     background-color: #8e9294;
 }
 
-.colorEA {
+.color-EA {
     background-color: #fc4444;
 }
 
-.colorCarto {
+.color-carto {
     background-color: #142c44;
 }
 
-.colorComplutense {
+.color-complutense {
     background-color: #9a8a43;
 }
 
-.colorSimfor {
+.color-simfor {
     background-color: #3783e5;
 }
 
-.colorGranada {
+.color-granada {
     background-color: #bb2c2c;
 }
 
-.colorMediapost {
+.color-mediapost {
     background-color: #dc2c34;
 }
 
-.colorUC3M {
+.color-UC3M {
     background-color: #000e77;
 }
 
 @media all and (max-width: 1400px) {
-    .selectedStageTitle {
-        font-size: 0.5em;
-    }
     .selectedStageSubText {
         font-size: 0.44em;
         line-height: 1;
@@ -421,7 +413,7 @@
         padding: 3px;
     }
 
-    .timelineStage {
+    .timeline-stage {
         justify-content: center;
     }
 
@@ -472,7 +464,7 @@
         padding: 2px;
     }
 
-    .timelineStage {
+    .timeline-stage {
         justify-content: center;
     }
 }
@@ -481,9 +473,6 @@
     .date {
         font-size: 0.66em;
         color: #ffffff88;
-    }
-    .selectedStageTitle {
-        font-size: 0.65em;
     }
     .timeline__content {
         font-size: 0.65em;
