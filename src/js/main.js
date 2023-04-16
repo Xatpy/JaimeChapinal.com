@@ -262,6 +262,7 @@ const updateTimeline = (id) => {
     timelineLogo.alt = 'Alt text image url';
     timelineLogo.width = foundCareer.width ?? 100;
     timelineLogo.height = foundCareer.height ?? 100;
+    void timelineLogo.offsetWidth;
 
     const timelineStageSelectedRole = document.getElementById(
         'timelineStageSelectedRole'
@@ -348,7 +349,7 @@ const initObserversFadeInAnimations = () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((elem) => {
             if (elem.isIntersecting) {
-                elem.target.classList.add('fadeIn');
+                elem.target.classList.add('fadeInSection');
             }
         });
     });
