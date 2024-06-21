@@ -5,7 +5,7 @@
     "scripts": {
         "start": "parcel",
         "build": "rm -rf .parcel-cache ./dist && parcel build --public-url ./",
-        "predeploy": "rm -rf dist .parcel-cache && parcel build --public-url https://xatpy.github.io/JaimeChapinal.com/",
+        "predeploy": "rm -rf dist .parcel-cache && parcel build --public-url https://www.jaimechapinal.com/",
         "deploy": "gh-pages -d dist"
     },
     "devDependencies": {
