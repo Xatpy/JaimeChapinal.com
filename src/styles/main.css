@@ -125,22 +125,35 @@ body {
 
 .scroll-cue {
     position: absolute;
-    bottom: 32px;
+    bottom: 24px;
     left: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2px;
-    color: inherit;
-    font-size: 14px;
-    text-decoration: none;
-    text-shadow: none;
-    animation: scroll-cue-bob 1.8s ease-in-out infinite;
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 46px;
+    color: #f8ea48 !important;
+    text-decoration: none !important;
+    text-shadow: none !important;
+    transform: translateX(-50%);
 }
 
-@keyframes scroll-cue-bob {
-    0%, 100% { transform: translate(-50%, 0); }
-    50% { transform: translate(-50%, 8px); }
+.scroll-cue-chevron {
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg);
+    animation: scroll-cue-pulse 1.8s ease-in-out infinite;
+}
+
+.scroll-cue-chevron + .scroll-cue-chevron {
+    margin-top: -8px;
+    animation-delay: 0.15s;
+}
+
+@keyframes scroll-cue-pulse {
+    0%, 100% { opacity: 0.35; transform: translateY(-3px) rotate(45deg); }
+    50% { opacity: 1; transform: translateY(3px) rotate(45deg); }
 }
 
 .main-text-section {
@@ -249,49 +262,84 @@ body {
 }
 
 .cookie-banner {
-    font-size: 20px;
     position: fixed;
-    bottom: 40px;
-    left: 10%;
-    right: 10%;
-    padding: 14px;
-    z-index: 100;
+    right: 24px;
+    bottom: 24px;
+    left: 24px;
+    z-index: 200;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    background-color: #eee;
-    border-radius: 5px;
-    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
-    color: #404040;
-    text-align: center;
+    justify-content: center;
+    gap: 18px;
+    width: min(600px, calc(100% - 48px));
+    margin-left: auto;
+    padding: 14px 16px;
+    background: rgba(34, 36, 42, 0.98);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+    color: #f5f5f5;
+    font-size: 14px;
+    line-height: 1.35;
+    text-align: left;
+}
+
+.cookie-copy {
+    min-width: 0;
+}
+
+.cookie-title {
+    color: #f8ea48;
+    font-size: 15px;
+    font-weight: 700;
 }
 
 .cookie-banner p + p {
-    font-size: 14px;
     margin-top: 4px;
+}
+
+.cookie-banner a {
+    color: #f8ea48;
 }
 
 .cookie-actions {
     display: flex;
+    flex-direction: row !important;
     gap: 8px;
     flex-shrink: 0;
+    align-items: center;
 }
 
 .cookie-button,
 .cookie-settings {
-    border: 1px solid #404040;
-    border-radius: 4px;
+    min-width: 78px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 999px;
     background: transparent;
-    color: #404040;
+    color: #fff;
     cursor: pointer;
-    font: inherit;
-    padding: 7px 10px;
+    font: inherit !important;
+    font-size: 14px !important;
+    font-weight: 700;
+    line-height: 1;
+    padding: 10px 14px;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.cookie-button:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-1px);
 }
 
 .cookie-button-primary {
-    background: #404040;
-    color: #fff;
+    background: #f8ea48;
+    border-color: #f8ea48;
+    color: #202124;
+}
+
+.cookie-button-primary:hover {
+    background: #fff37b;
 }
 
 .cookie-settings {
@@ -338,10 +386,22 @@ body {
 
 @media all and (max-width: 632px) {
     .cookie-banner {
+        right: 16px;
         bottom: 16px;
         left: 16px;
-        right: 16px;
+        width: auto;
+        margin-left: 0;
         flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .cookie-actions {
+        width: 100%;
+    }
+
+    .cookie-button {
+        flex: 1;
     }
 }
 
@@ -662,11 +722,6 @@ body {
 }
 
 @media all and (max-width: 632px) {
-    .cookie-banner {
-        left: 4%;
-        right: 4%;
-        padding: 5px;
-    }
     .close-button {
         width: 30px;
     }

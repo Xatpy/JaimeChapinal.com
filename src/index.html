@@ -24,7 +24,6 @@
 
         <link rel="manifest" href="manifest.json" />
         <link rel="canonical" href="https://jaimechapinal.com/" />
-        <link rel="preload" href="./images/shareImg.webp" as="image" type="image/webp" />
 
         <link rel="preload" href="./styles/styles.css" as="style" />
         <link rel="stylesheet" type="text/css" media="screen" href="./styles/styles.css" />
@@ -44,9 +43,9 @@
 
     <body>
         <div id="cookie-banner" class="cookie-banner hidden" role="dialog" aria-labelledby="cookie-banner-title" aria-describedby="cookie-banner-description">
-            <div>
-                <p id="cookie-banner-title">Optional analytics cookies</p>
-                <p id="cookie-banner-description">I use Google Analytics to understand site traffic. You can accept or reject it; either choice keeps the site fully usable. <a href="./cookie-policy.html">Cookie policy</a>.</p>
+            <div class="cookie-copy">
+                <p id="cookie-banner-title" class="cookie-title">Optional analytics</p>
+                <p id="cookie-banner-description">Analytics help me understand visits. Accepting is optional and never affects access. <a href="./cookie-policy.html">Cookie policy</a>.</p>
             </div>
             <div class="cookie-actions">
                 <button id="cookie-reject" class="cookie-button" type="button">Reject</button>
@@ -64,7 +63,7 @@
                             <img id="home-image-id" class="home-image-img" alt="" width="400" height="400" />
                         </picture>
                     </div>
-                    <a class="scroll-cue" href="#sectionB" aria-label="Scroll to introduction"><span>Scroll</span><span aria-hidden="true">↓</span></a>
+                    <a id="scroll-cue" class="scroll-cue" href="#sectionB" aria-label="Scroll to introduction"><span class="scroll-cue-chevron" aria-hidden="true"></span><span class="scroll-cue-chevron" aria-hidden="true"></span></a>
                 </header>
             </div>
             <main id="maincontent">

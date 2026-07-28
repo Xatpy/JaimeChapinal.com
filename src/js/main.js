@@ -72,6 +72,13 @@ const initSaluteWave = () => {
     };
 };
 
+const initScrollCue = () => {
+    document.getElementById('scroll-cue').onclick = (event) => {
+        event.preventDefault();
+        document.getElementById('sectionB').scrollIntoView({ behavior: 'smooth' });
+    };
+};
+
 const setTitleFavicon = () => {
     const setFavicon = (char) => {
         const linkForFavicon = document.querySelector(
@@ -289,6 +296,8 @@ const loadAnalytics = () => {
     window.gtag = function gtag() {
         window.dataLayer.push(arguments);
     };
+    window.gtag('consent', 'default', { analytics_storage: 'denied' });
+    window.gtag('consent', 'update', { analytics_storage: 'granted' });
     window.gtag('js', new Date());
     window.gtag('config', 'G-S4WPTM8ZQ5');
 
@@ -297,10 +306,6 @@ const loadAnalytics = () => {
     gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-S4WPTM8ZQ5';
     document.head.append(gtagScript);
 
-    const gtmScript = document.createElement('script');
-    gtmScript.async = true;
-    gtmScript.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-T8J34XQ';
-    document.head.append(gtmScript);
 };
 
 const disableAnalytics = () => {
@@ -433,6 +438,7 @@ const initHoverButton = () => {
 window.onload = () => {
     initFaviconTitle();
     initSaluteWave();
+    initScrollCue();
     initCookiesBanner();
     initObserversFadeInAnimations();
     initTooltips();
