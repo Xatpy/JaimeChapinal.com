@@ -22,6 +22,47 @@ let g_currentTimelineId = '';
 let g_htmlTimelineIdsBall = [];
 let g_htmlTimelineSpeechBubble = [];
 
+const careers = [
+    {
+        id: 'spotify',
+        company: 'Spotify',
+        dates: 'Sep 2021 - Present',
+        color: 'color-spotify',
+        image: spotifyImage,
+        title: 'Spotify',
+        role: 'Senior Software Engineer',
+        tasks: 'Web/Desktop app features development and Client Quality Platform tooling',
+        projects: 'Spotify Desktop app. Internal developer tools.',
+        width: 250,
+        height: 75,
+    },
+    {
+        id: 'amazon',
+        company: 'Amazon',
+        dates: 'Aug 2019 - Sep 2021',
+        color: 'color-amazon',
+        image: amazonImg,
+        title: 'Amazon',
+        role: 'Software Development Engineer II',
+        tasks: 'European Customer Experience Engineer: API, backend, mobile, OPS (retail). Kindle Reader: Maintaining PC/Mac reader apps and developing new web reader',
+        projects: 'Price drops in cart, Amazon Kids, Kindle Reader for PC/Mac/Web]',
+        width: 250,
+        height: 75,
+    },
+    { id: 'king', company: 'King', dates: 'Jan 2018 - Jul 2019', color: 'color-king', image: imgKing, title: 'King', role: 'C++ Game Programmer', tasks: 'Gameplay and tools programmer. New content team: New in-game features (blockers, map functionalities) and art/design production toolsets.', projects: 'Candy Crush Saga', width: 200, height: 200 },
+    { id: 'gameloft', company: 'Gameloft', dates: 'Mar 2017 - Oct 2018', color: 'color-gameloft', image: imgGameloft, title: 'Gameloft', role: 'UI Engineer', tasks: 'Bug fixing (upd.6) and new Unity prototyping for an unannounced title.', projects: 'Asphalt Extreme, Unannounced title', width: 250, height: 50 },
+    { id: 'fl', company: 'Future Lighthouse', dates: 'Oct 2017 - Jan 2018', color: 'color-future-lighthouse', image: imgFL, title: 'Future Lighthouse', role: 'VR Engineer', tasks: 'VR programming, QA certification bug fixing and publishing.', projects: 'Melita (Gear VR), In the Cloud: VR Afterlife (PS4)', width: 250, height: 176 },
+    { id: 'ea', company: 'Electronic Arts', dates: 'Apr 2015 - Mar 2017', color: 'color-EA', image: imgEA, title: 'Electronic Arts', role: 'Software Engineer', tasks: 'Frostbite, Unity3D, Ignite and internal tools. PC,PS4,X1,PS3,X360. Internationalization, localization and bug fixing', projects: 'FIFA 17, Battlefield 1, Star Wars Battlefront, FIFA 16,Plants vs. Zombies: Heroes, Mirror’s Edge: Catalyst , Need for Speed', width: 250, height: 39 },
+    { id: 'carto', company: 'Carto', dates: 'Oct 2014 - Apr 2015', color: 'color-carto', image: imgCarto, title: 'Carto', role: 'Developer', tasks: 'Front-End Engineer. QA. Technical Support', projects: '', width: 200, height: 98 },
+    { id: 'simfor', company: 'Simfor', dates: 'Aug 2012 - Sep 2014', color: 'color-simfor', image: imgSimfor, title: 'Simfor', role: 'Programmer', tasks: 'Virtual simulators: cranes, cars, buses, trucks and military vehicles. C++,(OSG), DirectX and Qt. Gameplay, tools and shaders', projects: '', width: 200, height: 82 },
+    { id: 'complutense', company: '🎓Univ. Complutense - Master Videogames', dates: 'Aug 2012 - Sep 2013', color: 'color-complutense', image: imgComplutense, title: 'University Complutense of Madrid', role: 'Student', tasks: 'Master in Video Games Development (Programming)', projects: '', width: 175, height: 198 },
+    { id: 'granada', company: '🎓Universidad Granada - Master Interaction', dates: 'Oct 2011 - Jun 2012', color: 'color-granada', side: 'timeline__item--left', image: imgGranada, title: 'University of Granada', role: 'Student', tasks: 'Master in Software Development (Human – Computer Interaction)', projects: '', width: 250, height: 85 },
+    { id: 'mediapost', company: 'Mediapost', dates: 'Jul 2010 - Oct 2011', color: 'color-mediapost', side: 'timeline__item--left', image: imgMediapost, title: 'Mediapost', role: 'Junior programmer', tasks: 'Marketing and logistic web apps. Technologies: ASP.NET, C#, Javascript, web services and thermal printers', projects: '', width: 250, height: 149 },
+    { id: 'uc3m', company: '🎓UC3M - Computer Science Degree', dates: 'Sep 2007 - Jun 2011', color: 'color-UC3M', side: 'timeline__item--left', image: imgUC3M, title: 'University Carlos III of Madrid', role: 'Student', tasks: '2007-2010: Technical Engineering in Computer Management, 2010-2011: Computer Engineering Degree', projects: '', width: 175, height: 175 },
+];
+
+const careerById = new Map(careers.map((career) => [career.id, career]));
+
 const initSaluteWave = () => {
     document.getElementById('emojiHi').onmouseenter = () => {
         const emojiHi = document.getElementById('emojiHi');
@@ -65,6 +106,7 @@ const initTooltips = () => {
             inertia: true,
             arrow: true,
             hideOnClick: false,
+            trigger: 'mouseenter focus',
             onShow(instance) {
                 if (typeof instance.props.content !== 'object') {
                     fetch(url)
@@ -118,8 +160,10 @@ const updateSelectedItemAfter = (selectedId) => {
     g_htmlTimelineIdsBall.forEach((htmlElement) => {
         if (htmlElement.id === `item-${selectedId}`) {
             htmlElement.classList.add('timeline__selected');
+            htmlElement.setAttribute('aria-pressed', 'true');
         } else {
             htmlElement.classList.remove('timeline__selected');
+            htmlElement.setAttribute('aria-pressed', 'false');
         }
     });
 
@@ -137,129 +181,15 @@ const clickOnTimeline = (event) => {
 };
 
 const updateTimeline = (id) => {
-    if (id === g_currentTimelineId) {
-        return;
-    }
+    if (id === g_currentTimelineId) return;
 
+    const foundCareer = careerById.get(id);
+    if (!foundCareer) return;
     g_currentTimelineId = id;
-    const mapCareer = {
-        spotify: {
-            image: spotifyImage,
-            title: 'Spotfiy',
-            role: 'Senior Software Engineer',
-            tasks: 'Web/Desktop app features development and Client Quality Platform tooling',
-            projects: 'Spotify Desktop app. Internal developer tools.',
-            width: 250,
-            height: 75,
-        },
-        amazon: {
-            image: amazonImg,
-            title: 'Amazon',
-            role: 'Software Development Engineer II',
-            tasks: 'European Customer Experience Engineer: API, backend, mobile, OPS (retail). Kindle Reader: Maintaining PC/Mac reader apps and developing new web reader',
-            projects:
-                'Price drops in cart, Amazon Kids, Kindle Reader for PC/Mac/Web]',
-            width: 250,
-            height: 75,
-        },
-        king: {
-            image: imgKing,
-            title: 'King',
-            role: 'C++ Game Programmer',
-            tasks: 'Gameplay and tools programmer. New content team: New in-game features (blockers, map functionalities) and art/design production toolsets.',
-            projects: 'Candy Crush Saga',
-            width: 200,
-            height: 200,
-        },
-        fl: {
-            image: imgFL,
-            title: 'Future Lighthouse',
-            role: 'VR Engineer',
-            tasks: 'VR programming, QA certification bug fixing and publishing.',
-            projects: 'Melita (Gear VR), In the Cloud: VR Afterlife (PS4)',
-            width: 250,
-            height: 176,
-        },
-        gameloft: {
-            image: imgGameloft,
-            title: 'Gameloft',
-            role: 'UI Engineer',
-            tasks: 'Bug fixing (upd.6) and new Unity prototyping for an unannounced title.',
-            projects: 'Asphalt Extreme, Unannounced title',
-            width: 250,
-            height: 50,
-        },
-        ea: {
-            image: imgEA,
-            title: 'Electronic Arts',
-            role: 'Software Engineer',
-            tasks: 'Frostbite, Unity3D, Ignite and internal tools. PC,PS4,X1,PS3,X360. Internationalization, localization and bug fixing',
-            projects:
-                'FIFA 17, Battlefield 1, Star Wars Battlefront, FIFA 16,Plants vs. Zombies: Heroes, Mirror’s Edge: Catalyst , Need for Speed',
-            width: 250,
-            height: 39,
-        },
-        carto: {
-            image: imgCarto,
-            title: 'Carto',
-            role: 'Developer',
-            tasks: 'Front-End Engineer. QA. Technical Support',
-            projects: '',
-            width: 200,
-            height: 98,
-        },
-        simfor: {
-            image: imgSimfor,
-            title: 'Simfor',
-            role: 'Programmer',
-            tasks: 'Virtual simulators: cranes, cars, buses, trucks and military vehicles. C++,(OSG), DirectX and Qt. Gameplay, tools and shaders',
-            projects: '',
-            width: 200,
-            height: 82,
-        },
-        complutense: {
-            image: imgComplutense,
-            title: 'University Complutense of Madrid',
-            role: 'Student',
-            tasks: 'Master in Video Games Development (Programming)',
-            projects: '',
-            width: 175,
-            height: 198,
-        },
-        granada: {
-            image: imgGranada,
-            title: 'University of Granada',
-            role: 'Student',
-            tasks: 'Master in Software Development (Human – Computer Interaction)',
-            projects: '',
-            width: 250,
-            height: 85,
-        },
-        mediapost: {
-            image: imgMediapost,
-            title: 'Mediapost',
-            role: 'Junior programmer',
-            tasks: 'Marketing and logistic web apps. Technologies: ASP.NET, C#, Javascript, web services and thermal printers',
-            projects: '',
-            width: 250,
-            height: 149,
-        },
-        uc3m: {
-            image: imgUC3M,
-            title: 'University Carlos III of Madrid',
-            role: 'Student',
-            tasks: '2007-2010: Technical Engineering in Computer Management, 2010-2011: Computer Engineering Degree',
-            projects: '',
-            width: 175,
-            height: 175,
-        },
-    };
-
-    const foundCareer = mapCareer[id];
 
     const timelineLogo = document.getElementById('timelineLogo');
     timelineLogo.src = foundCareer.image;
-    timelineLogo.alt = 'Alt text image url';
+    timelineLogo.alt = `${foundCareer.title} logo`;
     timelineLogo.width = foundCareer.width ?? 100;
     timelineLogo.height = foundCareer.height ?? 100;
     void timelineLogo.offsetWidth;
@@ -273,9 +203,9 @@ const updateTimeline = (id) => {
     const timelineStageSelectedProjects = document.getElementById(
         'timelineStageSelectedProjects'
     );
-    timelineStageSelectedRole.innerHTML = foundCareer.role ?? '';
-    timelineStageSelectedTasks.innerHTML = foundCareer.tasks ?? '';
-    timelineStageSelectedProjects.innerHTML = foundCareer.projects ?? '';
+    timelineStageSelectedRole.textContent = foundCareer.role ?? '';
+    timelineStageSelectedTasks.textContent = foundCareer.tasks ?? '';
+    timelineStageSelectedProjects.textContent = foundCareer.projects ?? '';
 
     const divSelectedStageTextContainer = document.getElementById(
         'divSelectedStageTextContainer'
@@ -287,31 +217,48 @@ const updateTimeline = (id) => {
     updateSelectedItemAfter(id);
 };
 
-const initTimeline = () => {
-    const companiesId = [
-        'spotify',
-        'amazon',
-        'king',
-        'gameloft',
-        'fl',
-        'ea',
-        'carto',
-        'simfor',
-        'complutense',
-        'granada',
-        'mediapost',
-        'uc3m',
-    ];
-    companiesId.forEach((id) => {
-        const timelineItem = document.getElementById(`item-${id}`);
-        timelineItem.onclick = clickOnTimeline;
-        g_htmlTimelineIdsBall.push(timelineItem);
-        g_htmlTimelineSpeechBubble.push(
-            document.getElementById(`timeline-${id}`)
-        );
+const renderTimeline = () => {
+    const items = document.getElementById('timeline-items');
+    const fragment = document.createDocumentFragment();
+
+    careers.forEach((career) => {
+        const item = document.createElement('button');
+        item.type = 'button';
+        item.id = `item-${career.id}`;
+        item.className = `timeline__item ${career.side ?? ''}`;
+        item.setAttribute('aria-pressed', 'false');
+        item.setAttribute('aria-label', `${career.company}, ${career.dates}`);
+        item.addEventListener('click', clickOnTimeline);
+
+        const inner = document.createElement('span');
+        inner.className = 'timeline__item__inner';
+        const wrap = document.createElement('span');
+        wrap.className = 'timeline__content__wrap';
+        const content = document.createElement('span');
+        content.id = `timeline-${career.id}`;
+        content.className = `timeline__content ${career.color}`;
+        const company = document.createElement('span');
+        company.className = 'companyName';
+        company.textContent = career.company;
+        const dates = document.createElement('span');
+        dates.className = 'date';
+        dates.textContent = career.dates;
+
+        content.append(company, dates);
+        wrap.append(content);
+        inner.append(wrap);
+        item.append(inner);
+        fragment.append(item);
     });
 
-    updateTimeline('spotify');
+    items.replaceChildren(fragment);
+};
+
+const initTimeline = () => {
+    renderTimeline();
+    g_htmlTimelineIdsBall = careers.map((career) => document.getElementById(`item-${career.id}`));
+    g_htmlTimelineSpeechBubble = careers.map((career) => document.getElementById(`timeline-${career.id}`));
+    updateTimeline(careers[0].id);
 };
 
 const playSound = (soundUrl) => {
@@ -332,17 +279,67 @@ const initBell = () => {
     document.getElementById('bell').onclick = sendPing;
 };
 
-const closeBanner = () => {
-    localStorage.setItem('cookies', 'closed');
+const consentKey = 'analytics-consent';
+
+const loadAnalytics = () => {
+    if (window.analyticsLoaded) return;
+    window.analyticsLoaded = true;
+    window['ga-disable-G-S4WPTM8ZQ5'] = false;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function gtag() {
+        window.dataLayer.push(arguments);
+    };
+    window.gtag('js', new Date());
+    window.gtag('config', 'G-S4WPTM8ZQ5');
+
+    const gtagScript = document.createElement('script');
+    gtagScript.async = true;
+    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-S4WPTM8ZQ5';
+    document.head.append(gtagScript);
+
+    const gtmScript = document.createElement('script');
+    gtmScript.async = true;
+    gtmScript.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-T8J34XQ';
+    document.head.append(gtmScript);
+};
+
+const disableAnalytics = () => {
+    window['ga-disable-G-S4WPTM8ZQ5'] = true;
+    if (window.gtag) {
+        window.gtag('consent', 'update', { analytics_storage: 'denied' });
+    }
+    document.cookie
+        .split(';')
+        .map((cookie) => cookie.trim().split('=')[0])
+        .filter((name) => name === '_gid' || name.startsWith('_ga') || name.startsWith('_gat'))
+        .forEach((name) => {
+        document.cookie = `${name}=; Max-Age=0; path=/`;
+        document.cookie = `${name}=; Max-Age=0; path=/; domain=.jaimechapinal.com`;
+        });
+};
+
+const setAnalyticsConsent = (consent) => {
+    localStorage.setItem(consentKey, consent);
     document.getElementById('cookie-banner').classList.add('hidden');
-    playSound(require('url:../sounds/cookie.ogg'));
+    if (consent === 'accepted') {
+        loadAnalytics();
+    } else {
+        disableAnalytics();
+    }
 };
 
 const initCookiesBanner = () => {
-    if (localStorage.getItem('cookies') != 'closed') {
-        document.getElementById('cookie-close').onclick = closeBanner;
+    const consent = localStorage.getItem(consentKey);
+    if (consent === 'accepted') loadAnalytics();
+    if (!consent) {
         document.getElementById('cookie-banner').classList.remove('hidden');
     }
+    document.getElementById('cookie-accept').onclick = () => setAnalyticsConsent('accepted');
+    document.getElementById('cookie-reject').onclick = () => setAnalyticsConsent('rejected');
+    document.getElementById('cookie-settings').onclick = () => {
+        document.getElementById('cookie-banner').classList.remove('hidden');
+        document.getElementById('cookie-accept').focus();
+    };
 };
 
 const initObserversFadeInAnimations = () => {

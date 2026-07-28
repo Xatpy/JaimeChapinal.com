@@ -3,7 +3,7 @@
     "short_name": "JaimeChapinal",
     "background_color": "#f8ea48",
     "display": "standalone",
-    "Scope": "/",
+    "scope": "/",
     "start_url": "https://jaimechapinal.com/",
     "splash_pages": null,
     "theme_color": "#317EFB",
@@ -11,7 +11,7 @@
         {
             "src": "images/webp/cartoon.webp",
             "sizes": "400x400",
-            "type": "image/png"
+            "type": "image/webp"
         }
     ]
 }

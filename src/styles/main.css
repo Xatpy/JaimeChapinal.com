@@ -86,6 +86,7 @@ body {
 
 .bg-home {
     background-image: linear-gradient(#202124, #262626);
+    position: relative;
 }
 
 .bg-second-screen {
@@ -112,6 +113,34 @@ body {
     text-decoration-line: underline;
     text-decoration-style: dotted;
     cursor: grab;
+}
+
+.interests-gif:focus-visible,
+.scroll-cue:focus-visible,
+.cookie-button:focus-visible,
+.cookie-settings:focus-visible {
+    outline: 3px solid #f8ea48;
+    outline-offset: 4px;
+}
+
+.scroll-cue {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    color: inherit;
+    font-size: 14px;
+    text-decoration: none;
+    text-shadow: none;
+    animation: scroll-cue-bob 1.8s ease-in-out infinite;
+}
+
+@keyframes scroll-cue-bob {
+    0%, 100% { transform: translate(-50%, 0); }
+    50% { transform: translate(-50%, 8px); }
 }
 
 .main-text-section {
@@ -225,16 +254,95 @@ body {
     bottom: 40px;
     left: 10%;
     right: 10%;
-    padding: 5px 14px;
+    padding: 14px;
     z-index: 100;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 16px;
     background-color: #eee;
     border-radius: 5px;
     box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
     color: #404040;
     text-align: center;
+}
+
+.cookie-banner p + p {
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.cookie-actions {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.cookie-button,
+.cookie-settings {
+    border: 1px solid #404040;
+    border-radius: 4px;
+    background: transparent;
+    color: #404040;
+    cursor: pointer;
+    font: inherit;
+    padding: 7px 10px;
+}
+
+.cookie-button-primary {
+    background: #404040;
+    color: #fff;
+}
+
+.cookie-settings {
+    margin-top: 8px;
+}
+
+.cookie-policy-page {
+    min-height: 100vh;
+    padding: 48px 20px;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.cookie-policy {
+    width: min(760px, 100%);
+    margin: 0 auto;
+    font-size: 18px;
+    user-select: text;
+}
+
+.cookie-policy h1,
+.cookie-policy h2 {
+    margin-top: 1.5em;
+}
+
+.cookie-policy p {
+    margin-top: 1em;
+}
+
+.cookie-policy a {
+    color: #f8ea48;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@media all and (max-width: 632px) {
+    .cookie-banner {
+        bottom: 16px;
+        left: 16px;
+        right: 16px;
+        flex-direction: column;
+    }
 }
 
 .img-product-kindle {
