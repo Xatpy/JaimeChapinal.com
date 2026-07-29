@@ -61,6 +61,10 @@ body {
     background-color: black;
 }
 
+a:visited {
+    color: #b8b8b8;
+}
+
 .wrapper {
     justify-content: center;
     scroll-snap-type: y mandatory;
