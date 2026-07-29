@@ -343,7 +343,17 @@ body {
 }
 
 .cookie-settings {
-    margin-top: 8px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    min-width: auto;
+    padding: 8px 10px;
+    font-size: 11px !important;
+    opacity: 0.7;
+}
+
+.cookie-settings:hover {
+    opacity: 1;
 }
 
 .cookie-policy-page {
@@ -468,6 +478,7 @@ body {
 
 .main-pings {
     display: flex;
+    position: relative;
     flex-direction: column;
     height: 100%;
     width: 100%;
