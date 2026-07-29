@@ -153,12 +153,23 @@
     height: 100%;
 }
 .timeline__item {
+    background: transparent;
+    border: 0;
+    color: inherit;
+    font: inherit;
     font-size: 1rem;
     padding: 10px 40px 10px 0;
     position: relative;
     width: 50%;
     z-index: 2;
     cursor: pointer;
+    text-align: inherit;
+}
+
+.timeline__item:focus-visible .timeline__content {
+    border: solid 2px gold;
+    outline: 3px solid #f8ea48;
+    outline-offset: 3px;
 }
 .timeline__item::after {
     background-color: #fff;

@@ -6,22 +6,24 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Jaime Chapinal personal website and portfolio. Software Engineer" />
+        <meta name="description" content="Jaime Chapinal is a Senior Software Engineer at Spotify building Web and Desktop clients, and the maker behind Chapiware." />
         <meta name="theme-color" content="#317EFB" />
 
         <meta property="og:title" content="Jaime Chapinal" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://raw.githubusercontent.com/Xatpy/JaimeChapinal.com/main/src/images/shareImg.webp" />
+        <meta property="og:image" content="https://jaimechapinal.com/images/shareImg.webp" />
         <meta property="og:url" content="https://jaimechapinal.com" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="og:description" content="Jaime Chapinal portfolio" />
+        <meta property="og:description" content="Senior Software Engineer at Spotify and maker of small local-first apps at Chapiware." />
         <meta property="og:site_name" content="Jaime Chapinal" />
         <meta name="twitter:image:alt" content="Portfolio webpage JaimeChapinal.com" />
-        <meta name="twitter:site" content="@chapi13e" />
+        <meta name="twitter:image" content="https://jaimechapinal.com/images/shareImg.webp" />
+        <meta name="twitter:site" content="@chapi13" />
 
         <meta name="google-site-verification" content="rNgsuRRN3rukaz-t9Cod8mZuvI2Voq0vWrvL1tIW3fI" />
 
         <link rel="manifest" href="manifest.json" />
+        <link rel="canonical" href="https://jaimechapinal.com/" />
 
         <link rel="preload" href="./styles/styles.css" as="style" />
         <link rel="stylesheet" type="text/css" media="screen" href="./styles/styles.css" />
@@ -37,25 +39,18 @@
 
         <script async src="https://kit.fontawesome.com/c2c0b5775c.js" crossorigin="anonymous"></script>
 
-        <script>
-            (function (w, d, s, l, i) {
-                w[l] = w[l] || [];
-                w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-                var f = d.getElementsByTagName(s)[0],
-                    j = d.createElement(s),
-                    dl = l != 'dataLayer' ? '&l=' + l : '';
-                j.async = true;
-                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-                f.parentNode.insertBefore(j, f);
-            })(window, document, 'script', 'dataLayer', 'GTM-T8J34XQ');
-        </script>
     </head>
 
     <body>
-        <div id="cookie-banner" class="cookie-banner hidden transparent">
-            <span></span>
-            <p>By using this website, you agree to the <a href="’insert" link’>cookie policy</a>🍪</p>
-            <button id="cookie-close" class="close-button">&times;</button>
+        <div id="cookie-banner" class="cookie-banner hidden" role="dialog" aria-labelledby="cookie-banner-title" aria-describedby="cookie-banner-description">
+            <div class="cookie-copy">
+                <p id="cookie-banner-title" class="cookie-title">Optional analytics</p>
+                <p id="cookie-banner-description">Analytics help me understand visits. Accepting is optional and never affects access. <a href="./cookie-policy.html">Cookie policy</a>.</p>
+            </div>
+            <div class="cookie-actions">
+                <button id="cookie-reject" class="cookie-button" type="button">Reject</button>
+                <button id="cookie-accept" class="cookie-button cookie-button-primary" type="button">Accept</button>
+            </div>
         </div>
         <a class="skip-link" href="#maincontent">Skip to main</a>
         <div class="wrapper">
@@ -68,23 +63,24 @@
                             <img id="home-image-id" class="home-image-img" alt="" width="400" height="400" />
                         </picture>
                     </div>
+                    <a id="scroll-cue" class="scroll-cue" href="#sectionB" aria-label="Scroll to introduction"><span class="scroll-cue-chevron" aria-hidden="true"></span><span class="scroll-cue-chevron" aria-hidden="true"></span></a>
                 </header>
             </div>
             <main id="maincontent">
                 <div id="sectionB" class="section bg-second-screen" tabindex="0">
                     <div class="main-text-section transparent">
                         <div class="text-second-screen">
-                            <p>I'm a Software Developer👨‍💻, currently working at Spotify🎶.</p>
+                            <p>I'm Jaime Chapinal, Senior Software Engineer. I build the Web and Desktop clients at Spotify, and ship small local-first apps on the side under Chapiware.</p>
                         </div>
                         <div>
                             <p>
                                 <span>I love </span>
-                                <span id="gif-videogames" class="interests-gif">video games</span>,
-                                <span id="gif-programming" class="interests-gif">programming</span>,
-                                <span id="gif-gifs" class="interests-gif">GIFs</span>,
-                                <span id="gif-football" class="interests-gif">football</span>
+                                <span id="gif-videogames" class="interests-gif" tabindex="0">video games</span>,
+                                <span id="gif-programming" class="interests-gif" tabindex="0">programming</span>,
+                                <span id="gif-gifs" class="interests-gif" tabindex="0">GIFs</span>,
+                                <span id="gif-football" class="interests-gif" tabindex="0">football</span>
                                 <span> and </span>
-                                <span id="gif-office" class="interests-gif">The Office</span>.
+                                <span id="gif-office" class="interests-gif" tabindex="0">The Office</span>.
                             </p>
                         </div>
                     </div>
@@ -137,7 +133,7 @@
                                         <img class="img-product img-product-ea" loading="lazy" aria-label="Electronic Arts" />
                                         <div class="image-caption">
                                             <h5>Electronic Arts</h5>
-                                            <p>UI: Localization (l13n) and Internationalization (i18n) team</p>
+                                            <p>UI: Localization (l10n) and Internationalization (i18n) team</p>
                                         </div>
                                     </div>
                                     <div class="col-md-3 cell hover-rotate">
@@ -197,7 +193,7 @@
                                         <img class="img-product img-product-ea" loading="lazy" aria-label="Electronic Arts" />
                                         <div class="image-caption">
                                             <h5>Electronic Arts</h5>
-                                            <p>UI: Localization (l13n) and Internationalization (i18n) team</p>
+                                            <p>UI: Localization (l10n) and Internationalization (i18n) team</p>
                                         </div>
                                     </div>
                                 </div>
@@ -225,128 +221,7 @@
                             <div id="idTimeline" class="desktopTimeline desktopTimelineChange">
                                 <div class="timeline timeline--loaded timeline--mobile" style="opacity: 1">
                                     <div class="timeline__wrap">
-                                        <div class="timeline__items">
-                                            <div class="timeline__item timeline__item timeline__selected" id="item-spotify">
-                                                <div class="timeline__item__inner">
-                                                    <div class="timeline__content__wrap">
-                                                        <div id="timeline-spotify" class="timeline__content color-spotify timeline__active">
-                                                            <span class="companyName">Spotify</span>
-                                                            <span class="date">Sep 2021 - Present</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="timeline__item timeline__item" id="item-amazon">
-                                                <div class="timeline__item__inner">
-                                                    <div class="timeline__content__wrap">
-                                                        <div id="timeline-amazon" class="timeline__content color-amazon">
-                                                            <span class="companyName">Amazon</span>
-                                                            <span class="date">Aug 2019 - Sep 2021</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="timeline__item timeline__item" id="item-king">
-                                                <div class="timeline__item__inner">
-                                                    <div class="timeline__content__wrap">
-                                                        <div id="timeline-king" class="timeline__content color-king">
-                                                            <span class="companyName">King</span>
-                                                            <span class="date">Jan 2018 - Jul 2019</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="timeline__item timeline__item" id="item-fl">
-                                                <div class="timeline__item__inner">
-                                                    <div class="timeline__content__wrap">
-                                                        <div id="timeline-fl" class="timeline__content color-future-lighthouse">
-                                                            <span class="companyName">Future Lighthouse</span>
-                                                            <span class="date">Oct 2017 - Jan 2018</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="timeline__item timeline__item" id="item-gameloft">
-                                                <div class="timeline__item__inner">
-                                                    <div class="timeline__content__wrap">
-                                                        <div id="timeline-gameloft" class="timeline__content color-gameloft">
-                                                            <span class="companyName">Gameloft</span>
-                                                            <span class="date">Mar 2017 - Oct 2018</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="timeline__item timeline__item" id="item-ea">
-                                                <div class="timeline__item__inner">
-                                                    <div class="timeline__content__wrap">
-                                                        <div id="timeline-ea" class="timeline__content color-EA">
-                                                            <span class="companyName">Electronic Arts</span>
-                                                            <span class="date">Apr 2015 - Mar 2017</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="timeline__item timeline__item" id="item-carto">
-                                                <div class="timeline__item__inner">
-                                                    <div class="timeline__content__wrap">
-                                                        <div id="timeline-carto" class="timeline__content color-carto">
-                                                            <span class="companyName">Carto</span>
-                                                            <span class="date">Oct 2014 - Apr 2015</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="timeline__item timeline__item" id="item-simfor">
-                                                <div class="timeline__item__inner">
-                                                    <div class="timeline__content__wrap">
-                                                        <div id="timeline-simfor" class="timeline__content color-simfor">
-                                                            <span class="companyName">Simfor</span>
-                                                            <span class="date">Aug 2012 - Sep 2014</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="timeline__item timeline__item" id="item-complutense">
-                                                <div class="timeline__item__inner">
-                                                    <div class="timeline__content__wrap">
-                                                        <div id="timeline-complutense" class="timeline__content color-complutense">
-                                                            <span class="companyName">🎓Univ. Complutense - Master Videogames</span>
-                                                            <span class="date">Aug 2012 - Sep 2013</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="timeline__item timeline__item--left" id="item-granada">
-                                                <div class="timeline__item__inner">
-                                                    <div class="timeline__content__wrap">
-                                                        <div id="timeline-granada" class="timeline__content color-granada">
-                                                            <span class="companyName">🎓Universidad Granada - Master Interaction</span>
-                                                            <span class="date">Oct 2011 - Jun 2012</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="timeline__item timeline__item--left" id="item-mediapost">
-                                                <div class="timeline__item__inner">
-                                                    <div class="timeline__content__wrap">
-                                                        <div id="timeline-mediapost" class="timeline__content color-mediapost">
-                                                            <span class="companyName">Mediapost</span>
-                                                            <span class="date">Jul 2010 - Oct 2011</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="timeline__item timeline__item--left" id="item-uc3m">
-                                                <div class="timeline__item__inner">
-                                                    <div class="timeline__content__wrap">
-                                                        <div id="timeline-uc3m" class="timeline__content color-UC3M">
-                                                            <span class="companyName">🎓UC3M - Computer Science Degree</span>
-                                                            <span class="date">Sep 2007 - Jun 2011</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <div id="timeline-items" class="timeline__items"></div>
                                     </div>
                                 </div>
                             </div>
@@ -413,11 +288,9 @@
                             </div>
                             <div class="div-pet-projects">
                                 <p>
-                                    And check out my other pet projects and indie games
-                                    <a href="https://xatpy.github.io/" target="_blank" rel="noopener" class="main-pings-bolder-text pet-project-link">
-                                        💻 HERE 🎮</a
-                                    >.
+                                    Outside of work, I run <a href="https://chapiware.com" target="_blank" rel="noopener" class="main-pings-bolder-text pet-project-link">Chapiware</a>, where I build small local-first, privacy-first apps.
                                 </p>
+                                <button id="cookie-settings" class="cookie-settings" type="button">Cookie settings</button>
                             </div>
                         </div>
                         <div class="end-component end-component-bell transparent">
@@ -434,23 +307,5 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
         <script src="https://unpkg.com/@popperjs/core@2"></script>
         <script src="https://unpkg.com/tippy.js@6"></script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-S4WPTM8ZQ5"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
-            gtag('config', 'G-S4WPTM8ZQ5');
-        </script>
-
-        <noscript
-            ><iframe
-                src="https://www.googletagmanager.com/ns.html?id=GTM-T8J34XQ"
-                height="0"
-                width="0"
-                style="display: none; visibility: hidden"
-            ></iframe
-        ></noscript>
     </body>
 </html>
