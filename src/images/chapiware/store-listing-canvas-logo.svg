@@ -1,0 +1,13 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Isometric Layers -->
+  <path d="M256 96L448 192L256 288L64 192L256 96Z" fill="#4F46E5" fill-opacity="0.9"/>
+  <path d="M256 160L448 256L256 352L64 256L256 160Z" fill="#7C3AED" fill-opacity="0.8"/>
+  <path d="M256 224L448 320L256 416L64 320L256 224Z" fill="#4F46E5" fill-opacity="0.9"/>
+  
+  <!-- Central Shutter/Lens Element -->
+  <circle cx="256" cy="256" r="90" fill="white" stroke="#1E1B4B" stroke-width="12"/>
+  <circle cx="256" cy="256" r="40" fill="#4F46E5"/>
+  <path d="M256 186L286 236H226L256 186Z" fill="#1E1B4B"/>
+  <path d="M306 216L326 266L276 256L306 216Z" fill="#1E1B4B"/>
+  <path d="M206 216L236 216L226 266L206 216Z" fill="#1E1B4B"/>
+</svg>

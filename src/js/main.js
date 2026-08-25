@@ -268,24 +268,6 @@ const initTimeline = () => {
     updateTimeline(careers[0].id);
 };
 
-const playSound = (soundUrl) => {
-    const audio = new Audio(soundUrl);
-    audio.play();
-};
-
-const sendPing = () => {
-    playSound(require('url:../sounds/a.mp3'));
-    document.getElementById('bell').classList.remove('pulse-button');
-    void document.getElementById('bell').offsetWidth;
-    document.getElementById('bell').classList.remove('bell-animation');
-    void document.getElementById('bell').offsetWidth;
-    document.getElementById('bell').classList.add('bell-animation');
-};
-
-const initBell = () => {
-    document.getElementById('bell').onclick = sendPing;
-};
-
 const consentKey = 'analytics-consent';
 
 const loadAnalytics = () => {
@@ -443,6 +425,5 @@ window.onload = () => {
     initObserversFadeInAnimations();
     initTooltips();
     initTimeline();
-    initBell();
     initHoverButton();
 };

@@ -1,29 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Jaime Chapinal</title>
+        <title>Jaime Chapinal | Senior Software Engineer & Chapiware Maker</title>
 
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Jaime Chapinal is a Senior Software Engineer at Spotify building Web and Desktop clients, and the maker behind Chapiware." />
+        <meta name="description" content="Jaime Chapinal is a Senior Software Engineer building Web and Desktop clients at Spotify, and the independent maker behind Chapiware's local-first, privacy-first apps." />
         <meta name="theme-color" content="#317EFB" />
 
-        <meta property="og:title" content="Jaime Chapinal" />
+        <meta property="og:title" content="Jaime Chapinal | Senior Software Engineer & Chapiware Maker" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://jaimechapinal.com/images/shareImg.webp" />
-        <meta property="og:url" content="https://jaimechapinal.com" />
+        <meta property="og:url" content="https://jaimechapinal.com/" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="og:description" content="Senior Software Engineer at Spotify and maker of small local-first apps at Chapiware." />
+        <meta property="og:description" content="Senior Software Engineer building Web and Desktop clients at Spotify, and maker of local-first, privacy-first apps at Chapiware." />
         <meta property="og:site_name" content="Jaime Chapinal" />
         <meta name="twitter:image:alt" content="Portfolio webpage JaimeChapinal.com" />
         <meta name="twitter:image" content="https://jaimechapinal.com/images/shareImg.webp" />
         <meta name="twitter:site" content="@chapi13" />
+        <meta name="twitter:title" content="Jaime Chapinal | Senior Software Engineer & Chapiware Maker" />
+        <meta name="twitter:description" content="Senior Software Engineer at Spotify and maker of local-first, privacy-first apps at Chapiware." />
 
         <meta name="google-site-verification" content="rNgsuRRN3rukaz-t9Cod8mZuvI2Voq0vWrvL1tIW3fI" />
 
         <link rel="manifest" href="manifest.json" />
         <link rel="canonical" href="https://jaimechapinal.com/" />
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Jaime Chapinal",
+                "url": "https://jaimechapinal.com/",
+                "jobTitle": "Senior Software Engineer",
+                "description": "Senior Software Engineer building Web and Desktop clients at Spotify and independent maker behind Chapiware.",
+                "worksFor": {
+                    "@type": "Organization",
+                    "name": "Spotify",
+                    "url": "https://www.spotify.com/"
+                },
+                "sameAs": [
+                    "https://github.com/xatpy",
+                    "https://x.com/chapi13",
+                    "https://www.linkedin.com/in/jaime-chapinal-cervantes/",
+                    "https://blog.jaimechapinal.com/",
+                    "https://www.chapiware.com/"
+                ],
+                "knowsAbout": ["Web development", "Desktop applications", "Software engineering", "Local-first software", "Privacy-first software"]
+            }
+        </script>
 
         <link rel="preload" href="./styles/styles.css" as="style" />
         <link rel="stylesheet" type="text/css" media="screen" href="./styles/styles.css" />
@@ -57,7 +83,7 @@
             <div id="sectionA" class="section bg-home" tabindex="0">
                 <header>
                     <div>Hi there! <span id="emojiHi" class="wave">👋</span></div>
-                    <div>My name is <mark>Jaime Chapinal</mark></div>
+                    <h1 class="home-name">My name is <mark>Jaime Chapinal</mark></h1>
                     <div>
                         <picture>
                             <img id="home-image-id" class="home-image-img" alt="" width="400" height="400" />
@@ -88,9 +114,7 @@
 
                 <div id="sectionC" class="section bg-third-screen" tabindex="0">
                     <div class="products">
-                        <div class="products-title">
-                            <span>Some products where I have worked</span>
-                        </div>
+                        <h2 class="products-title">Some products where I have worked</h2>
 
                         <div class="desktopProductsContent transparent">
                             <div class="products-grid">
@@ -213,9 +237,7 @@
 
                 <div id="sectionD" class="section bg-fourth-screen sectionTimeline" tabindex="0">
                     <div class="timelineMainDiv">
-                        <div class="timelineTitle">
-                            <span>Career timeline</span>
-                        </div>
+                        <h2 class="timelineTitle">Career timeline</h2>
 
                         <div class="timelineContainer transparent">
                             <div id="idTimeline" class="desktopTimeline desktopTimelineChange">
@@ -240,24 +262,72 @@
                     </div>
                 </div>
 
-                <div id="sectionE" class="section bg-fifth-screen" tabindex="0">
+                <section id="sectionE" class="section bg-fifth-screen" aria-labelledby="chapiware-title">
+                    <div class="chapiware-showcase transparent">
+                        <img class="chapiware-logo" src="./images/chapiware/chapiware-logo-light.svg" alt="Chapiware" width="280" height="58" />
+                        <p class="chapiware-kicker">Independent maker</p>
+                        <h2 id="chapiware-title">What I build at Chapiware</h2>
+                        <p class="chapiware-intro">Calm, local-first apps for memories, habits, reading, and the small things worth keeping. No account, no cloud, no tracking.</p>
+
+                        <div class="chapiware-projects">
+                            <a class="chapiware-project" href="https://www.chapiware.com/ayer/" target="_blank" rel="noopener">
+                                <span class="chapiware-project-media">
+                                    <img src="./images/chapiware/ayer-share.jpg" alt="Ayer photo memories view" width="1200" height="630" loading="lazy" />
+                                    <img class="chapiware-project-icon" src="./images/chapiware/ayer-icon.png" alt="" width="180" height="180" loading="lazy" />
+                                </span>
+                                <span class="chapiware-project-copy">
+                                    <span class="chapiware-project-type">Personal timeline</span>
+                                    <span class="chapiware-project-title">Ayer</span>
+                                    <span>Revisit any day of your life, instantly and privately.</span>
+                                </span>
+                            </a>
+                            <a class="chapiware-project" href="https://www.chapiware.com/#products" target="_blank" rel="noopener">
+                                <span class="chapiware-project-media">
+                                    <img src="./images/chapiware/countly-daily.jpg" alt="Countly Daily calendar view" width="640" height="1386" loading="lazy" />
+                                    <img class="chapiware-project-icon" src="./images/chapiware/your-year-icon.jpg" alt="" width="495" height="490" loading="lazy" />
+                                </span>
+                                <span class="chapiware-project-copy">
+                                    <span class="chapiware-project-type">A connected product family</span>
+                                    <span class="chapiware-project-title">Your life, in context</span>
+                                    <span>Photo memories, a year at a glance, and private daily tracking.</span>
+                                </span>
+                            </a>
+                            <a class="chapiware-project" href="https://www.chapiware.com/#tools" target="_blank" rel="noopener">
+                                <span class="chapiware-project-media">
+                                    <img src="./images/chapiware/store-listing-canvas.png" alt="Store Listing Canvas editor" width="2872" height="1436" loading="lazy" />
+                                    <img class="chapiware-project-icon" src="./images/chapiware/store-listing-canvas-logo.svg" alt="" width="512" height="512" loading="lazy" />
+                                </span>
+                                <span class="chapiware-project-copy">
+                                    <span class="chapiware-project-type">Tools for makers</span>
+                                    <span class="chapiware-project-title">Small, focused utilities</span>
+                                    <span>Useful tools that stay fast, simple, and out of your way.</span>
+                                </span>
+                            </a>
+                        </div>
+
+                        <a class="chapiware-cta" href="https://www.chapiware.com/" target="_blank" rel="noopener">Explore Chapiware <span aria-hidden="true">→</span></a>
+                    </div>
+                </section>
+
+                <div id="sectionF" class="section bg-sixth-screen" tabindex="0">
                     <div class="main-pings">
                         <div class="end-component end-component-title">
-                            <p><span class="main-pings-bolder-text">Thank you</span> for making it this far!</p>
+                            <p><span class="main-pings-bolder-text">Hey, thanks for making it this far!</span></p>
+                            <img class="thanks-gif" src="./images/gifs/tom-hanks-thanks.webp" alt="Tom Hanks saying thanks" width="360" height="202" loading="lazy" decoding="async" />
                         </div>
                         <div class="end-component end-component-center transparent">
-                            <p>You can <span class="main-pings-bolder-text">contact me</span> through these social networks:</p>
+                            <p class="contact-blog-intro">Want to know more about me?</p>
+                            <a class="blog-link" href="https://blog.jaimechapinal.com/" target="_blank" rel="noopener">Read my blog <span aria-hidden="true">→</span></a>
+                            <p class="contact-channels-intro">Or find me through any of these channels.</p>
                             <div class="wrapper-social-networker">
                                 <ul class="ul-wrapper">
                                     <li class="github">
                                         <a title="GitHub" class="linkSocialNetwork" href="https://github.com/xatpy" target="_blank" rel="noopener"
                                             ><i class="fa fa-github fa" aria-hidden="true"></i
-                                        ></a>
+                                        </a>
                                     </li>
-                                    <li class="twitter">
-                                        <a title="Twitter" class="linkSocialNetwork" href="https://twitter.com/chapi13" target="_blank" rel="noopener"
-                                            ><i class="fa fa-twitter fa" aria-hidden="true"></i
-                                        ></a>
+                                    <li class="x">
+                                        <a title="X" class="linkSocialNetwork" href="https://x.com/chapi13" target="_blank" rel="noopener"><svg class="x-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817-5.967 6.817H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z" /></svg></a>
                                     </li>
                                     <li class="linkedin">
                                         <a
@@ -267,34 +337,26 @@
                                             target="_blank"
                                             rel="noopener"
                                             ><i class="fa fa-linkedin fa" aria-hidden="true"></i
-                                        ></a>
+                                        </a>
                                     </li>
                                     <li class="envelope">
                                         <a title="Mail" class="linkSocialNetwork" href="mailto:hi@chapiware.com?subject=Mail from Site"
-                                            ><i class="fa fa-envelope fa" aria-hidden="true"></i
-                                        ></a>
+                                            ><svg class="mail-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z" /></svg>
+                                        </a>
                                     </li>
                                     <li class="rss">
                                         <a
                                             title="Blog"
                                             class="linkSocialNetwork"
-                                            href="https://jaimechapinal.com/blog/"
+                                            href="https://blog.jaimechapinal.com"
                                             target="_blank"
                                             rel="noopener"
                                             ><i class="fa fa-rss fa" aria-hidden="true"></i
-                                        ></a>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="div-pet-projects">
-                                <p>
-                                    Outside of work, I run <a href="https://chapiware.com" target="_blank" rel="noopener" class="main-pings-bolder-text pet-project-link">Chapiware</a>, where I build small local-first, privacy-first apps.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="end-component end-component-bell transparent">
-                            <p>Oh! And send a ping if you want :)</p>
-                            <button onclick="sendPing()" class="bell pulse-button" id="bell">🔔</button>
+                            <p class="contact-response">I'm always happy to chat, and I reply to every message.</p>
                         </div>
                         <button id="cookie-settings" class="cookie-settings" type="button">Cookie settings</button>
                     </div>

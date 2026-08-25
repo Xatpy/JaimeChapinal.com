@@ -4,15 +4,15 @@
     "browserslist": "> 0.5%, last 2 versions, not dead",
     "scripts": {
         "start": "parcel",
-        "build": "rm -rf .parcel-cache ./dist && parcel build --public-url ./ && mkdir -p dist/images && cp src/images/shareImg.webp dist/images/shareImg.webp",
-        "predeploy": "rm -rf dist .parcel-cache && parcel build --public-url https://xatpy.github.io/JaimeChapinal.com/ && mkdir -p dist/images && cp src/images/shareImg.webp dist/images/shareImg.webp",
+        "build": "rm -rf .parcel-cache ./dist && parcel build --public-url ./ && mkdir -p dist/images && cp src/images/shareImg.webp dist/images/shareImg.webp && cp src/robots.txt src/sitemap.xml src/llms.txt dist/",
+        "predeploy": "rm -rf dist .parcel-cache && parcel build --public-url https://jaimechapinal.com/ && mkdir -p dist/images && cp src/images/shareImg.webp dist/images/shareImg.webp && cp src/robots.txt src/sitemap.xml src/llms.txt dist/",
         "deploy": "gh-pages -d dist"
     },
     "devDependencies": {
         "@parcel/packager-raw-url": "2.8.3",
+        "@parcel/transformer-jsonld": "^2.8.3",
         "@parcel/transformer-webmanifest": "2.8.3",
         "gh-pages": "^5.0.0",
         "parcel": "^2.8.3"
-    },
-    "dependencies": {}
+    }
 }

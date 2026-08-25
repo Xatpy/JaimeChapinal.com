@@ -1,7 +1,12 @@
 .linkSocialNetwork {
-    width: 10%;
-    text-align: center;
     cursor: pointer;
+    display: flex;
+    width: 38px;
+    height: 38px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
 }
 
 .ul-wrapper {
@@ -39,6 +44,9 @@
 
 .wrapper-social-networker ul li .fa {
     color: #d8e2dc;
+    width: 38px;
+    font-size: 38px;
+    line-height: 1;
     transition: all 0.5s ease;
 }
 
@@ -74,6 +82,26 @@
     transition: all 0.5s ease;
 }
 
+.wrapper-social-networker ul li:hover.x {
+    border: 5px solid #252b3b;
+    box-shadow: 0 0 15px #252b3b;
+    transition: all 0.5s ease;
+}
+
+.wrapper-social-networker ul li .x-icon {
+    display: block;
+    width: 38px;
+    height: 38px;
+    fill: #252b3b;
+    transition: all 0.5s ease;
+}
+
+.wrapper-social-networker ul li:hover .x-icon {
+    fill: #252b3b;
+    filter: drop-shadow(0 0 8px rgba(37, 43, 59, 0.45));
+    transition: all 0.5s ease;
+}
+
 .wrapper-social-networker ul li:hover.github {
     border: 5px solid #333;
     box-shadow: 0 0 15px #333;
@@ -96,13 +124,18 @@
     transition: all 0.5s ease;
 }
 
-.wrapper-social-networker ul li .fa-envelope {
-    color: #4dc247aa;
+.wrapper-social-networker ul li .mail-icon {
+    display: block;
+    width: 38px;
+    height: 38px;
+    fill: #4dc247aa;
+    text-decoration: none;
+    transition: all 0.5s ease;
 }
 
-.wrapper-social-networker ul li:hover .fa-envelope {
-    color: #4dc247;
-    text-shadow: 0 0 15px #4dc247;
+.wrapper-social-networker ul li:hover .mail-icon {
+    fill: #4dc247;
+    filter: drop-shadow(0 0 8px rgba(77, 194, 71, 0.65));
     transition: all 0.5s ease;
 }
 
@@ -125,11 +158,6 @@
 @media screen and (max-width: 640px) {
     .wrapper-social-networker {
         margin: 0;
-    }
-
-    .wrapper-social-networker ul li .fa {
-        color: #d8e2dc;
-        transition: all 0.5s ease;
     }
 }
 

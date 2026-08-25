@@ -88,6 +88,12 @@ a:visited {
         0px 8px 1px rgba(0, 0, 0, 0.1);
 }
 
+.home-name,
+.products-title,
+.timelineTitle {
+    font-weight: inherit;
+}
+
 .bg-home {
     background-image: linear-gradient(#202124, #262626);
     position: relative;
@@ -111,6 +117,164 @@ a:visited {
 
 .bg-sixth-screen {
     background-image: linear-gradient(#b4bcd4, #c0c9e4);
+}
+
+.chapiware-showcase {
+    width: min(1100px, 90%);
+    color: #fff;
+    font-size: clamp(16px, 1.25vw, 21px);
+    line-height: 1.45;
+    text-shadow: 0px 2px 0px #66718d, 0px 4px 3px rgba(0, 0, 0, 0.15);
+}
+
+.chapiware-logo {
+    width: min(220px, 55%);
+    height: auto;
+    margin-bottom: clamp(8px, 1.5vh, 16px);
+}
+
+.chapiware-kicker {
+    font-size: 0.75em;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.chapiware-showcase h2 {
+    margin: 0.2em 0;
+    font-size: clamp(32px, 4vw, 62px);
+    line-height: 1.1;
+}
+
+.chapiware-intro {
+    max-width: 710px;
+    margin: 0 auto;
+}
+
+.chapiware-projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin: clamp(24px, 4vh, 46px) 0;
+}
+
+.chapiware-project {
+    display: flex;
+    min-height: 330px;
+    flex-direction: column;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 16px;
+    background: rgba(33, 38, 51, 0.45);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+    color: #fff;
+    text-align: left;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chapiware-project:visited {
+    color: #fff;
+}
+
+.chapiware-project:hover,
+.chapiware-project:focus-visible {
+    background: rgba(33, 38, 51, 0.65);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.3);
+    outline: none;
+    transform: translateY(-5px);
+}
+
+.chapiware-project:focus-visible,
+.chapiware-cta:focus-visible {
+    outline: 3px solid #f8ea48;
+    outline-offset: 4px;
+}
+
+.chapiware-project-type {
+    font-size: 0.68em;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.chapiware-project-media {
+    position: relative;
+    display: block;
+    height: 174px;
+    overflow: hidden;
+    background: #222733;
+}
+
+.chapiware-project-media::after {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 35%, rgba(25, 29, 40, 0.7));
+    content: '';
+}
+
+.chapiware-project-media > img:first-child {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.chapiware-project:hover .chapiware-project-media > img:first-child {
+    transform: scale(1.07);
+}
+
+.chapiware-project-icon {
+    position: absolute;
+    z-index: 1;
+    right: 16px;
+    bottom: 14px;
+    width: 54px;
+    height: 54px;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    border-radius: 13px;
+    background: #fff;
+    object-fit: cover;
+}
+
+.chapiware-project-copy {
+    display: flex;
+    height: 100%;
+    padding: 18px 20px 20px;
+    flex-direction: column;
+}
+
+.chapiware-project-title {
+    display: block;
+    margin: 0.3em 0 0.2em;
+    font-size: 1.25em;
+    line-height: 1.15;
+}
+
+.chapiware-project-copy > span:last-child {
+    font-size: 0.88em;
+}
+
+.chapiware-cta {
+    display: inline-block;
+    padding: 12px 20px;
+    border: 2px solid #fff;
+    border-radius: 999px;
+    color: #fff;
+    font-size: 0.9em;
+    font-weight: 800;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.chapiware-cta:visited {
+    color: #fff;
+}
+
+.chapiware-cta:hover {
+    background: #fff;
+    color: #41434a;
+    transform: translateY(-2px);
 }
 
 .interests-gif {
@@ -512,19 +676,25 @@ a:visited {
 }
 
 .end-component-title {
-    height: 25%;
+    height: 35%;
+    gap: 18px;
+    font-size: clamp(30px, 3.5vw, 52px);
 }
 
-.end-component-bell {
-    display: flex;
-    height: 25%;
-    justify-content: center;
-    gap: 30px;
+.thanks-gif {
+    width: min(360px, 75vw);
+    height: auto;
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    border-radius: 14px;
+    box-shadow: 0 10px 22px rgba(38, 43, 58, 0.32);
 }
 
 .end-component-center {
-    height: 50%;
-    gap: 3.5%;
+    height: 65%;
+    padding-top: 26px;
+    justify-content: flex-start;
+    gap: 18px;
+    font-size: clamp(18px, 1.5vw, 24px);
     vertical-align: middle;
 }
 
@@ -535,6 +705,52 @@ a:visited {
 .pet-project-link {
     color: #e4e4e4;
     display: inline-block;
+}
+
+.blog-link {
+    display: inline-block;
+    padding: 11px 18px;
+    border: 2px solid #202124;
+    border-radius: 999px;
+    background-color: #202124 !important;
+    box-shadow: 0 5px 0 rgba(32, 33, 36, 0.35);
+    color: #fff !important;
+    font-size: 1em;
+    font-weight: 800;
+    text-decoration: none;
+    text-shadow: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.blog-link:visited {
+    color: #fff;
+}
+
+.blog-link:hover {
+    border-color: #f8ea48;
+    background-color: #3c4043 !important;
+    color: #fff !important;
+    transform: translateY(-2px);
+}
+
+.blog-link:focus-visible {
+    outline: 3px solid #f8ea48;
+    outline-offset: 5px;
+}
+
+.contact-blog-intro,
+.contact-channels-intro,
+.contact-response {
+    max-width: 680px;
+}
+
+.contact-channels-intro {
+    margin-top: 8px;
+}
+
+.contact-response {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.82em;
 }
 
 .remove-decorations {
@@ -710,8 +926,58 @@ a:visited {
         justify-content: end;
     }
 
-    .end-component-bell {
-        justify-content: start;
+    .thanks-gif {
+        width: min(250px, 65vw);
+        border-width: 2px;
+        border-radius: 10px;
+    }
+
+    .chapiware-showcase {
+        width: min(680px, 88%);
+        font-size: clamp(14px, 3.5vw, 18px);
+    }
+
+    .chapiware-logo {
+        width: min(170px, 45%);
+        margin-bottom: 4px;
+    }
+
+    .chapiware-showcase h2 {
+        font-size: clamp(27px, 7vw, 38px);
+    }
+
+    .chapiware-projects {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin: 14px 0;
+    }
+
+    .chapiware-project {
+        min-height: 0;
+        flex-direction: row;
+    }
+
+    .chapiware-project-media {
+        width: 112px;
+        height: 104px;
+        flex: 0 0 112px;
+    }
+
+    .chapiware-project-icon {
+        right: 8px;
+        bottom: 8px;
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+    }
+
+    .chapiware-project-copy {
+        padding: 10px 13px;
+    }
+
+    .chapiware-project-title {
+        margin: 0.12em 0;
+        font-size: 1.05em;
     }
 }
 
@@ -805,5 +1071,29 @@ a:visited {
     }
     .main-pings {
         font-size: 5vh;
+    }
+
+    .chapiware-showcase {
+        font-size: clamp(12px, 2.5vh, 17px);
+    }
+
+    .chapiware-projects {
+        margin: 12px 0;
+    }
+
+    .chapiware-project {
+        min-height: 0;
+    }
+
+    .chapiware-project-media {
+        height: 100px;
+    }
+
+    .chapiware-project-copy {
+        padding: 10px 14px;
+    }
+
+    .thanks-gif {
+        width: 180px;
     }
 }
