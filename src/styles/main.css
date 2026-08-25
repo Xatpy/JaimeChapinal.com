@@ -623,7 +623,7 @@ a:visited {
     -ms-transition: all 300ms ease-in-out;
 }
 
-.image-caption h5 {
+.image-caption .product-title {
     padding: 45px 0px 5px 0px;
     text-align: center;
     margin-left: -15px;
@@ -759,8 +759,8 @@ a:visited {
 }
 
 .home-image-img {
-    clip-path: circle(200px at center);
-    -webkit-clip-path: circle(200px at center);
+    clip-path: circle(50% at center);
+    -webkit-clip-path: circle(50% at center);
     animation-iteration-count: 1;
     animation-name: home-image-animation;
     animation-duration: 1s;
@@ -768,8 +768,8 @@ a:visited {
     display: inline-block;
     cursor: grab;
     margin-top: 75px;
-    width: 400px;
-    height: 400px;
+    width: clamp(200px, min(20vw, 38vh), 400px);
+    height: clamp(200px, min(20vw, 38vh), 400px);
 
     background: url(../images/webp/cartoonHRwebp.webp) center / cover;
 }
@@ -780,8 +780,8 @@ a:visited {
         -webkit-clip-path: circle(18px at center);
     }
     100% {
-        clip-path: circle(200px at center);
-        -webkit-clip-path: circle(200px at center);
+        clip-path: circle(50% at center);
+        -webkit-clip-path: circle(50% at center);
     }
 }
 
@@ -849,6 +849,59 @@ a:visited {
 }
 
 @media all and (min-width: 769px) {
+    /*
+     * The opening screen used to inherit 5vw from .section. On a wide but
+     * relatively short display that made the text grow with the width alone,
+     * leaving the heading and portrait taller than the viewport. Keep this
+     * composition constrained by both available dimensions instead.
+     */
+    .bg-home header {
+        display: flex;
+        max-height: calc(100vh - 72px);
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: clamp(10px, 2vh, 24px);
+        font-size: clamp(3rem, min(6.3vw, 9vh), 6rem);
+        line-height: 1.08;
+    }
+
+    .bg-home .home-name {
+        max-width: calc(100vw - 32px);
+        line-height: 1.08;
+    }
+
+    /* Keep the highlighted full name together as the viewport changes. */
+    .bg-home .home-name mark {
+        display: inline-block;
+    }
+
+    .bg-home .home-image-img {
+        margin-top: 0;
+    }
+
+    .main-text-section {
+        width: min(1600px, calc(100vw - 96px));
+        margin: clamp(24px, 6vh, 72px) auto;
+        font-size: clamp(2rem, min(3.5vw, 6.5vh), 3.5rem);
+        line-height: 1.3;
+    }
+
+    .text-second-screen {
+        margin-bottom: clamp(40px, 8vh, 90px);
+    }
+
+    .products-title {
+        height: 12%;
+        padding: clamp(10px, 1.75vh, 20px) 24px;
+        font-size: clamp(2rem, min(3.5vw, 7vh), 4.25rem);
+        line-height: 1.1;
+    }
+
+    .products .desktopProductsContent {
+        height: 88%;
+    }
+
     .home-image-img {
         background: url(../images/webp/cartoon.webp) center / cover;
     }
@@ -862,7 +915,7 @@ a:visited {
 }
 
 @media all and (min-width: 769px) and (max-width: 1200px) {
-    .image-caption h5 {
+    .image-caption .product-title {
         font-size: 4vw;
     }
 
@@ -892,7 +945,7 @@ a:visited {
         height: 108%;
     }
 
-    .image-caption h5 {
+    .image-caption .product-title {
         padding: 25px 0px 2px 0px;
         margin-left: 0;
         text-transform: uppercase;
@@ -1043,7 +1096,7 @@ a:visited {
         top: -113%;
     }
 
-    .image-caption h5 {
+    .image-caption .product-title {
         padding: 0;
         margin-left: 0;
         text-transform: uppercase;

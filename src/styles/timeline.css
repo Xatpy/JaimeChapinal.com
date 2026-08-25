@@ -527,3 +527,16 @@
         height: 5%;
     }
 }
+
+@media all and (min-width: 769px) {
+    .timelineTitle {
+        height: 12%;
+        padding: clamp(10px, 1.75vh, 20px) 24px;
+        font-size: clamp(2rem, min(3.5vw, 7vh), 4.25rem);
+        line-height: 1.1;
+    }
+
+    .timelineContainer {
+        height: 88%;
+    }
+}
