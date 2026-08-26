@@ -348,6 +348,8 @@ class HoverButton {
     constructor(el) {
         this.el = el;
         this.hover = false;
+        this.isDragging = false;
+        this.lastPointerPosition = null;
         this.calculatePosition();
         this.attachEventsListener();
     }
@@ -355,6 +357,10 @@ class HoverButton {
     attachEventsListener() {
         window.addEventListener('mousemove', (e) => this.onMouseMove(e));
         window.addEventListener('resize', (e) => this.calculatePosition(e));
+        this.el.addEventListener('pointerdown', (e) => this.onPointerDown(e));
+        this.el.addEventListener('pointermove', (e) => this.onPointerMove(e));
+        this.el.addEventListener('pointerup', (e) => this.onPointerUp(e));
+        this.el.addEventListener('pointercancel', (e) => this.onPointerUp(e));
     }
 
     calculatePosition() {
@@ -394,11 +400,63 @@ class HoverButton {
         gsap.to(this.el, {
             x: (x - this.x) * 0.4,
             y: (y - this.y) * 0.4,
-            scale: 1.15,
+            scale: this.isDragging ? 1.2 : 1.15,
             ease: 'power2.out',
-            duration: 0.4,
+            duration: this.isDragging ? 0.2 : 0.4,
         });
         this.el.style.zIndex = 10;
+    }
+
+    onPointerDown(e) {
+        if (e.button !== 0) return;
+
+        e.preventDefault();
+        this.isDragging = true;
+        this.lastPointerPosition = { x: e.clientX, y: e.clientY };
+        this.el.classList.add('is-dragging');
+        this.el.setPointerCapture(e.pointerId);
+
+        gsap.to(this.el, {
+            scale: 1.2,
+            rotation: 2,
+            ease: 'power2.out',
+            duration: 0.18,
+        });
+    }
+
+    onPointerMove(e) {
+        if (!this.isDragging) return;
+
+        const deltaX = e.clientX - this.lastPointerPosition.x;
+        this.lastPointerPosition = { x: e.clientX, y: e.clientY };
+        this.onHover(e.clientX, e.clientY);
+
+        // A small directional tilt makes the portrait feel responsive while
+        // it is being dragged without changing its circular mask.
+        gsap.to(this.el, {
+            rotation: Math.max(-5, Math.min(5, deltaX * 0.35)),
+            ease: 'power2.out',
+            duration: 0.16,
+            overwrite: 'auto',
+        });
+    }
+
+    onPointerUp(e) {
+        if (!this.isDragging) return;
+
+        this.isDragging = false;
+        this.lastPointerPosition = null;
+        this.el.classList.remove('is-dragging');
+        if (this.el.hasPointerCapture(e.pointerId)) {
+            this.el.releasePointerCapture(e.pointerId);
+        }
+
+        gsap.to(this.el, {
+            rotation: 0,
+            scale: this.hover ? 1.15 : 1,
+            ease: 'elastic.out(1.2, 0.4)',
+            duration: 0.5,
+        });
     }
 
     onLeave() {
@@ -406,6 +464,7 @@ class HoverButton {
             x: 0,
             y: 0,
             scale: 1,
+            rotation: 0,
             ease: 'elastic.out(1.2, 0.4)',
             duration: 0.7,
         });

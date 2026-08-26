@@ -774,6 +774,25 @@ a:visited {
     background: url(../images/webp/cartoonHRwebp.webp) center / cover;
 }
 
+/* The portrait is translated and enlarged on hover. Its immediate wrappers
+ * must not inherit the global horizontal clipping or the circle is cut off
+ * before it reaches the edge of the viewport. */
+.home-image-wrapper,
+.home-image-wrapper picture {
+    display: block;
+    max-width: none;
+    overflow: visible;
+}
+
+.home-image-img {
+    will-change: transform;
+    touch-action: none;
+}
+
+.home-image-img.is-dragging {
+    cursor: grabbing;
+}
+
 @keyframes home-image-animation {
     0% {
         clip-path: circle(18px at center);
