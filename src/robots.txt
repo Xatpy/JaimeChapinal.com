@@ -1,11 +1,15 @@
-# Content usage preferences: AI search and agent use are welcome; model training is not.
+# Content usage preferences: AI crawlers and agents may access public content;
+# model training is not permitted.
 Content-Signal: ai-train=no, search=yes, ai-input=yes
 
 User-agent: GPTBot
-Disallow: /
+Allow: /
 
 User-agent: Google-Extended
-Disallow: /
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
 
 User-agent: OAI-SearchBot
 Allow: /
