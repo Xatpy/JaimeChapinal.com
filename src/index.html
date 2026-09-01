@@ -120,14 +120,14 @@
                             <div class="products-grid">
                                 <div class="row">
                                     <div class="col-md-4 cell hover-rotate">
-                                        <img class="img-product img-product-spotify" loading="lazy" aria-label="Spotify" />
+                                        <img class="img-product img-product-spotify" src="./images/webp/spotifyCover.webp" alt="Spotify logo" loading="lazy" decoding="async" />
                                         <div class="image-caption">
                                             <p class="product-title">Spotify</p>
                                             <p>Web/Desktop app and Client Quality Platform tooling development</p>
                                         </div>
                                     </div>
                                     <div class="col-md-4 cell hover-rotate">
-                                        <img class="img-product img-product-kindle" loading="lazy" aria-label="Amazon Kindle" />
+                                        <img class="img-product img-product-kindle" src="./images/webp/kindleCover.webp" alt="Amazon Kindle logo" loading="lazy" decoding="async" />
                                         <div class="image-caption">
                                             <p class="product-title">Amazon - Kindle</p>
                                             <p>
@@ -147,21 +147,21 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-3 cell hover-rotate">
-                                        <img class="img-product img-product-candy" loading="lazy" aria-label="Candy Crush Saga" />
+                                        <img class="img-product img-product-candy" src="./images/webp/candycrush.webp" alt="Candy Crush Saga logo" loading="lazy" decoding="async" />
                                         <div class="image-caption">
                                             <p class="product-title">King - Candy Crush Saga</p>
                                             <p>New content team: building new gameplay features and internal tools.</p>
                                         </div>
                                     </div>
                                     <div class="col-md-3 cell hover-rotate">
-                                        <img class="img-product img-product-ea" loading="lazy" aria-label="Electronic Arts" />
+                                        <img class="img-product img-product-ea" src="./images/webp/electronicArts.webp" alt="Electronic Arts logo" loading="lazy" decoding="async" />
                                         <div class="image-caption">
                                             <p class="product-title">Electronic Arts</p>
                                             <p>UI: Localization (l10n) and Internationalization (i18n) team</p>
                                         </div>
                                     </div>
                                     <div class="col-md-3 cell hover-rotate">
-                                        <img class="img-product img-product-simfor" loading="lazy" aria-label="Simfor simulators" />
+                                        <img class="img-product img-product-simfor" src="./images/webp/simforSim.webp" alt="Simfor simulator logo" loading="lazy" decoding="async" />
                                         <div class="image-caption">
                                             <p class="product-title">Simfor</p>
                                             <p>Building training virtual simulator: cranes, cars, buses, trucks and military vehicles.</p>
@@ -175,7 +175,7 @@
                             <div class="products-grid">
                                 <div class="rowProductsMobile">
                                     <div class="col-md-4 cell hover-rotate">
-                                        <img class="img-product img-product-spotify" loading="lazy" aria-label="Spotify" />
+                                        <img class="img-product img-product-spotify" src="./images/webp/spotifyCover.webp" alt="Spotify logo" loading="lazy" decoding="async" />
                                         <div class="image-caption">
                                             <p class="product-title">Spotify</p>
                                             <p>Web & Desktop app and Client Quality Platform tooling development</p>
@@ -185,7 +185,7 @@
 
                                 <div class="rowProductsMobile">
                                     <div class="col-md-4 cell hover-rotate">
-                                        <img class="img-product img-product-kindle" loading="lazy" aria-label="Amazon Kindle" />
+                                        <img class="img-product img-product-kindle" src="./images/webp/kindleCover.webp" alt="Amazon Kindle logo" loading="lazy" decoding="async" />
                                         <div class="image-caption">
                                             <p class="product-title">Amazon - Kindle</p>
                                             <p>
@@ -205,7 +205,7 @@
                                 </div>
                                 <div class="rowProductsMobile">
                                     <div class="col-md-3 cell hover-rotate">
-                                        <img class="img-product img-product-candy" loading="lazy" aria-label="Candy Crush Saga" />
+                                        <img class="img-product img-product-candy" src="./images/webp/candycrush.webp" alt="Candy Crush Saga logo" loading="lazy" decoding="async" />
                                         <div class="image-caption">
                                             <p class="product-title">King - Candy Crush Saga</p>
                                             <p>New content team: building new gameplay features and internal tools.</p>
@@ -214,7 +214,7 @@
                                 </div>
                                 <div class="rowProductsMobile">
                                     <div class="col-md-3 cell hover-rotate">
-                                        <img class="img-product img-product-ea" loading="lazy" aria-label="Electronic Arts" />
+                                        <img class="img-product img-product-ea" src="./images/webp/electronicArts.webp" alt="Electronic Arts logo" loading="lazy" decoding="async" />
                                         <div class="image-caption">
                                             <p class="product-title">Electronic Arts</p>
                                             <p>UI: Localization (l10n) and Internationalization (i18n) team</p>
@@ -223,7 +223,7 @@
                                 </div>
                                 <div class="rowProductsMobile">
                                     <div class="col-md-3 cell hover-rotate">
-                                        <img class="img-product img-product-simfor" loading="lazy" aria-label="Simfor simulators" />
+                                        <img class="img-product img-product-simfor" src="./images/webp/simforSim.webp" alt="Simfor simulator logo" loading="lazy" decoding="async" />
                                         <div class="image-caption">
                                             <p class="product-title">Simfor</p>
                                             <p>Building training virtual simulator: cranes, cars, buses, trucks and military vehicles.</p>
@@ -243,7 +243,20 @@
                             <div id="idTimeline" class="desktopTimeline desktopTimelineChange">
                                 <div class="timeline timeline--loaded timeline--mobile" style="opacity: 1">
                                     <div class="timeline__wrap">
-                                        <div id="timeline-items" class="timeline__items"></div>
+                                        <div id="timeline-items" class="timeline__items">
+                                            <button type="button" id="item-spotify" class="timeline__item" aria-pressed="false" aria-label="Spotify, Sep 2021 - Present"><span class="timeline__item__inner"><span class="timeline__content__wrap"><span id="timeline-spotify" class="timeline__content color-spotify"><span class="date">Sep 2021 - Present</span><span class="companyName">Spotify</span></span></span></span></button>
+                                            <button type="button" id="item-amazon" class="timeline__item" aria-pressed="false" aria-label="Amazon, Aug 2019 - Sep 2021"><span class="timeline__item__inner"><span class="timeline__content__wrap"><span id="timeline-amazon" class="timeline__content color-amazon"><span class="date">Aug 2019 - Sep 2021</span><span class="companyName">Amazon</span></span></span></span></button>
+                                            <button type="button" id="item-king" class="timeline__item" aria-pressed="false" aria-label="King, Jan 2018 - Jul 2019"><span class="timeline__item__inner"><span class="timeline__content__wrap"><span id="timeline-king" class="timeline__content color-king"><span class="date">Jan 2018 - Jul 2019</span><span class="companyName">King</span></span></span></span></button>
+                                            <button type="button" id="item-gameloft" class="timeline__item" aria-pressed="false" aria-label="Gameloft, Mar 2017 - Oct 2018"><span class="timeline__item__inner"><span class="timeline__content__wrap"><span id="timeline-gameloft" class="timeline__content color-gameloft"><span class="date">Mar 2017 - Oct 2018</span><span class="companyName">Gameloft</span></span></span></span></button>
+                                            <button type="button" id="item-fl" class="timeline__item" aria-pressed="false" aria-label="Future Lighthouse, Oct 2017 - Jan 2018"><span class="timeline__item__inner"><span class="timeline__content__wrap"><span id="timeline-fl" class="timeline__content color-future-lighthouse"><span class="date">Oct 2017 - Jan 2018</span><span class="companyName">Future Lighthouse</span></span></span></span></button>
+                                            <button type="button" id="item-ea" class="timeline__item" aria-pressed="false" aria-label="Electronic Arts, Apr 2015 - Mar 2017"><span class="timeline__item__inner"><span class="timeline__content__wrap"><span id="timeline-ea" class="timeline__content color-EA"><span class="date">Apr 2015 - Mar 2017</span><span class="companyName">Electronic Arts</span></span></span></span></button>
+                                            <button type="button" id="item-carto" class="timeline__item" aria-pressed="false" aria-label="Carto, Oct 2014 - Apr 2015"><span class="timeline__item__inner"><span class="timeline__content__wrap"><span id="timeline-carto" class="timeline__content color-carto"><span class="date">Oct 2014 - Apr 2015</span><span class="companyName">Carto</span></span></span></span></button>
+                                            <button type="button" id="item-simfor" class="timeline__item" aria-pressed="false" aria-label="Simfor, Aug 2012 - Sep 2014"><span class="timeline__item__inner"><span class="timeline__content__wrap"><span id="timeline-simfor" class="timeline__content color-simfor"><span class="date">Aug 2012 - Sep 2014</span><span class="companyName">Simfor</span></span></span></span></button>
+                                            <button type="button" id="item-complutense" class="timeline__item" aria-pressed="false" aria-label="University Complutense of Madrid, Aug 2012 - Sep 2013"><span class="timeline__item__inner"><span class="timeline__content__wrap"><span id="timeline-complutense" class="timeline__content color-complutense"><span class="date">Aug 2012 - Sep 2013</span><span class="companyName">🎓Univ. Complutense - Master Videogames</span></span></span></span></button>
+                                            <button type="button" id="item-granada" class="timeline__item timeline__item--left" aria-pressed="false" aria-label="University of Granada, Oct 2011 - Jun 2012"><span class="timeline__item__inner"><span class="timeline__content__wrap"><span id="timeline-granada" class="timeline__content color-granada"><span class="date">Oct 2011 - Jun 2012</span><span class="companyName">🎓Universidad Granada - Master Interaction</span></span></span></span></button>
+                                            <button type="button" id="item-mediapost" class="timeline__item timeline__item--left" aria-pressed="false" aria-label="Mediapost, Jul 2010 - Oct 2011"><span class="timeline__item__inner"><span class="timeline__content__wrap"><span id="timeline-mediapost" class="timeline__content color-mediapost"><span class="date">Jul 2010 - Oct 2011</span><span class="companyName">Mediapost</span></span></span></span></button>
+                                            <button type="button" id="item-uc3m" class="timeline__item timeline__item--left" aria-pressed="false" aria-label="University Carlos III of Madrid, Sep 2007 - Jun 2011"><span class="timeline__item__inner"><span class="timeline__content__wrap"><span id="timeline-uc3m" class="timeline__content color-UC3M"><span class="date">Sep 2007 - Jun 2011</span><span class="companyName">🎓UC3M - Computer Science Degree</span></span></span></span></button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -251,20 +264,38 @@
                             <div class="timeline-stage">
                                 <div id="timelineStageSelected" class="divSelectedStage">
                                     <div id="divSelectedStageTextContainer" class="divSelectedStageTextContainer runAnimation">
-                                        <img id="timelineLogo" class="selectedStageLogo" alt="Selected stage logo" width="250" height="250" />
-                                        <p id="timelineStageSelectedRole" class="selectedStageSubText selectedStageSubTextRole">Role</p>
-                                        <p id="timelineStageSelectedTasks" class="selectedStageSubText">Task</p>
-                                        <p id="timelineStageSelectedProjects" class="selectedStageSubText">Projects</p>
+                                        <img id="timelineLogo" class="selectedStageLogo" src="./images/logos/spotify.png" alt="Spotify logo" width="250" height="75" loading="lazy" decoding="async" />
+                                        <p id="timelineStageSelectedRole" class="selectedStageSubText selectedStageSubTextRole">Senior Software Engineer</p>
+                                        <p id="timelineStageSelectedTasks" class="selectedStageSubText">Web/Desktop app features development and Client Quality Platform tooling</p>
+                                        <p id="timelineStageSelectedProjects" class="selectedStageSubText">Spotify Desktop app. Internal developer tools.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <section class="visually-hidden" aria-labelledby="career-details-title">
+                            <h3 id="career-details-title">Career timeline details</h3>
+                            <ol>
+                                <li><strong>Spotify — Senior Software Engineer</strong> (Sep 2021 – Present). Web and desktop app feature development and Client Quality Platform tooling. Projects: Spotify Desktop app and internal developer tools.</li>
+                                <li><strong>Amazon — Software Development Engineer II</strong> (Aug 2019 – Sep 2021). European Customer Experience engineering across APIs, backend, mobile and retail operations; maintained PC/Mac Kindle Reader apps and developed the new web reader. Projects: price drops in cart, Amazon Kids and Kindle Reader for PC, Mac and web.</li>
+                                <li><strong>King — C++ Game Programmer</strong> (Jan 2018 – Jul 2019). Built gameplay and tools, including new in-game features, map functionality and art/design production toolsets. Project: Candy Crush Saga.</li>
+                                <li><strong>Gameloft — UI Engineer</strong> (Mar 2017 – Oct 2018). Fixed bugs for update 6 and created Unity prototypes for an unannounced title. Projects: Asphalt Extreme and an unannounced title.</li>
+                                <li><strong>Future Lighthouse — VR Engineer</strong> (Oct 2017 – Jan 2018). VR programming, QA certification bug fixing and publishing. Projects: Melita for Gear VR and In the Cloud: VR Afterlife for PS4.</li>
+                                <li><strong>Electronic Arts — Software Engineer</strong> (Apr 2015 – Mar 2017). Worked with Frostbite, Unity3D, Ignite and internal tools across PC, PS4, Xbox One, PS3 and Xbox 360; focused on internationalization, localization and bug fixing. Projects: FIFA 17, Battlefield 1, Star Wars Battlefront, FIFA 16, Plants vs. Zombies: Heroes, Mirror's Edge: Catalyst and Need for Speed.</li>
+                                <li><strong>Carto — Developer</strong> (Oct 2014 – Apr 2015). Front-end engineering, QA and technical support.</li>
+                                <li><strong>Simfor — Programmer</strong> (Aug 2012 – Sep 2014). Developed virtual simulators for cranes, cars, buses, trucks and military vehicles using C++, OSG, DirectX and Qt; worked on gameplay, tools and shaders.</li>
+                                <li><strong>University Complutense of Madrid — Student</strong> (Aug 2012 – Sep 2013). Master's degree in Video Games Development, Programming.</li>
+                                <li><strong>University of Granada — Student</strong> (Oct 2011 – Jun 2012). Master's degree in Software Development, Human–Computer Interaction.</li>
+                                <li><strong>Mediapost — Junior Programmer</strong> (Jul 2010 – Oct 2011). Built marketing and logistics web apps using ASP.NET, C#, JavaScript, web services and thermal printers.</li>
+                                <li><strong>University Carlos III of Madrid — Student</strong> (Sep 2007 – Jun 2011). Technical Engineering in Computer Management, followed by a Computer Engineering Degree.</li>
+                            </ol>
+                        </section>
                     </div>
                 </div>
 
                 <section id="sectionE" class="section bg-fifth-screen" aria-labelledby="chapiware-title">
                     <div class="chapiware-showcase transparent">
-                        <img class="chapiware-logo" src="./images/chapiware/chapiware-logo-light.svg" alt="Chapiware" width="280" height="58" />
+                        <img class="chapiware-logo" src="./images/chapiware/chapiware-logo-light.svg" alt="Chapiware logo" width="280" height="58" loading="lazy" decoding="async" />
                         <p class="chapiware-kicker">Independent maker</p>
                         <h2 id="chapiware-title">What I build at Chapiware</h2>
                         <p class="chapiware-intro">Calm, local-first apps for memories, habits, reading, and the small things worth keeping. No account, no cloud, no tracking.</p>
