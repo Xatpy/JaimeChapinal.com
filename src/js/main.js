@@ -251,7 +251,7 @@ const renderTimeline = () => {
         dates.className = 'date';
         dates.textContent = career.dates;
 
-        content.append(company, dates);
+        content.append(dates, company);
         wrap.append(content);
         inner.append(wrap);
         item.append(inner);
