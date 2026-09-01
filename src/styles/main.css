@@ -707,6 +707,17 @@ a:visited {
     font-weight: bolder;
 }
 
+/* Keep the inline Chapiware link readable without introducing a new accent
+ * colour into the introductory copy. */
+.main-text-section a.main-pings-bolder-text,
+.main-text-section a.main-pings-bolder-text:visited {
+    color: inherit;
+    font-weight: 700;
+    text-decoration-color: rgba(255, 255, 255, 0.7);
+    text-decoration-thickness: 0.08em;
+    text-underline-offset: 0.12em;
+}
+
 .pet-project-link {
     color: #e4e4e4;
     display: inline-block;
