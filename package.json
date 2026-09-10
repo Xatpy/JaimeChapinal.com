@@ -4,8 +4,8 @@
     "browserslist": "> 0.5%, last 2 versions, not dead",
     "scripts": {
         "start": "parcel",
-        "build": "rm -rf .parcel-cache ./dist && parcel build --public-url ./ && mkdir -p dist/images && cp src/images/shareImg.webp dist/images/shareImg.webp && cp src/robots.txt src/sitemap.xml src/llms.txt dist/",
-        "predeploy": "rm -rf dist .parcel-cache && parcel build --public-url https://jaimechapinal.com/ && mkdir -p dist/images && cp src/images/shareImg.webp dist/images/shareImg.webp && cp src/robots.txt src/sitemap.xml src/llms.txt dist/",
+        "build": "rm -rf .parcel-cache ./dist && parcel build --public-url ./ && mkdir -p dist/images dist/wiki && cp src/images/shareImg.webp dist/images/shareImg.webp && cp src/images/webp/cartoonHRwebp.webp dist/images/wiki-portrait.webp && cp src/wiki/index.html dist/wiki/index.html && cp src/robots.txt src/sitemap.xml src/llms.txt dist/",
+        "predeploy": "rm -rf dist .parcel-cache && parcel build --public-url https://jaimechapinal.com/ && mkdir -p dist/images dist/wiki && cp src/images/shareImg.webp dist/images/shareImg.webp && cp src/images/webp/cartoonHRwebp.webp dist/images/wiki-portrait.webp && cp src/wiki/index.html dist/wiki/index.html && cp src/robots.txt src/sitemap.xml src/llms.txt dist/",
         "deploy": "gh-pages -d dist"
     },
     "devDependencies": {

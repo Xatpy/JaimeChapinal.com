@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jaime Chapinal — Public Record</title>
+  <meta name="description" content="A sourced wiki-style biography of Jaime Chapinal: software work, Chapiware apps, research and the limits of his public web footprint.">
+  <meta name="theme-color" content="#15191d">
+  <link rel="canonical" href="https://jaimechapinal.com/wiki/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Jaime Chapinal — Public Record">
+  <meta property="og:description" content="Software work, Chapiware apps, research and public projects, with linked sources and evidence notes.">
+  <meta property="og:url" content="https://jaimechapinal.com/wiki/">
+  <meta property="og:image" content="https://jaimechapinal.com/images/wiki-portrait.webp">
+  <meta property="og:locale" content="en_GB">
+  <meta property="article:published_time" content="2026-09-07">
+  <style>
+/* Self-contained stylesheet. No framework, downloads, or build step. */
+:root,.dark{--background:#15191d;--foreground:#e0e4e7;--border:#353d45;--muted:#1e242a;--muted-foreground:#a6afb8;--primary:#8cc9ff;--primary-foreground:#15191d;--card:#1c2228;--card-foreground:#e0e4e7;--accent:#263441;--accent-foreground:#e0e4e7;--ring:#8cc9ff;--radius:0.2rem;}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:28px}
+body{margin:0;background:var(--background);color:var(--foreground);font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.75}
+a{color:#8cc9ff;text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible{outline:2px solid #a8d7ff;outline-offset:5px}
+p{margin:0 0 20px}
+sup{font-size:12px;margin-left:3px;line-height:0}
+.masthead{max-width:1360px;margin:auto;padding:28px 48px 24px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border)}
+.wordmark{font-family:Georgia,serif;color:#f3f5f7;font-size:21px;letter-spacing:1px;line-height:1.3}
+.wordmark span{display:block;font-family:Arial,sans-serif;font-size:13px;letter-spacing:.04em;color:#9ba7b2;margin-top:3px}
+.edition{font-size:12px;letter-spacing:.09em;color:#98a4af;text-align:right}
+.edition b{display:block;font-size:13px;font-weight:400;letter-spacing:.03em;color:#c5cdd4;margin-top:3px}
+main{max-width:1264px;margin:auto;padding:40px 48px 0}
+.article-meta{display:flex;justify-content:space-between;font-size:12px;letter-spacing:.08em;color:#a6b0bb}
+.status{color:#b6cbbd;letter-spacing:0}
+.status:before{content:'●';font-size:9px;margin-right:7px}
+h1{font:normal clamp(42px,5vw,64px)/1.16 Georgia,'Times New Roman',serif;letter-spacing:-1.5px;color:#f2f4f6;margin:20px 0 10px}
+.subtitle{color:#aeb8c1;font-size:18px;margin-bottom:29px}
+.article-bar{display:flex;gap:25px;border-bottom:1px solid var(--border);margin-bottom:32px;font-size:14px}
+.article-bar>*{padding:9px 0 12px}
+.article-bar>span{border-bottom:2px solid #8cc9ff;color:#eff5fa}
+.article-bar small{color:#a5b1bc;margin-left:5px}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 282px;gap:44px;align-items:start}
+article{min-width:0}
+.intro{font-size:18px;line-height:1.8}
+.intro strong{color:#f1f4f7}
+.contents{border:1px solid var(--border);background:#191f25;padding:20px 24px;margin:30px 0 35px}
+.eyebrow{font-size:12px;letter-spacing:.1em;color:#a9b6c1}
+.contents ol{display:grid;grid-template-columns:1fr 1fr;gap:6px 25px;padding-left:20px;margin:12px 0 0;font-size:14px}
+.contents li::marker{color:#8c9aa7}
+h2{font:normal 29px/1.3 Georgia,serif;border-bottom:1px solid var(--border);padding-bottom:11px;margin:40px 0 20px;color:#f0f2f4;scroll-margin-top:28px}
+.anchor{font:14px Arial,sans-serif;margin-left:12px;opacity:0}
+h2:hover .anchor,.anchor:focus{opacity:1}
+.record-table{width:100%;font-size:14px;line-height:1.55}
+.record-table th{text-align:left;color:#9cabb8;font-size:12px;text-transform:uppercase;letter-spacing:.04em;padding:12px 10px;white-space:normal}
+.record-table td{padding:13px 10px;white-space:normal;border-top:1px solid #303942;vertical-align:top}
+.record-table tr:hover{background:#1c242b}
+.record-table .date{min-width:113px;color:#9eadba}
+.record-table strong{font-weight:500;color:#e8eef2}
+.paper{border-left:2px solid #719fc5;background:#1b2229;padding:22px 25px;margin:28px 0}
+.paper h3{font:23px/1.4 Georgia,serif;margin:10px 0 12px;color:#edf1f4}
+.paper p{font-size:15px}
+.paper>a{font-size:14px}
+.app-list{display:grid;grid-template-columns:1fr 1fr;column-gap:30px;margin:25px 0}
+.app-list>div{border-top:1px solid var(--border);padding:15px 0 0}
+.app-list h3{font-size:16px;font-weight:600;color:#eaf0f5;margin:0 0 4px}
+.app-list p{font-size:14px;color:#b1bdc7;line-height:1.7}
+.note{color:#a9b5be;font-size:14px;border-left:2px solid #495967;padding-left:17px}
+.audit-lead{font-size:19px;color:#dce7ef}
+.evidence>div{padding:20px 0;border-top:1px solid var(--border)}
+.evidence-label{font-size:11px;letter-spacing:.1em;color:#a9d0b8}
+.evidence-label.self{color:#9ec7eb}
+.evidence-label.limited{color:#d2bd95}
+.evidence h3{font-size:18px;font-weight:500;margin:6px 0 9px}
+.evidence p{margin-bottom:0;font-size:15px;color:#b9c3cb}
+.evidence{margin-bottom:25px}
+.reference-intro{color:#a7b4be;font-size:14px}
+.references{padding-left:25px;font-size:14px}
+.references li{padding:8px 0 8px 8px;scroll-margin-top:35px}
+.references li::marker{color:#8f9eab}
+.references li:target{background:#233140}
+.references p{font-size:12px;line-height:1.6;color:#9dabb7;margin:4px 0 0}
+.infobox{border:1px solid #3b4550;background:#1c232a}
+.portrait{display:block;width:100%;aspect-ratio:1;object-fit:cover;object-position:center;border-bottom:1px solid #46525e}
+.initials{background:#263440;color:#b8c8d5;font:normal 76px/1 Georgia,serif;text-align:center;letter-spacing:-5px;padding:36px 20px 28px;border-bottom:1px solid #46525e}
+.initials span{display:block;font:11px/1.5 Arial,sans-serif;letter-spacing:.15em;margin-top:18px;color:#b9c8d4}
+.info-title{padding:17px;font:21px/1.4 Georgia,serif;text-align:center;color:#f0f4f7}
+.infobox dl{margin:0;padding:0 19px}
+.infobox dl>div{border-top:1px solid var(--border);padding:13px 0}
+.infobox dt{font-size:12px;color:#a3b1bd;margin-bottom:4px}
+.infobox dd{margin:0;font-size:14px;line-height:1.6}
+.infobox-note{padding:20px;font-size:12px;line-height:1.7;color:#96a6b3;border-top:1px solid var(--border);margin-top:9px}
+footer{border-top:1px solid var(--border);margin-top:50px;padding:25px 0 35px;display:flex;justify-content:space-between;gap:20px;font-size:12px;color:#94a3af}
+footer a{margin-left:20px}
+.skip{position:absolute;left:20px;top:-70px;background:#263d4d;padding:10px}
+.skip:focus{top:15px}
+::selection{background:#385671;color:#fff}
+@media(max-width:1000px){main{padding:30px}
+.masthead{padding:23px 30px}
+.layout{gap:28px;grid-template-columns:minmax(0,1fr) 240px}
+.intro{font-size:17px}
+}
+@media(max-width:760px){main{padding:27px 20px 0}
+.masthead{padding:20px}
+.edition{font-size:10px}
+.edition b{font-size:11px}
+.wordmark{font-size:18px}
+.layout{display:flex;flex-direction:column}
+.infobox{order:-1;width:100%;margin-bottom:8px}
+.portrait{display:none}
+.initials{display:block;border-bottom:0}
+.info-title{text-align:left;padding:17px 19px}
+.infobox dl{display:grid;grid-template-columns:1fr 1fr;column-gap:20px}
+.infobox-note{padding:13px 19px}
+.article-meta{font-size:10px}
+.subtitle{font-size:16px}
+.article-bar{gap:20px;font-size:13px;margin-bottom:24px}
+h1{font-size:44px}
+h2{font-size:27px}
+.contents ol{font-size:14px}
+.app-list{gap:0 22px}
+footer{flex-direction:column;gap:6px}
+.record-table td,.record-table th{padding-left:4px;padding-right:6px}
+.record-table .date{min-width:90px}
+.record-table{font-size:13px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}
+}
+@media print{body{background:white;color:#222}
+.masthead,.article-bar,.contents,footer,.infobox{display:none}
+.layout{display:block}
+main{padding:0}
+h1,h2,h3,.intro strong,.record-table strong,.audit-lead{color:#111}
+a{color:#174c77}
+.paper,.evidence>div{background:white;break-inside:avoid}
+.app-list p,.evidence p,.note{color:#333}
+.references p{color:#555}
+}
+
+
+/* Native HTML replacements for the original framework defaults. */
+html { color-scheme: dark; }
+
+body { -webkit-font-smoothing: antialiased; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+.table-scroll { max-width: 100%; overflow-x: auto; }
+
+th { font-weight: 500; }
+
+strong, b { font-weight: 700; }
+
+a { overflow-wrap: anywhere; }
+
+.contents ol, .references { list-style-type: decimal; }
+
+@media (max-width: 380px) {
+  .contents ol, .app-list { grid-template-columns: 1fr; }
+
+  .article-bar { flex-wrap: wrap; gap: 12px; }
+
+  .masthead { gap: 12px; }
+
+}
+
+@media print { html { color-scheme: light; }
+ }
+
+  </style>
+</head>
+<body>
+<a class="skip" href="#biography">Skip to article</a><header class="masthead"><a href="#top" class="wordmark">PUBLIC RECORD<span>A personal wiki</span></a><div class="edition">LAST REVIEWED <b>07 SEPTEMBER 2026</b></div></header>
+<main id="top"><div class="article-meta"><span>PEOPLE / SOFTWARE &amp; TECHNOLOGY</span><span class="status">Sources linked</span></div><h1>Jaime Chapinal</h1>
+<p class="subtitle">Software engineer, independent app maker and Kinect research co-author</p>
+<div class="article-bar"><span>Article</span><a href="#audit">Evidence &amp; limitations</a><a href="#references">References <small>14</small></a></div><div class="layout"><article><section id="biography" class="intro"><p><strong>Jaime Chapinal Cervantes</strong> is a software engineer whose public profile lists work at Spotify and independent app development under <a href="https://www.chapiware.com/">Chapiware</a>. His personal website describes a senior engineering role on Spotify’s web and desktop clients.<sup><a href="#source-1" aria-label="Reference 1">[1]</a></sup><sup><a href="#source-2" aria-label="Reference 2">[2]</a></sup></p>
+<p>His public record also includes a 2012 paper on Kinect interaction, a game-development conference talk and a collection of apps for photos, reading and everyday tracking.<sup><a href="#source-7" aria-label="Reference 7">[7]</a></sup><sup><a href="#source-9" aria-label="Reference 9">[9]</a></sup><sup><a href="#source-3" aria-label="Reference 3">[3]</a></sup> Google Play identifies Chapiware’s Ayer developer as Jaime Chapinal Cervantes, linking the full name to the product portfolio.<sup><a href="#source-4" aria-label="Reference 4">[4]</a></sup></p>
+</section>
+<nav class="contents" aria-label="Article contents"><div class="eyebrow">CONTENTS</div><ol><li><a href="#career">Career</a></li><li><a href="#research">Education &amp; research</a></li><li><a href="#chapiware">Chapiware</a></li><li><a href="#public-work">Public work</a></li><li><a href="#audit">What the web knows</a></li><li><a href="#context">The experiment</a></li><li><a href="#references">References</a></li></ol></nav>
+<h2 id="career">Career<a class="anchor" href="#career" aria-label="Link to Career">#</a></h2>
+<p>The following chronology is reported on Chapinal’s website. “Present” reflects the listing as accessed on 7 September 2026; the overlapping 2017–18 entries are retained as published.<sup><a href="#source-1" aria-label="Reference 1">[1]</a></sup></p>
+<div class="table-scroll"><table class="record-table"><thead><tr><th scope="col">Period</th><th scope="col">Organization</th><th scope="col">Reported work</th></tr>
+</thead>
+<tbody><tr><td class="date">2021–present</td><td><strong>Spotify</strong></td><td>Web and desktop clients; quality tooling.</td></tr>
+<tr><td class="date">2019–2021</td><td><strong>Amazon</strong></td><td>Kindle Reader and customer experience.</td></tr>
+<tr><td class="date">2018–2019</td><td><strong>King</strong></td><td>Candy Crush Saga gameplay and tools.</td></tr>
+<tr><td class="date">2017–2018</td><td><strong>Gameloft</strong></td><td>UI engineering.</td></tr>
+<tr><td class="date">2017–2018</td><td><strong>Future Lighthouse</strong></td><td>Virtual-reality engineering.</td></tr>
+<tr><td class="date">2015–2017</td><td><strong>Electronic Arts</strong></td><td>Localization and internationalization.</td></tr>
+<tr><td class="date">2014–2015</td><td><strong>Carto</strong></td><td>Front-end development and QA.</td></tr>
+<tr><td class="date">2012–2014</td><td><strong>Simfor</strong></td><td>Vehicle-training simulators.</td></tr>
+<tr><td class="date">2010–2011</td><td><strong>Mediapost</strong></td><td>Web application development.</td></tr>
+</tbody>
+</table>
+</div><h2 id="research">Education and research<a class="anchor" href="#research" aria-label="Link to Education and research">#</a></h2>
+<p>Chapinal’s website lists computing studies at Universidad Carlos III de Madrid (2007–11), software-development and human–computer interaction studies at Granada (2011–12), and video-game development at Universidad Complutense de Madrid (2012–13).<sup><a href="#source-1" aria-label="Reference 1">[1]</a></sup></p>
+<p>A University of Granada record independently names him as the author of a master’s project on cognitive rehabilitation through video games using Kinect, defended on <strong>23 July 2012</strong> and supervised by Francisco Luis Gutiérrez Vela and Patricia Paderewski Rodríguez.<sup><a href="#source-6" aria-label="Reference 6">[6]</a></sup></p>
+<div class="paper"><span class="eyebrow">PUBLICATION · 2012</span><h3>Natural interaction techniques using Kinect</h3>
+<p>Jaime Chapinal Cervantes, Francisco Luis Gutiérrez Vela and Patricia Paderewski-Rodríguez.</p>
+<p>Published in the proceedings of the 13th International Conference on Interacción Persona-Ordenador, held in Elche, Spain, 3–5 October 2012. The paper examines adapting 3D interaction techniques to Kinect and presents a cognitive-rehabilitation case study.<sup><a href="#source-7" aria-label="Reference 7">[7]</a></sup><sup><a href="#source-8" aria-label="Reference 8">[8]</a></sup></p>
+<a href="https://doi.org/10.1145/2379636.2379650">DOI: 10.1145/2379636.2379650 ↗</a></div><h2 id="chapiware">Chapiware<a class="anchor" href="#chapiware" aria-label="Link to Chapiware">#</a></h2>
+<p>Chapiware presents its products as small applications that keep personal data on the user’s device, generally without accounts or cloud storage. Its current catalogue includes eight apps and two web utilities.<sup><a href="#source-3" aria-label="Reference 3">[3]</a></sup> Apple’s developer page provides additional evidence of published apps under Chapinal’s name.<sup><a href="#source-5" aria-label="Reference 5">[5]</a></sup></p>
+<div class="app-list"><div><h3>Ayer</h3>
+<p>Photo memories from the same date across years.<sup><a href="#source-3" aria-label="Reference 3">[3]</a></sup></p>
+</div><div><h3>Your Year</h3>
+<p>A calendar of daily photos.<sup><a href="#source-3" aria-label="Reference 3">[3]</a></sup></p>
+</div><div><h3>Countly Daily</h3>
+<p>Personal habits and event tracking.<sup><a href="#source-3" aria-label="Reference 3">[3]</a></sup></p>
+</div><div><h3>Ireneo</h3>
+<p>A voice inbox with optional on-device transcription.<sup><a href="#source-14" aria-label="Reference 14">[14]</a></sup></p>
+</div><div><h3>Send to X4</h3>
+<p>Web articles for the Xteink X4 e-reader.<sup><a href="#source-3" aria-label="Reference 3">[3]</a></sup></p>
+</div><div><h3>Beatable</h3>
+<p>Game discovery by completion time.<sup><a href="#source-3" aria-label="Reference 3">[3]</a></sup></p>
+</div><div><h3>StickToGif</h3>
+<p>Motion-tracked GIF annotations.<sup><a href="#source-3" aria-label="Reference 3">[3]</a></sup></p>
+</div><div><h3>8 Seconds Hug</h3>
+<p>A timer for a short daily hug ritual.<sup><a href="#source-3" aria-label="Reference 3">[3]</a></sup></p>
+</div></div><p>Its web utilities include Store Listing Canvas, for app-store screenshots, and PDF Ruler, for measuring distances in PDFs.<sup><a href="#source-3" aria-label="Reference 3">[3]</a></sup></p>
+<p class="note">Privacy descriptions reflect the developer’s statements. Store listings establish publication and attribution; they are not independent technical privacy audits.<sup><a href="#source-4" aria-label="Reference 4">[4]</a></sup><sup><a href="#source-14" aria-label="Reference 14">[14]</a></sup></p>
+<h2 id="public-work">Public work and writing<a class="anchor" href="#public-work" aria-label="Link to Public work and writing">#</a></h2>
+<p>His website links to the GitHub account <a href="https://github.com/xatpy">Xatpy</a>, whose profile links back to the same site. Public repositories include Send to X4, its mobile app, Beatable, a La Vida Moderna soundboard and a project connecting Strava data to CartoDB maps.<sup><a href="#source-1" aria-label="Reference 1">[1]</a></sup><sup><a href="#source-10" aria-label="Reference 10">[10]</a></sup></p>
+<p>An attendee’s account of <strong>Freakend Juegos 2016</strong> links to Chapinal’s presentation on internationalization best practices. This is a useful trace of his work outside his own résumé.<sup><a href="#source-9" aria-label="Reference 9">[9]</a></sup></p>
+<p>His blog’s 2026 entries discuss building a hug-timer app while running, organizing an iPhone photo archive, developing an app through voice interaction from a car, and creating a children’s comic from a family photo. These are self-published accounts of projects, not independent reports.<sup><a href="#source-11" aria-label="Reference 11">[11]</a></sup></p>
+<p>He publicly lists video games, programming, GIFs, football and <em>The Office</em> among his interests.<sup><a href="#source-1" aria-label="Reference 1">[1]</a></sup></p>
+<h2 id="audit">What the internet actually knows<a class="anchor" href="#audit" aria-label="Link to What the internet actually knows">#</a></h2>
+<p class="audit-lead">The clearest footprint is professional: software work, published apps and a research trail. The evidence gets thinner when it moves beyond those artifacts.</p>
+<div class="evidence"><div><span class="evidence-label">DOCUMENTED</span><h3>Work that leaves a record</h3>
+<p>The university thesis record, indexed conference paper, app-store entries, public repositories and a third-party conference account are directly discoverable.<sup><a href="#source-4" aria-label="Reference 4">[4]</a></sup><sup><a href="#source-6" aria-label="Reference 6">[6]</a></sup><sup><a href="#source-7" aria-label="Reference 7">[7]</a></sup><sup><a href="#source-9" aria-label="Reference 9">[9]</a></sup><sup><a href="#source-10" aria-label="Reference 10">[10]</a></sup></p>
+</div><div><span class="evidence-label self">SELF-REPORTED</span><h3>A detailed professional biography</h3>
+<p>Job dates, responsibilities, most education details and interests come primarily from Chapinal’s own website and LinkedIn. Matching profiles reinforce identity, but do not independently verify every claim.<sup><a href="#source-1" aria-label="Reference 1">[1]</a></sup><sup><a href="#source-2" aria-label="Reference 2">[2]</a></sup></p>
+</div><div><span class="evidence-label limited">UNRESOLVED</span><h3>Recognition and missing context</h3>
+<p>LinkedIn reports a Nova 111 List recognition in May 2024. The linked organizer’s page returned “not found” during this research, so the award remains a self-reported claim here.<sup><a href="#source-2" aria-label="Reference 2">[2]</a></sup></p>
+</div><div><span class="evidence-label limited">NOT ESTABLISHED</span><h3>The rest of a life</h3>
+<p>This research did not establish a birth date, birthplace, nationality, revenue, download totals or a complete personal biography. No values are inferred from names, location settings or gaps in search results.</p>
+</div></div><p class="note">Assessment: a substantial public professional footprint, with limited independent biographical coverage. This is a bounded web search, not an exhaustive inventory of everything online. Repeated app listings and mirrored profiles were treated as copies, not extra corroboration.</p>
+<h2 id="context">The experiment behind this page<a class="anchor" href="#context" aria-label="Link to The experiment behind this page">#</a></h2>
+<p>On 6 September 2026, Jack Friks posted that he had asked an agent to independently research him and create a wiki. He described the result as accurate, unsettling and enjoyable; the attached image showed an encyclopedic article with an infobox and citations.<sup><a href="#source-12" aria-label="Reference 12">[12]</a></sup></p>
+<p>One retrievable reaction, from Creao AI, framed it as a test of how much of someone’s life is already publicly reconstructable.<sup><a href="#source-13" aria-label="Reference 13">[13]</a></sup> The full reply and quote-post conversation could not be reviewed, so this page does not claim to summarize its overall reception.</p>
+<p>This article applies that idea to Jaime Chapinal: public sources supply the biography, while the evidence notes show where a plausible story would outrun the record. Research used publicly accessible pages only, without private accounts, messages or workspace material as biographical evidence.</p>
+<h2 id="references">References<a class="anchor" href="#references" aria-label="Link to References">#</a></h2>
+<p class="reference-intro">Sources accessed 7 September 2026. Labels identify the kind of evidence each source provides.</p>
+<ol class="references"><li id="source-1"><a href="https://jaimechapinal.com/">Personal website &amp; career timeline <span aria-hidden="true">↗</span></a><p>Self-published · career, education and interests</p>
+</li><li id="source-2"><a href="https://es.linkedin.com/in/jaime-chapinal-cervantes">LinkedIn profile <span aria-hidden="true">↗</span></a><p>Self-reported · professional identity and Nova claim</p>
+</li><li id="source-3"><a href="https://www.chapiware.com/">Chapiware product catalogue <span aria-hidden="true">↗</span></a><p>First-party · apps and product philosophy</p>
+</li><li id="source-4"><a href="https://play.google.com/store/apps/details?hl=en&amp;id=com.chapiware.ayer">Ayer on Google Play <span aria-hidden="true">↗</span></a><p>Store record · developer identity; privacy is developer-declared</p>
+</li><li id="source-5"><a href="https://apps.apple.com/ph/developer/jaime-chapinal/id1855881822">Apple developer listing <span aria-hidden="true">↗</span></a><p>Store record · published apps</p>
+</li><li id="source-6"><a href="https://masteres.ugr.es/desarrollo-software/print/pdf/node/282">University of Granada: 2011–12 master’s projects <span aria-hidden="true">↗</span></a><p>Institutional record · thesis title and defense date</p>
+</li><li id="source-7"><a href="https://dblp.uni-trier.de/db/conf/interaccion/interaccion2012.html">DBLP: Interacción 2012 proceedings <span aria-hidden="true">↗</span></a><p>Bibliographic record · authorship and publication</p>
+</li><li id="source-8"><a href="https://www.cin.ufpe.br/~if124/frame/turmas/turma_2013_1/artigos/kinect/a14-chapinal_cervantes.pdf">Natural interaction techniques using Kinect <span aria-hidden="true">↗</span></a><p>Research paper · primary text, university-hosted copy</p>
+</li><li id="source-9"><a href="https://www.albertogonzalez.net/freakend-juegos-2016/">Freakend Juegos 2016 — Alberto González <span aria-hidden="true">↗</span></a><p>Independent attendee account · talk and presentation link</p>
+</li><li id="source-10"><a href="https://github.com/xatpy">Xatpy on GitHub <span aria-hidden="true">↗</span></a><p>First-party public work · identity linked from personal website</p>
+</li><li id="source-11"><a href="https://blog.jaimechapinal.com/">Jaime Chapinal’s blog <span aria-hidden="true">↗</span></a><p>Self-published · dated writing</p>
+</li><li id="source-12"><a href="https://x.com/jackfriks/status/2096631012763595181">Jack Friks: the original wiki experiment <span aria-hidden="true">↗</span></a><p>6 September 2026 · text and image recovered through FxTwitter</p>
+</li><li id="source-13"><a href="https://zamantika.com/profile/CreaoAI">Creao AI’s reaction, indexed mirror <span aria-hidden="true">↗</span></a><p>Secondary mirror · one visible response, not the whole conversation</p>
+</li><li id="source-14"><a href="https://apps.apple.com/it/app/ireneo/id6798789699">Ireneo on the App Store <span aria-hidden="true">↗</span></a><p>Store record · app description and developer</p>
+</li></ol></article>
+<aside class="infobox" aria-label="Biographical summary"><img class="portrait" src="../images/wiki-portrait.webp" alt="Illustrated portrait of Jaime Chapinal"><div class="initials" aria-hidden="true">JC<span>JAIME CHAPINAL</span></div><div class="info-title">Jaime Chapinal Cervantes</div><dl><div><dt>Occupation</dt><dd>Software engineer; app maker<sup><a href="#source-1" aria-label="Reference 1">[1]</a></sup></dd></div><div><dt>Listed employer</dt><dd>Spotify<sup><a href="#source-1" aria-label="Reference 1">[1]</a></sup><sup><a href="#source-2" aria-label="Reference 2">[2]</a></sup></dd></div><div><dt>Independent work</dt><dd>Chapiware<sup><a href="#source-3" aria-label="Reference 3">[3]</a></sup><sup><a href="#source-4" aria-label="Reference 4">[4]</a></sup></dd></div><div><dt>Published research</dt><dd>Kinect interaction, 2012<sup><a href="#source-7" aria-label="Reference 7">[7]</a></sup></dd></div><div><dt>Public code</dt><dd><a href="https://github.com/xatpy">github.com/Xatpy ↗</a></dd></div><div><dt>Website</dt><dd><a href="https://jaimechapinal.com/">jaimechapinal.com ↗</a></dd></div></dl><div class="infobox-note">A personal research experiment, compiled from public sources. Not a Wikipedia article.</div></aside>
+</div><footer><span>PUBLIC RECORD · JAIME CHAPINAL</span><span>Snapshot: 7 September 2026 <a href="#top">Back to top ↑</a></span></footer>
+</main>
+
+</body>
+</html>
