@@ -1,15 +1,18 @@
 # Jaime Chapinal
 
-> Jaime Chapinal is a Senior Software Engineer building Web and Desktop clients at Spotify and the independent maker behind Chapiware, a family of local-first, privacy-first apps.
+> Jaime Chapinal is a Senior Software Engineer at Spotify, working on web and desktop experiences and developer tooling. Previously at Amazon, King, and Electronic Arts.
 
 ## About
 
 - Location and profile: https://jaimechapinal.com/
 - Career: Senior Software Engineer at Spotify; experience in web, desktop, games, developer tools, and client quality platforms.
-- Independent work: Chapiware builds calm, local-first apps for memories, habits, reading, and personal data. No account, cloud, or tracking is required for its products.
+- Personal projects outside his role at Spotify: Chapiware builds calm, local-first apps for memories, habits, reading, and personal data. No account, cloud, or tracking is required for its products.
 
 ## Projects and writing
 
+- Spotify work: https://jaimechapinal.com/work/spotify.html
+- Kindle work: https://jaimechapinal.com/work/kindle.html
+- Candy Crush Saga work: https://jaimechapinal.com/work/candy-crush.html
 - Chapiware: https://www.chapiware.com/
 - Ayer: https://www.chapiware.com/ayer/
 - Jaime's blog: https://blog.jaimechapinal.com/

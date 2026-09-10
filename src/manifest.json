@@ -1,12 +1,12 @@
 {
     "name": "Jaime Chapinal",
     "short_name": "JaimeChapinal",
-    "background_color": "#f8ea48",
+    "background_color": "#191a18",
     "display": "standalone",
     "scope": "/",
     "start_url": "https://jaimechapinal.com/",
     "splash_pages": null,
-    "theme_color": "#317EFB",
+    "theme_color": "#191a18",
     "icons": [
         {
             "src": "images/webp/cartoon.webp",
