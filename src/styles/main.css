@@ -333,6 +333,18 @@ a:visited {
     margin-bottom: 100px;
 }
 
+.public-record-link {
+    margin-top: 1.15em;
+    font-size: 0.46em;
+    line-height: 1.4;
+}
+
+.public-record-link a {
+    color: inherit;
+    font-weight: 700;
+    text-decoration-color: currentColor;
+}
+
 .products {
     display: flex;
     height: 100%;
