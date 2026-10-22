@@ -6,8 +6,12 @@
     --yellow: #eeff63;
     --line: #3b3d34;
     --radius: 5px;
+    /* System stacks: native-feeling type with no font requests. */
+    --sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --mono: ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+    --serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
     color-scheme: dark;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--sans);
     background: var(--ink);
     color: var(--paper);
     font-synthesis: none;
@@ -71,7 +75,7 @@ summary:focus-visible {
     padding-block: 110px;
 }
 .eyebrow {
-    font-family: 'Courier New', monospace;
+    font-family: var(--mono);
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.1em;
@@ -162,7 +166,7 @@ nav a[aria-current] {
 }
 h1 {
     font-size: clamp(56px, 6.8vw, 104px);
-    letter-spacing: -0.067em;
+    letter-spacing: -0.035em;
     line-height: 0.99;
     font-weight: 650;
     margin: 29px 0 28px;
@@ -248,7 +252,7 @@ h1 {
 }
 .portrait-label {
     align-self: flex-start;
-    font-family: 'Courier New', monospace;
+    font-family: var(--mono);
     font-size: 11px;
     letter-spacing: 0.16em;
     transform: rotate(-7deg);
@@ -294,7 +298,7 @@ h1 {
 }
 .portrait-note {
     margin-top: 30px;
-    font-family: Georgia, serif;
+    font-family: var(--serif);
     font-size: 17px;
     font-style: italic;
     transform: rotate(-4deg);
@@ -361,7 +365,7 @@ h1 {
     font-weight: 750;
 }
 .company-list span:nth-child(3) {
-    font-family: Georgia, serif;
+    font-family: var(--serif);
     font-style: italic;
     font-size: 30px;
 }
@@ -382,7 +386,7 @@ h1 {
 h2 {
     font-size: clamp(38px, 4.25vw, 64px);
     line-height: 1.05;
-    letter-spacing: -0.055em;
+    letter-spacing: -0.045em;
     font-weight: 550;
 }
 .section-heading > p,
@@ -433,9 +437,7 @@ h2 {
     background: var(--ink);
     color: white;
     padding: 7px 9px;
-    font:
-        10px 'Courier New',
-        monospace;
+    font: 10px var(--mono);
     letter-spacing: 0.06em;
 }
 .work-copy {
@@ -506,7 +508,7 @@ h2 {
 .app-feature h3 {
     font-size: clamp(36px, 4vw, 59px);
     line-height: 1.04;
-    letter-spacing: -0.055em;
+    letter-spacing: -0.045em;
     font-weight: 550;
     margin: 17px 0 22px;
 }
@@ -515,33 +517,83 @@ h2 {
     color: #53574b;
     max-width: 380px;
 }
+.app-feature h3 em {
+    font-style: normal;
+    color: #b5452c;
+}
+.ayer-stats {
+    display: flex;
+    gap: 28px;
+    margin: 28px 0 0;
+}
+.ayer-stats dt {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    line-height: 1;
+}
+.ayer-stats dd {
+    margin: 8px 0 0;
+    max-width: 120px;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #595c50;
+}
 .app-feature .button {
-    margin-top: 26px;
+    margin-top: 30px;
 }
 .privacy-note {
     display: block;
-    font:
-        11px 'Courier New',
-        monospace;
+    font: 11px var(--mono);
     margin-top: 21px;
     color: #55584b;
 }
 .ayer-visual {
-    background: #131313;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 25px 0;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-content: center;
+    padding: 48px 48px 150px;
+    background: #f3e4d2;
 }
-.ayer-visual img {
+.ayer-photo {
+    position: relative;
+    margin: 0;
+}
+.ayer-photo img {
     width: 100%;
-    height: auto;
-    object-fit: contain;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.ayer-photo figcaption {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 5px 8px;
+    border-radius: 4px;
+    background: var(--paper);
+    color: var(--ink);
+    font: 11px var(--mono);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+.ayer-phone {
+    position: absolute;
+    left: 50%;
+    bottom: 32px;
+    width: 21%;
+    border: 5px solid var(--ink);
+    border-radius: 22px;
+    background: var(--ink);
+    box-shadow: 0 18px 40px #0004;
+    transform: translateX(-50%) rotate(-4deg);
 }
 .app-pair {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 32px;
+    gap: 48px 32px;
     margin-top: 42px;
 }
 .small-app {
@@ -555,23 +607,62 @@ h2 {
     border-radius: var(--radius);
     background: #e4e3db;
 }
-.countly-media img {
+.small-app-media img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: top;
+    transition: transform 0.4s;
 }
-.canvas-media {
+.small-app:hover .small-app-media img {
+    transform: scale(1.04);
+}
+.app-more {
+    margin-top: 56px;
+    padding-top: 28px;
+    border-top: 1px solid #d6d8cc;
+}
+.app-more ul {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px 24px;
+    margin: 18px 0 0;
+    padding: 0;
+    list-style: none;
+}
+.app-more a {
     display: flex;
     align-items: center;
-    background: #d8d6e2;
+    gap: 14px;
+    padding-block: 8px;
+    font-size: 15px;
+    font-weight: 550;
 }
-.canvas-media img {
-    height: 175px;
-    width: auto;
-    max-width: none;
-    object-fit: cover;
-    object-position: left;
+.app-more img {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    object-fit: contain;
+    flex-shrink: 0;
+    transition: transform 0.2s;
+}
+.app-more small {
+    margin-left: 6px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: #e6e9dc;
+    color: #55584b;
+    font: 10px var(--mono);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    vertical-align: 2px;
+}
+.app-more a:hover span {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+.app-more a:hover img {
+    transform: rotate(-6deg);
 }
 .small-app .eyebrow {
     font-size: 10px;
@@ -604,9 +695,7 @@ h2 {
     border-bottom: 1px solid var(--line);
 }
 .article-number {
-    font:
-        14px 'Courier New',
-        monospace;
+    font: 14px var(--mono);
     color: var(--muted);
     align-self: start;
     margin-top: 5px;
@@ -665,9 +754,7 @@ h2 {
     margin-bottom: 20px;
 }
 .personal-note {
-    font:
-        italic 22px/1.4 Georgia,
-        serif;
+    font: italic 22px/1.4 var(--serif);
     color: var(--yellow);
     padding: 24px 0 30px;
     transform: rotate(-3deg);
@@ -677,18 +764,59 @@ h2 {
     font-size: 36px;
     margin-right: 15px;
 }
+.career-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-block: 1px solid #494b40;
+    margin: 6px 0 36px;
+}
+.career-stats div {
+    padding: 20px 16px 20px 0;
+}
+.career-stats div + div {
+    border-left: 1px solid #494b40;
+    padding-left: 18px;
+}
+.career-stats dt {
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    color: var(--paper);
+}
+.career-stats dd {
+    margin: 10px 0 0;
+    font: 11px/1.4 var(--mono);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
 .career {
     scroll-margin-top: 110px;
 }
 .career > h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
     font-size: 22px;
     font-weight: 500;
     margin-bottom: 25px;
     letter-spacing: -0.025em;
 }
+.career > h3 + h3,
+.career-entry + h3 {
+    margin-top: 56px;
+}
+.career > h3 small {
+    font: 11px var(--mono);
+    letter-spacing: 0.08em;
+    color: var(--muted);
+}
 .career-entry {
     border-top: 1px solid #494b40;
 }
+.career-entry:has(+ h3),
 .career-entry:last-child {
     border-bottom: 1px solid #494b40;
 }
@@ -697,21 +825,40 @@ h2 {
     grid-template-columns: 1fr auto 18px;
     gap: 15px;
     align-items: center;
-    padding: 20px 0;
+    padding: 18px 0;
     cursor: pointer;
     list-style: none;
+}
+.career-static {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 15px;
+    align-items: center;
+    padding: 18px 33px 18px 0;
+}
+.career-entry summary:hover .career-company {
+    color: var(--yellow);
 }
 .career-entry summary::-webkit-details-marker {
     display: none;
 }
 .career-company {
-    font-size: 15px;
-    font-weight: 550;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+.career-role {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--muted);
+}
+.career-entry[open] .career-role {
+    color: var(--yellow);
 }
 .career-date {
-    font:
-        11px/1.4 'Courier New',
-        monospace;
+    font: 11px/1.4 var(--mono);
     color: var(--muted);
 }
 .expand {
@@ -725,12 +872,6 @@ h2 {
 }
 .career-body {
     padding: 0 30px 23px 0;
-}
-.career-body h4 {
-    font-size: 14px;
-    font-weight: 550;
-    color: var(--yellow);
-    margin-bottom: 12px;
 }
 .career-body p {
     color: var(--muted);
@@ -749,7 +890,7 @@ h2 {
 .contact-heading h2 {
     font-size: clamp(55px, 8.5vw, 128px);
     line-height: 0.97;
-    letter-spacing: -0.065em;
+    letter-spacing: -0.045em;
 }
 .contact-heading h2 span {
     color: var(--yellow);
@@ -903,9 +1044,7 @@ h2 {
     padding-top: 24px;
 }
 .detail-meta dt {
-    font:
-        11px 'Courier New',
-        monospace;
+    font: 11px var(--mono);
     color: var(--muted);
     margin-top: 20px;
 }
@@ -952,6 +1091,44 @@ h2 {
     object-fit: cover;
     border-radius: 5px;
     margin-bottom: 40px;
+}
+.next-case {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 14px 30px;
+    align-items: center;
+    border-top: 1px solid var(--line);
+    padding-block: 48px 90px;
+}
+.next-case .eyebrow {
+    color: var(--muted);
+}
+.next-case-title {
+    grid-row: 2;
+    font-size: clamp(30px, 4.25vw, 56px);
+    font-weight: 550;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    transition: color 0.2s;
+}
+.next-case-arrow {
+    grid-row: 1 / 3;
+    grid-column: 2;
+    display: grid;
+    place-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--yellow);
+    color: var(--ink);
+    font-size: 38px;
+    transition: transform 0.2s;
+}
+.next-case:hover .next-case-title {
+    color: var(--yellow);
+}
+.next-case:hover .next-case-arrow {
+    transform: translateX(6px);
 }
 @keyframes portrait-wave {
     0%,
@@ -1003,6 +1180,9 @@ h2 {
         grid-template-columns: 110px 1fr;
         gap: 18px;
     }
+    .app-more ul {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
     .app-feature-copy {
         padding: 35px;
     }
@@ -1011,7 +1191,11 @@ h2 {
     }
     .career-entry summary {
         grid-template-columns: 1fr 18px;
-        gap: 4px 12px;
+        gap: 10px 12px;
+    }
+    .career-static {
+        grid-template-columns: 1fr;
+        gap: 10px;
     }
     .career-date {
         grid-column: 1;
@@ -1207,12 +1391,45 @@ h2 {
         font-size: 43px;
     }
     .ayer-visual {
-        padding: 0;
+        gap: 10px;
+        padding: 24px 24px 110px;
+    }
+    .ayer-photo figcaption {
+        top: 8px;
+        left: 8px;
+        font-size: 9px;
+    }
+    .ayer-phone {
+        bottom: 18px;
+        width: 24%;
+        border-width: 3px;
+        border-radius: 14px;
+    }
+    .ayer-stats {
+        gap: 18px;
+    }
+    .ayer-stats dt {
+        font-size: 24px;
     }
     .app-pair {
         grid-template-columns: 1fr;
         gap: 35px;
         margin-top: 35px;
+    }
+    .app-more {
+        margin-top: 45px;
+    }
+    .app-more ul {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 4px 16px;
+    }
+    .app-more a {
+        font-size: 14px;
+        gap: 10px;
+    }
+    .app-more img {
+        width: 34px;
+        height: 34px;
     }
     .small-app {
         grid-template-columns: 110px 1fr;
@@ -1257,22 +1474,17 @@ h2 {
         grid-template-columns: 1fr;
         gap: 55px;
     }
-    .career-entry summary {
-        grid-template-columns: 1fr auto 18px;
-        padding-block: 20px;
-        gap: 12px;
+    .career-stats dt {
+        font-size: 32px;
     }
-    .career-date {
-        grid-column: 2;
-        grid-row: 1;
+    .career-stats dd {
         font-size: 10px;
     }
-    .expand {
-        grid-column: 3;
-        grid-row: 1;
-    }
     .career-company {
-        font-size: 14px;
+        font-size: 15px;
+    }
+    .career-role {
+        font-size: 13px;
     }
     .career-body {
         padding-right: 15px;
@@ -1334,6 +1546,14 @@ h2 {
     .detail-meta dt {
         margin-top: 0;
     }
+    .next-case {
+        padding-block: 36px 65px;
+    }
+    .next-case-arrow {
+        width: 52px;
+        height: 52px;
+        font-size: 26px;
+    }
     .detail-prose p,
     .detail-prose li {
         font-size: 16px;
@@ -1346,17 +1566,6 @@ h2 {
     }
 }
 @media (max-width: 380px) {
-    .career-entry summary {
-        grid-template-columns: 1fr 18px;
-    }
-    .career-date {
-        grid-column: 1;
-        grid-row: 2;
-    }
-    .expand {
-        grid-column: 2;
-        grid-row: 1/3;
-    }
     .hero-aside {
         grid-template-columns: 1fr;
     }

@@ -6,6 +6,8 @@
 
 - Location and profile: https://jaimechapinal.com/
 - Career: Senior Software Engineer at Spotify; experience in web, desktop, games, developer tools, and client quality platforms.
+- Recognition: Nova 111 List winner (2024), Electronic Arts Superstar Award (2016), Global Game Jam Madrid BeatJamp award (2013); co-author of "Natural interaction techniques using Kinect" (Interacción 2012).
+- Languages: Spanish (native), English (full professional), Swedish (basic).
 - Personal projects outside his role at Spotify: Chapiware builds calm, local-first apps for memories, habits, reading, and personal data. No account, cloud, or tracking is required for its products.
 
 ## Projects and writing

@@ -110,6 +110,27 @@ portrait?.addEventListener('click', () => {
 portrait?.addEventListener('animationend', () =>
     portrait.classList.remove('is-waving')
 );
+// Highlight the nav link for the section being read (home page only).
+const navLinks = [...document.querySelectorAll('nav a[href^="#"]')];
+if (navLinks.length && 'IntersectionObserver' in window) {
+    const sections = navLinks
+        .map((link) => document.getElementById(link.hash.slice(1)))
+        .filter(Boolean);
+    const observer = new IntersectionObserver(
+        (entries) => {
+            for (const entry of entries) {
+                if (!entry.isIntersecting) continue;
+                navLinks.forEach((link) =>
+                    link.hash === `#${entry.target.id}`
+                        ? link.setAttribute('aria-current', 'true')
+                        : link.removeAttribute('aria-current')
+                );
+            }
+        },
+        { rootMargin: '-40% 0px -55% 0px' }
+    );
+    sections.forEach((section) => observer.observe(section));
+}
 // Keep old shared section links useful after the redesign.
 const legacyAnchors = {
     sectionA: 'top',
