@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [main]
   workflow_dispatch:
+  workflow_run:
+    workflows: [Build v2 preview]
+    branches: ['2.0']
+    types: [completed]
 
 permissions:
   contents: read
@@ -16,25 +20,50 @@ concurrency:
 
 jobs:
   build:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
+      - name: Check out current site
         uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.ref || 'main' }}
+          path: current-site
+
+      - name: Check out v2 preview
+        uses: actions/checkout@v6
+        with:
+          ref: '2.0'
+          path: preview-site
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: yarn
+          cache-dependency-path: |
+            current-site/yarn.lock
+            preview-site/yarn.lock
 
       - name: Enable Corepack
         run: corepack enable
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: |
+          yarn --cwd current-site install --frozen-lockfile
+          yarn --cwd preview-site install --frozen-lockfile
 
-      - name: Build site
+      - name: Build current site
+        working-directory: current-site
         run: npm run build
+
+      - name: Build v2 preview
+        working-directory: preview-site
+        run: npm run build:v2
+
+      - name: Assemble both versions
+        run: |
+          cp -R preview-site/dist-v2 current-site/dist/v2
+          touch current-site/dist/.nojekyll
 
       - name: Configure GitHub Pages
         if: github.event_name != 'pull_request'
@@ -44,7 +73,7 @@ jobs:
         if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v4
         with:
-          path: dist
+          path: current-site/dist
 
   deploy:
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
