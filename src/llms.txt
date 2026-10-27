@@ -2,30 +2,36 @@
 
 > Jaime Chapinal is a Senior Software Engineer at Spotify, working on web and desktop experiences and developer tooling. Previously at Amazon, King, and Electronic Arts.
 
+Career: experience in web, desktop, games, developer tools, and client quality platforms. Languages: Spanish (native), English (full professional), Swedish (basic).
+
+Recognition: Nova 111 List winner (2024), Electronic Arts Superstar Award (2016), Global Game Jam Madrid BeatJamp award (2013); co-author of "Natural interaction techniques using Kinect" (Interacción 2012).
+
+Personal projects outside his role at Spotify: Chapiware builds calm, local-first apps for memories, habits, reading, and personal data. No account, cloud, or tracking is required for its products.
+
 ## About
 
-- Location and profile: https://jaimechapinal.com/
-- Career: Senior Software Engineer at Spotify; experience in web, desktop, games, developer tools, and client quality platforms.
-- Recognition: Nova 111 List winner (2024), Electronic Arts Superstar Award (2016), Global Game Jam Madrid BeatJamp award (2013); co-author of "Natural interaction techniques using Kinect" (Interacción 2012).
-- Languages: Spanish (native), English (full professional), Swedish (basic).
-- Personal projects outside his role at Spotify: Chapiware builds calm, local-first apps for memories, habits, reading, and personal data. No account, cloud, or tracking is required for its products.
+- [Profile](https://jaimechapinal.com/): Home page with selected work, career, personal projects, and contact
+- [Public record](https://jaimechapinal.com/wiki/): Sourced overview of what the public web says about Jaime
+
+## Work
+
+- [Spotify](https://jaimechapinal.com/work/spotify.html): Web and desktop features, and Client Quality Platform tooling
+- [Kindle](https://jaimechapinal.com/work/kindle.html): The Kindle web reader and the Kindle Reader apps for PC and Mac
+- [Candy Crush Saga](https://jaimechapinal.com/work/candy-crush.html): Gameplay features and production tools at King
 
 ## Projects and writing
 
-- Spotify work: https://jaimechapinal.com/work/spotify.html
-- Kindle work: https://jaimechapinal.com/work/kindle.html
-- Candy Crush Saga work: https://jaimechapinal.com/work/candy-crush.html
-- Chapiware: https://www.chapiware.com/
-- Ayer: https://www.chapiware.com/ayer/
-- Jaime's blog: https://blog.jaimechapinal.com/
-- GitHub: https://github.com/xatpy
+- [Chapiware](https://www.chapiware.com/): Independent, local-first apps
+- [Ayer](https://www.chapiware.com/ayer/): Photos and videos taken on today's date in previous years, kept on the phone
+- [Blog](https://blog.jaimechapinal.com/): Personal writing
+- [GitHub](https://github.com/xatpy): Open source code
 
 ## Contact
 
-- LinkedIn: https://www.linkedin.com/in/jaime-chapinal-cervantes/
-- X: https://x.com/chapi13
-- Email: hi@chapiware.com
+- [LinkedIn](https://www.linkedin.com/in/jaime-chapinal-cervantes/): Professional profile
+- [X](https://x.com/chapi13): Social profile
+- [Email](mailto:hi@chapiware.com): hi@chapiware.com
 
-## Content use
+## Optional
 
-This site permits indexing for search and use as input to AI assistants and agents. It does not permit use for AI model training. See https://jaimechapinal.com/robots.txt for the machine-readable policy.
+- [Content use policy](https://jaimechapinal.com/robots.txt): Indexing for search and use as input to AI assistants and agents is allowed; use for AI model training is not
