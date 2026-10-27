@@ -268,20 +268,23 @@ if (!reducedMotion) {
             '.contact-heading',
             '.contact-bottom',
         ];
-        const revealer = new IntersectionObserver(
-            (entries) => {
-                for (const entry of entries) {
-                    if (!entry.isIntersecting) continue;
-                    entry.target.classList.add('is-visible');
-                    revealer.unobserve(entry.target);
+        // The observer's first report says what starts off screen, so nothing
+        // is measured by hand. Forced layouts here used to delay first paint.
+        const seen = new WeakSet();
+        const revealer = new IntersectionObserver((entries) => {
+            for (const { target, isIntersecting } of entries) {
+                if (!seen.has(target)) {
+                    seen.add(target);
+                    if (isIntersecting) revealer.unobserve(target);
+                    else target.classList.add('reveal');
+                } else if (isIntersecting) {
+                    target.classList.add('is-visible');
+                    revealer.unobserve(target);
                 }
-            },
-            { rootMargin: '0px 0px -8% 0px' }
-        );
+            }
+        });
         for (const selector of groups) {
             document.querySelectorAll(selector).forEach((element, index) => {
-                if (element.getBoundingClientRect().top < innerHeight) return;
-                element.classList.add('reveal');
                 element.style.setProperty(
                     '--reveal-delay',
                     `${(index % 4) * 0.08}s`
