@@ -859,10 +859,11 @@ h2 {
     cursor: help;
     transition: color 0.2s;
 }
-.gif-word:hover,
 .gif-word:focus-visible {
-    color: var(--yellow);
     outline: none;
+}
+.gif-word.is-open {
+    color: var(--yellow);
 }
 .gif-pop {
     position: absolute;
@@ -898,8 +899,6 @@ h2 {
     border-radius: 7px;
     background: var(--ink);
 }
-.gif-word:hover .gif-pop,
-.gif-word:focus-visible .gif-pop,
 .gif-word.is-open .gif-pop {
     opacity: 1;
     transform: translate(calc(-50% + var(--pop-shift, 0px)), 0) rotate(-2deg) scale(1);

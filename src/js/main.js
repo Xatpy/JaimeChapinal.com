@@ -149,31 +149,49 @@ if (destination)
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const finePointer = matchMedia('(hover: hover) and (pointer: fine)').matches;
 // Interest words play their clip only while open, so nothing loads up front.
+// Mouse opens on hover, touch toggles on tap, keyboard opens on focus.
 document.querySelectorAll('.gif-word').forEach((word) => {
     const pop = word.querySelector('.gif-pop');
     const video = word.querySelector('video');
+    let lastPointer = null;
     const open = () => {
-        word.classList.add('is-open');
-        pop.style.setProperty('--pop-shift', '0px');
-        const rect = pop.getBoundingClientRect();
+        // Keep the bubble on screen. Measure untransformed sizes, not the
+        // mid-animation box.
         const gutter = 12;
+        const rect = word.getBoundingClientRect();
+        const center = rect.left + rect.width / 2;
+        const half = pop.offsetWidth / 2;
         const shift =
-            Math.max(0, gutter - rect.left) -
-            Math.max(0, rect.right - (innerWidth - gutter));
+            Math.max(0, gutter - (center - half)) -
+            Math.max(0, center + half - (innerWidth - gutter));
         pop.style.setProperty('--pop-shift', `${shift}px`);
-        if (!reducedMotion) video.play().catch(() => {});
+        word.classList.add('is-open');
+        video.play().catch(() => {});
     };
     const close = () => {
         word.classList.remove('is-open');
         video.pause();
     };
-    word.addEventListener('pointerenter', open);
-    word.addEventListener('pointerleave', close);
-    word.addEventListener('focus', open);
-    word.addEventListener('blur', close);
-    word.addEventListener('click', () =>
-        word.classList.contains('is-open') && !finePointer ? close() : open()
-    );
+    word.addEventListener('pointerenter', (event) => {
+        if (event.pointerType === 'mouse') open();
+    });
+    word.addEventListener('pointerleave', (event) => {
+        if (event.pointerType === 'mouse') close();
+    });
+    word.addEventListener('pointerdown', (event) => {
+        lastPointer = event.pointerType;
+    });
+    word.addEventListener('focus', () => {
+        if (!lastPointer) open();
+    });
+    word.addEventListener('blur', () => {
+        lastPointer = null;
+        close();
+    });
+    word.addEventListener('click', () => {
+        if (lastPointer === 'mouse') return;
+        if (lastPointer) word.classList.contains('is-open') ? close() : open();
+    });
 });
 if (!reducedMotion) {
     // Confetti burst from the portrait.
