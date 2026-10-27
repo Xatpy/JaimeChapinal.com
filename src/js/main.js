@@ -96,7 +96,7 @@ const note = document.getElementById('portrait-note');
 const messages = [
     '¡Hola! Thanks for stopping by.',
     'Bears. Beets. Better software.',
-    'A little curiosity goes a long way.',
+    'Always tinkering. Powered by curiosity (and coffee).',
 ];
 let messageIndex = 0;
 portrait?.addEventListener('click', () => {
@@ -145,3 +145,187 @@ if (destination)
     document
         .getElementById(destination)
         ?.scrollIntoView({ behavior: 'instant' });
+// Juicy extras. Everything below is decoration and respects reduced motion.
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const finePointer = matchMedia('(hover: hover) and (pointer: fine)').matches;
+// Interest words play their clip only while open, so nothing loads up front.
+document.querySelectorAll('.gif-word').forEach((word) => {
+    const pop = word.querySelector('.gif-pop');
+    const video = word.querySelector('video');
+    const open = () => {
+        word.classList.add('is-open');
+        pop.style.setProperty('--pop-shift', '0px');
+        const rect = pop.getBoundingClientRect();
+        const gutter = 12;
+        const shift =
+            Math.max(0, gutter - rect.left) -
+            Math.max(0, rect.right - (innerWidth - gutter));
+        pop.style.setProperty('--pop-shift', `${shift}px`);
+        if (!reducedMotion) video.play().catch(() => {});
+    };
+    const close = () => {
+        word.classList.remove('is-open');
+        video.pause();
+    };
+    word.addEventListener('pointerenter', open);
+    word.addEventListener('pointerleave', close);
+    word.addEventListener('focus', open);
+    word.addEventListener('blur', close);
+    word.addEventListener('click', () =>
+        word.classList.contains('is-open') && !finePointer ? close() : open()
+    );
+});
+if (!reducedMotion) {
+    // Confetti burst from the portrait.
+    portrait?.addEventListener('click', () => {
+        const rect = portrait.getBoundingClientRect();
+        const colors = ['#eeff63', '#f5f4ec', '#b8f0c0', '#ff8a5c'];
+        for (let i = 0; i < 22; i++) {
+            const spark = document.createElement('span');
+            spark.className = 'spark';
+            spark.style.left = `${rect.left + rect.width / 2}px`;
+            spark.style.top = `${rect.top + rect.height / 2}px`;
+            spark.style.background = colors[i % colors.length];
+            document.body.append(spark);
+            const angle = (Math.PI * 2 * i) / 22 + Math.random() * 0.4;
+            const distance = rect.width * (0.55 + Math.random() * 0.45);
+            spark.animate(
+                [
+                    {
+                        transform: 'translate(0, 0) rotate(0) scale(1)',
+                        opacity: 1,
+                    },
+                    {
+                        transform: `translate(${Math.cos(angle) * distance}px, ${
+                            Math.sin(angle) * distance + 40
+                        }px) rotate(${Math.random() * 540}deg) scale(0.4)`,
+                        opacity: 0,
+                    },
+                ],
+                {
+                    duration: 700 + Math.random() * 400,
+                    easing: 'cubic-bezier(0.2, 0.7, 0.2, 1)',
+                }
+            ).onfinish = () => spark.remove();
+        }
+    });
+    // Reading progress along the top edge.
+    if (document.getElementById('top')) {
+        const progress = document.createElement('div');
+        progress.className = 'scroll-progress';
+        progress.setAttribute('aria-hidden', 'true');
+        document.body.append(progress);
+        let ticking = false;
+        addEventListener(
+            'scroll',
+            () => {
+                if (ticking) return;
+                ticking = true;
+                requestAnimationFrame(() => {
+                    const max =
+                        document.documentElement.scrollHeight - innerHeight;
+                    progress.style.setProperty(
+                        '--progress',
+                        max > 0 ? scrollY / max : 0
+                    );
+                    ticking = false;
+                });
+            },
+            { passive: true }
+        );
+    }
+    // Content rises in as it scrolls into view, staggered within each group.
+    if ('IntersectionObserver' in window) {
+        const groups = [
+            '.experience-strip',
+            '.section-heading',
+            '.work-card',
+            '.about-copy > *',
+            '.career-stats > div',
+            '.career-entry',
+            '.app-feature',
+            '.small-app',
+            '.app-more li',
+            '.article',
+            '.contact-heading',
+            '.contact-bottom',
+        ];
+        const revealer = new IntersectionObserver(
+            (entries) => {
+                for (const entry of entries) {
+                    if (!entry.isIntersecting) continue;
+                    entry.target.classList.add('is-visible');
+                    revealer.unobserve(entry.target);
+                }
+            },
+            { rootMargin: '0px 0px -8% 0px' }
+        );
+        for (const selector of groups) {
+            document.querySelectorAll(selector).forEach((element, index) => {
+                if (element.getBoundingClientRect().top < innerHeight) return;
+                element.classList.add('reveal');
+                element.style.setProperty(
+                    '--reveal-delay',
+                    `${(index % 4) * 0.08}s`
+                );
+                revealer.observe(element);
+            });
+        }
+        // Stats count up the first time they appear.
+        const counter = new IntersectionObserver((entries) => {
+            for (const entry of entries) {
+                if (!entry.isIntersecting) continue;
+                counter.unobserve(entry.target);
+                const [, number, suffix] =
+                    entry.target.textContent.match(/^(\d+)(.*)$/);
+                const target = Number(number);
+                const start = performance.now();
+                const step = (now) => {
+                    const t = Math.min(1, (now - start) / 1200);
+                    const eased = 1 - Math.pow(1 - t, 3);
+                    entry.target.textContent = `${Math.round(target * eased)}${suffix}`;
+                    if (t < 1) requestAnimationFrame(step);
+                };
+                requestAnimationFrame(step);
+            }
+        });
+        document
+            .querySelectorAll('.career-stats dt, .ayer-stats dt')
+            .forEach(
+                (stat) => /^\d+/.test(stat.textContent) && counter.observe(stat)
+            );
+    }
+    if (finePointer) {
+        // Work cards tilt towards the cursor with a moving shine.
+        document.querySelectorAll('.work-visual').forEach((visual) => {
+            visual.addEventListener('pointermove', (event) => {
+                const rect = visual.getBoundingClientRect();
+                const x = (event.clientX - rect.left) / rect.width;
+                const y = (event.clientY - rect.top) / rect.height;
+                visual.classList.add('is-tilting');
+                visual.style.setProperty('--tilt-x', `${(0.5 - y) * 10}deg`);
+                visual.style.setProperty('--tilt-y', `${(x - 0.5) * 12}deg`);
+                visual.style.setProperty('--shine-x', `${x * 100}%`);
+                visual.style.setProperty('--shine-y', `${y * 100}%`);
+            });
+            visual.addEventListener('pointerleave', () => {
+                visual.classList.remove('is-tilting');
+                visual.style.setProperty('--tilt-x', '0deg');
+                visual.style.setProperty('--tilt-y', '0deg');
+            });
+        });
+        // The contact button leans towards the cursor.
+        const contactArrow = document.querySelector('.contact-arrow');
+        contactArrow?.addEventListener('pointermove', (event) => {
+            const rect = contactArrow.getBoundingClientRect();
+            contactArrow.style.setProperty(
+                '--pull-x',
+                `${(event.clientX - rect.left - rect.width / 2) * 0.25}px`
+            );
+            contactArrow.style.setProperty(
+                '--pull-y',
+                `${(event.clientY - rect.top - rect.height / 2) * 0.25}px`
+            );
+        });
+    }
+}
