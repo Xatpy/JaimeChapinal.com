@@ -6,10 +6,6 @@ on:
   pull_request:
     branches: [main]
   workflow_dispatch:
-  workflow_run:
-    workflows: [Build v2 preview]
-    branches: ['2.0']
-    types: [completed]
 
 permissions:
   contents: read
@@ -20,20 +16,18 @@ concurrency:
 
 jobs:
   build:
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - name: Check out current site
         uses: actions/checkout@v6
         with:
-          ref: ${{ github.event_name == 'pull_request' && github.ref || 'main' }}
           path: current-site
 
-      - name: Check out v2 preview
+      - name: Check out v1 archive
         uses: actions/checkout@v6
         with:
-          ref: '2.0'
-          path: preview-site
+          ref: v1
+          path: v1-site
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -42,7 +36,7 @@ jobs:
           cache: yarn
           cache-dependency-path: |
             current-site/yarn.lock
-            preview-site/yarn.lock
+            v1-site/yarn.lock
 
       - name: Enable Corepack
         run: corepack enable
@@ -50,19 +44,19 @@ jobs:
       - name: Install dependencies
         run: |
           yarn --cwd current-site install --frozen-lockfile
-          yarn --cwd preview-site install --frozen-lockfile
+          yarn --cwd v1-site install --frozen-lockfile
 
       - name: Build current site
         working-directory: current-site
         run: npm run build
 
-      - name: Build v2 preview
-        working-directory: preview-site
-        run: npm run build:v2
+      - name: Build v1 archive
+        working-directory: v1-site
+        run: npm run build:v1
 
       - name: Assemble both versions
         run: |
-          cp -R preview-site/dist-v2 current-site/dist/v2
+          cp -R v1-site/dist-v1 current-site/dist/v1
           touch current-site/dist/.nojekyll
 
       - name: Configure GitHub Pages
